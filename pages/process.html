@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Process | Foodora BA Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">🍔 Foodora BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html" class="active">BA Process</a>
+                <a href="deliverables.html">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-sitemap"></i> Business Analysis Process</h1>
+            <p class="subtitle">A detailed walkthrough of the end-to-end BA methodology applied to Foodora</p>
+        </header>
+
+        <!-- Process Timeline -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-road"></i> Project Timeline & Phases</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">01</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-search"></i> Discovery & Analysis</h3>
+                            <p><strong>Duration:</strong> 2 Weeks</p>
+                            <ul>
+                                <li>Stakeholder identification and interviews</li>
+                                <li>Business case development</li>
+                                <li>Current state process analysis</li>
+                                <li>User persona creation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">02</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-file-alt"></i> Requirements Definition</h3>
+                            <p><strong>Duration:</strong> 3 Weeks</p>
+                            <ul>
+                                <li>Requirements workshops and elicitation</li>
+                                <li>User story creation and backlog grooming</li>
+                                <li>MoSCoW prioritization</li>
+                                <li>Documentation (PRD, use cases)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">03</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-pencil-ruler"></i> Solution Design</h3>
+                            <p><strong>Duration:</strong> 3 Weeks</p>
+                            <ul>
+                                <li>Process modeling (BPMN, UML)</li>
+                                <li>Wireframing and prototyping</li>
+                                <li>Technical requirements specification</li>
+                                <li>Data modeling (ERD)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">04</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-clipboard-check"></i> Validation & Handover</h3>
+                            <p><strong>Duration:</strong> 2 Weeks</p>
+                            <ul>
+                                <li>UAT planning and test case development</li>
+                                <li>Stakeholder reviews and sign-offs</li>
+                                <li>Traceability matrix creation</li>
+                                <li>Implementation roadmap</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stakeholder Management -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Stakeholder Analysis</h2>
+            </div>
+            
+            <div class="stakeholder-grid">
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar owner">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3>Restaurant Owner</h3>
+                    <p><strong>Interest:</strong> High | <strong>Power:</strong> High</p>
+                    <p><strong>Key Concerns:</strong> ROI, operational efficiency, customer retention</p>
+                    <p><strong>Communication:</strong> Weekly steering committee updates</p>
+                </div>
+                
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar staff">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Restaurant Staff</h3>
+                    <p><strong>Interest:</strong> High | <strong>Power:</strong> Medium</p>
+                    <p><strong>Key Concerns:</strong> Ease of use, error reduction, training</p>
+                    <p><strong>Communication:</strong> Bi-weekly demos and feedback sessions</p>
+                </div>
+                
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar customer">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <h3>End Customers</h3>
+                    <p><strong>Interest:</strong> High | <strong>Power:</strong> Low</p>
+                    <p><strong>Key Concerns:</strong> Convenience, speed, order accuracy</p>
+                    <p><strong>Communication:</strong> Surveys and usability testing</p>
+                </div>
+                
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar dev">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Development Team</h3>
+                    <p><strong>Interest:</strong> Medium | <strong>Power:</strong> High</p>
+                    <p><strong>Key Concerns:</strong> Clear requirements, technical feasibility</p>
+                    <p><strong>Communication:</strong> Daily stand-ups, sprint planning</p>
+                </div>
+            </div>
+            
+            <div class="stakeholder-matrix">
+                <h4>Power/Interest Matrix</h4>
+                <img src="../assets/images/diagrams/stakeholder-matrix.png" alt="Stakeholder Power Interest Matrix" class="responsive-img">
+            </div>
+        </section>
+
+        <!-- Requirements Elicitation -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-comments"></i> Requirements Elicitation Techniques</h2>
+            </div>
+            
+            <div class="techniques-grid">
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-user-friends"></i>
+                    </div>
+                    <h3>Stakeholder Interviews</h3>
+                    <p><strong>Participants:</strong> 8 key stakeholders</p>
+                    <p><strong>Outcome:</strong> 45+ business requirements identified</p>
+                    <p><strong>Tools:</strong> Interview guides, recording (with consent)</p>
+                </div>
+                
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <h3>Requirements Workshops</h3>
+                    <p><strong>Duration:</strong> 4 sessions, 2 hours each</p>
+                    <p><strong>Outcome:</strong> Consensus on scope and priorities</p>
+                    <p><strong>Tools:</strong> Miro board, user story mapping</p>
+                </div>
+                
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3>Observation & Job Shadowing</h3>
+                    <p><strong>Duration:</strong> 16 hours over 2 days</p>
+                    <p><strong>Outcome:</strong> Identified 12 process inefficiencies</p>
+                    <p><strong>Tools:</strong> Process maps, time-motion studies</p>
+                </div>
+                
+                <div class="technique-card">
+                    <div class="technique-icon">
+                        <i class="fas fa-file-signature"></i>
+                    </div>
+                    <h3>Document Analysis</h3>
+                    <p><strong>Documents:</strong> Current order forms, menu, POS reports</p>
+                    <p><strong>Outcome:</strong> 8 data entities and relationships identified</p>
+                    <p><strong>Tools:</strong> ERD, data dictionary</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Modeling -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-project-diagram"></i> Process Modeling & Analysis</h2>
+            </div>
+            
+            <div class="process-modeling">
+                <div class="process-as-is">
+                    <h3><i class="fas fa-history"></i> AS-IS Process (Current State)</h3>
+                    <img src="../assets/images/diagrams/process-as-is.png" alt="Current State Process" class="responsive-img">
+                    <p><strong>Key Pain Points:</strong></p>
+                    <ul>
+                        <li>Manual phone order taking (high error rate)</li>
+                        <li>No real-time menu updates</li>
+                        <li>Paper-based order tickets</li>
+                        <li>No customer wait time estimation</li>
+                    </ul>
+                </div>
+                
+                <div class="process-to-be">
+                    <h3><i class="fas fa-rocket"></i> TO-BE Process (Future State)</h3>
+                    <img src="../assets/images/diagrams/process-to-be.png" alt="Future State Process" class="responsive-img">
+                    <p><strong>Improvements:</strong></p>
+                    <ul>
+                        <li>Digital order flow with validation</li>
+                        <li>Automatic kitchen ticket printing</li>
+                        <li>Real-time customer notifications</li>
+                        <li>Integrated payment and loyalty</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="process-navigation">
+            <a href="project-overview.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Previous: Project Overview
+            </a>
+            <a href="deliverables.html" class="btn btn-primary">
+                Next: Deliverables <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Foodora Business Analyst Portfolio | Created for educational purposes</p>
+            <p class="footer-links">
+                <a href="../index.html">Home</a> | 
+                <a href="project-overview.html">Project Overview</a> | 
+                <a href="process.html">BA Process</a> | 
+                <a href="deliverables.html">Deliverables</a> | 
+                <a href="learnings.html">Learnings</a>
+            </p>
+            <p>Contact: your.email@example.com | <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+        </div>
+    </footer>
+</body>
+</html>

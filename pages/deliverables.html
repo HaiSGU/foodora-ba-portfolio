@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliverables | Foodora BA Portfolio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .deliverable-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+        
+        .filter-btn.active, .filter-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        
+        .deliverable-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .deliverable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .deliverable-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .deliverable-phase {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .phase-discovery { background: #ffebee; color: #c62828; }
+        .phase-requirements { background: #e3f2fd; color: #1565c0; }
+        .phase-design { background: #e8f5e9; color: #2e7d32; }
+        .phase-validation { background: #fff3e0; color: #ef6c00; }
+        
+        .deliverable-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+        
+        .deliverable-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .deliverable-tools {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+        
+        .tool-tag {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+        
+        .deliverable-preview {
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+        
+        .deliverable-preview img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+        }
+        
+        .deliverable-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+        }
+        
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+        
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../index.html" class="nav-logo">🍔 Foodora BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html">BA Process</a>
+                <a href="deliverables.html" class="active">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-folder-open"></i> BA Deliverables Portfolio</h1>
+            <p class="subtitle">A comprehensive collection of artifacts created during the Foodora project</p>
+        </header>
+
+        <!-- Filter -->
+        <div class="deliverable-filter">
+            <button class="filter-btn active" data-filter="all">All Deliverables</button>
+            <button class="filter-btn" data-filter="discovery">Discovery Phase</button>
+            <button class="filter-btn" data-filter="requirements">Requirements Phase</button>
+            <button class="filter-btn" data-filter="design">Design Phase</button>
+            <button class="filter-btn" data-filter="validation">Validation Phase</button>
+        </div>
+
+        <!-- Deliverables Grid -->
+        <div class="deliverables-grid">
+            
+            <!-- Business Case -->
+            <div class="deliverable-card" data-phase="discovery">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-discovery">Discovery</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <h3>Business Case Document</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Justify project investment with ROI analysis and strategic alignment</p>
+                    <p><strong>Contents:</strong> Problem statement, solution overview, financial analysis, risks, recommendations</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Google Docs</span>
+                        <span class="tool-tag">Excel</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/deliverables/business-case-preview.png" alt="Business Case Preview" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_Business_Case.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/deliverables/business-case-preview.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stakeholder Analysis -->
+            <div class="deliverable-card" data-phase="discovery">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-discovery">Discovery</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Stakeholder Analysis</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Identify and analyze all project stakeholders</p>
+                    <p><strong>Contents:</strong> Power/Interest matrix, communication plan, RACI matrix</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Lucidchart</span>
+                        <span class="tool-tag">Excel</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/diagrams/stakeholder-matrix.png" alt="Stakeholder Matrix" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_Stakeholder_Analysis.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/diagrams/stakeholder-matrix.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Personas -->
+            <div class="deliverable-card" data-phase="discovery">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-discovery">Discovery</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                    <h3>User Personas</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Create archetypal users to guide design decisions</p>
+                    <p><strong>Contents:</strong> 3 personas: Busy Professional, Restaurant Owner, Cashier</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Figma</span>
+                        <span class="tool-tag">Adobe XD</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/deliverables/user-persona.png" alt="User Persona" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_User_Personas.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/deliverables/user-persona.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Customer Journey Map -->
+            <div class="deliverable-card" data-phase="discovery">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-discovery">Discovery</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-map-marked-alt"></i>
+                    </div>
+                    <h3>Customer Journey Map</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Visualize end-to-end customer experience</p>
+                    <p><strong>Contents:</strong> Touchpoints, emotions, pain points, opportunities</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Miro</span>
+                        <span class="tool-tag">Figma</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/diagrams/customer-journey-map.png" alt="Customer Journey Map" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_Customer_Journey_Map.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/diagrams/customer-journey-map.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PRD -->
+            <div class="deliverable-card" data-phase="requirements">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-requirements">Requirements</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>Product Requirements Document</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Comprehensive requirements specification</p>
+                    <p><strong>Contents:</strong> 45+ requirements, user stories, acceptance criteria</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Google Docs</span>
+                        <span class="tool-tag">Confluence</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/deliverables/prd-preview.png" alt="PRD Preview" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_PRD_v1.0.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/deliverables/prd-preview.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Use Case Diagram -->
+            <div class="deliverable-card" data-phase="requirements">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-requirements">Requirements</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Use Case Diagram</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Visualize system functionality from user perspective</p>
+                    <p><strong>Contents:</strong> 8 use cases, 3 actors, system boundaries</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Draw.io</span>
+                        <span class="tool-tag">UML</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/diagrams/use-case-diagram.png" alt="Use Case Diagram" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_Use_Case_Diagram.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/diagrams/use-case-diagram.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jira Backlog -->
+            <div class="deliverable-card" data-phase="requirements">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-requirements">Requirements</span>
+                    <div class="deliverable-icon">
+                        <i class="fab fa-jira"></i>
+                    </div>
+                    <h3>Jira Backlog</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Agile requirement management and prioritization</p>
+                    <p><strong>Contents:</strong> 65+ user stories, 4 epics, MoSCoW prioritization</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Jira</span>
+                        <span class="tool-tag">Agile</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/deliverables/jira-backlog.png" alt="Jira Backlog" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="https://yourname.atlassian.net/jira/software/projects/FOD" class="btn btn-small" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> View Live
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/deliverables/jira-backlog.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BPMN Process Flow -->
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-stream"></i>
+                    </div>
+                    <h3>BPMN Process Flows</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Model business processes using standard notation</p>
+                    <p><strong>Contents:</strong> AS-IS and TO-BE processes, swimlanes</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Lucidchart</span>
+                        <span class="tool-tag">BPMN 2.0</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/diagrams/bpmn-process.png" alt="BPMN Process" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_Process_Flows.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/diagrams/bpmn-process.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Figma Prototype -->
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h3>Figma Interactive Prototype</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Interactive design for user validation</p>
+                    <p><strong>Contents:</strong> 15+ mobile screens, 8+ web screens, clickable flows</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Figma</span>
+                        <span class="tool-tag">Prototyping</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/screenshots/figma-prototype.png" alt="Figma Prototype" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="https://www.figma.com/proto/your-link-here" class="btn btn-small" target="_blank">
+                            <i class="fas fa-external-link-alt"></i> Live Prototype
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/screenshots/figma-prototype.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ERD -->
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Entity Relationship Diagram</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Design database structure and relationships</p>
+                    <p><strong>Contents:</strong> 8 entities, relationships, attributes, primary keys</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Draw.io</span>
+                        <span class="tool-tag">ERD</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/diagrams/erd-diagram.png" alt="ERD Diagram" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_ERD.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/diagrams/erd-diagram.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UAT Test Plan -->
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Validation</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>UAT Test Plan & Cases</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Plan and document user acceptance testing</p>
+                    <p><strong>Contents:</strong> 35+ test cases, scenarios, expected results</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Google Sheets</span>
+                        <span class="tool-tag">TestRail</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/deliverables/uat-test-cases.png" alt="UAT Test Cases" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_UAT_Test_Plan.pdf" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/deliverables/uat-test-cases.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Traceability Matrix -->
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Validation</span>
+                    <div class="deliverable-icon">
+                        <i class="fas fa-table"></i>
+                    </div>
+                    <h3>Traceability Matrix</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Track requirements through development lifecycle</p>
+                    <p><strong>Contents:</strong> Requirements to design to test case mapping</p>
+                    
+                    <div class="deliverable-tools">
+                        <span class="tool-tag">Excel</span>
+                        <span class="tool-tag">Jira</span>
+                    </div>
+                    
+                    <div class="deliverable-preview">
+                        <img src="../assets/images/deliverables/traceability-matrix.png" alt="Traceability Matrix" onclick="openModal(this.src)">
+                    </div>
+                    
+                    <div class="deliverable-actions">
+                        <a href="../assets/docs/Foodora_Traceability_Matrix.xlsx" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download Excel
+                        </a>
+                        <button class="btn btn-small btn-outline" onclick="openModal('../assets/images/deliverables/traceability-matrix.png')">
+                            <i class="fas fa-eye"></i> Preview
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Deliverables Summary -->
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-bar"></i> Deliverables Summary</h2>
+            </div>
+            
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-number">14</div>
+                    <div class="stat-label">Total Deliverables</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">45+</div>
+                    <div class="stat-label">Requirements</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">65+</div>
+                    <div class="stat-label">User Stories</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">35+</div>
+                    <div class="stat-label">Test Cases</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <div class="process-navigation">
+            <a href="process.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Previous: BA Process
+            </a>
+            <a href="learnings.html" class="btn btn-primary">
+                Next: Learnings <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div id="previewModal" class="preview-modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Preview">
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>© 2024 Foodora Business Analyst Portfolio | Created for educational purposes</p>
+            <p class="footer-links">
+                <a href="../index.html">Home</a> | 
+                <a href="project-overview.html">Project Overview</a> | 
+                <a href="process.html">BA Process</a> | 
+                <a href="deliverables.html">Deliverables</a> | 
+                <a href="learnings.html">Learnings</a>
+            </p>
+            <p>Contact: your.email@example.com | <a href="https://linkedin.com/in/yourprofile">LinkedIn</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Filter functionality
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                // Update active button
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                
+                const filter = this.getAttribute('data-filter');
+                const cards = document.querySelectorAll('.deliverable-card');
+                
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-phase') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        // Modal functionality
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('previewModal').style.display = 'flex';
+        }
+        
+        function closeModal() {
+            document.getElementById('previewModal').style.display = 'none';
+        }
+        
+        // Close modal when clicking outside
+        document.getElementById('previewModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
