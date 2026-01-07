@@ -1,0 +1,46 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="b4kbnQFB2Jbe89GUlGsi">
+    <mxGraphModel dx="1281" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="120" width="640" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="520" as="sourcePoint" />
+            <mxPoint x="440" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="60" y="280" as="sourcePoint" />
+            <mxPoint x="810" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-4" value="High Power" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="460" y="20" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-5" value="High Interest" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="770" y="290" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-7" value="&lt;div style=&quot;text-align: left;&quot;&gt;(Manage Closely)&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;Restaurant Owner&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Business owner &amp;amp; project sponsor&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Controls budget and scope&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Final decision-maker&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Approves UAT sign-off&lt;/li&gt;&lt;/ul&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="310" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-8" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;(&lt;/font&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); text-align: center;&quot;&gt;Keep Satisfied)&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Kitchen Staff&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;High impact on daily operations&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Focuses only on order accuracy&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Low interest in system features&lt;/li&gt;&lt;/ul&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="160" y="190" width="280" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-9" value="&lt;div style=&quot;text-align: left;&quot;&gt;(Keep Informed)&lt;font face=&quot;Times New Roman&quot;&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font face=&quot;Times New Roman&quot;&gt;Customers&lt;/font&gt;&lt;/div&gt;&lt;div&gt;&lt;ul&gt;&lt;li style=&quot;text-align: left;&quot;&gt;End users of the mobile app&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;Highly interested in speed &amp;amp; convenience&lt;/li&gt;&lt;li style=&quot;text-align: left;&quot;&gt;No authority over system decisions&lt;/li&gt;&lt;/ul&gt;&lt;font face=&quot;Times New Roman&quot;&gt;&lt;/font&gt;&lt;/div&gt;" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="440" y="280" width="310" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-11" value="Stakeholders are classified based on power and interest to define appropriate communication strategies for the FOODORA project." style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="120" y="550" width="640" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="JwT9C_5a5vkXlgf1wWLp-12" value="(Monitor)" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="345" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
