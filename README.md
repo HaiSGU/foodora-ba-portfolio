@@ -39,14 +39,13 @@ Business Analyst portfolio case study covering discovery, requirements, solution
 
 - UAT Test Cases (execution template): [assets/docs/UAT_Test_Cases_Template.xlsx](assets/docs/UAT_Test_Cases_Template.xlsx)
 - UAT Plan (markdown): [assets/docs/UAT_Test_Plan_and_Cases.md](assets/docs/UAT_Test_Plan_and_Cases.md)
-- UAT Test Cases (CSV): [assets/docs/UAT_Test_Cases.csv](assets/docs/UAT_Test_Cases.csv)
 - Traceability Matrix (IEEE 829 aligned): [assets/docs/Foodora_Traceability_Matrix.xlsx](assets/docs/Foodora_Traceability_Matrix.xlsx)
 - Test Summary Report + Sign-off (IEEE 829 aligned): [assets/docs/Foodora_UAT_Signoff_Form.docx](assets/docs/Foodora_UAT_Signoff_Form.docx)
 
 ## Repository structure
 
 ```
-assets/docs/                Documents (DOCX/XLSX/MD/CSV)
+assets/docs/                Documents (DOCX/XLSX/MD)
 assets/images/diagrams/     Diagrams (.drawio)
 assets/images/deliverables/ Preview images used by the website
 assets/images/screenshots/  Prototype/wireflow screenshots

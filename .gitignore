@@ -7,10 +7,16 @@ __pycache__/
 
 # Local temp / exports
 .tmp_docx/
+.tmp_docx_edit/
+.tmp_docx_edit*/
+.tmp_docx_edit*.zip
 *.tmp
 *.bak
 *.bkp
 *.dtmp
+
+# MS Office temporary files
+~$*.docx
 
 # Draw.io autosave / lock artifacts
 .$*.drawio.bkp

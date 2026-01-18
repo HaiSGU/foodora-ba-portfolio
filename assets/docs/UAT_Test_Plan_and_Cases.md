@@ -72,4 +72,3 @@ If a case fails, log:
 ### Files in this repo
 - `assets/docs/UAT_Test_Plan_and_Cases.md` (this file)
 - `assets/docs/UAT_Test_Cases_Template.xlsx` (test cases sheet — template)
-- `assets/docs/UAT_Test_Cases.csv` (legacy/simple export)
