@@ -20,7 +20,7 @@ Business Analyst portfolio case study covering discovery, requirements, solution
 - Business Case: [assets/docs/Business%20Case.docx](assets/docs/Business%20Case.docx)
 - Stakeholder Analysis (matrix): [assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio](assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio)
 - User Personas: [assets/docs/User%20Personas.docx](assets/docs/User%20Personas.docx)
-- Customer Journey Map: [assets/docs/FOODORA%20%E2%80%93%20Customer%20Journey%20Map%20(Customer%20Ordering%20%26%20Pickup).pdf](assets/docs/FOODORA%20%E2%80%93%20Customer%20Journey%20Map%20(Customer%20Ordering%20%26%20Pickup).pdf)
+- Customer Journey Map: [assets/docs/Customer_Journey_Map.png](assets/docs/Customer_Journey_Map.png)
 
 **Requirements**
 
