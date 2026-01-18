@@ -7,6 +7,12 @@ Business Analyst portfolio case study covering discovery, requirements, solution
 - Open [index.html](index.html) in a browser (or use VS Code Live Server)
 - Navigate to [pages/deliverables.html](pages/deliverables.html) to download artifacts
 
+## Online links (recommended for recruiters)
+
+- Prototype site (Figma Sites): [https://verify-curry-15074315.figma.site/](https://verify-curry-15074315.figma.site/)
+- Figma design file: [https://www.figma.com/design/NQueQnkRGx1mzjQSiJAmkZ/FOODORA](https://www.figma.com/design/NQueQnkRGx1mzjQSiJAmkZ/FOODORA)
+- Jira backlog: [https://nguyennhathai031004.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog](https://nguyennhathai031004.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
+
 ## Deliverables (downloadable)
 
 **Discovery**
@@ -25,9 +31,9 @@ Business Analyst portfolio case study covering discovery, requirements, solution
 
 **Design**
 
-- BPMN: [assets/images/diagrams/BPMN.drawio](assets/images/diagrams/BPMN.drawio)
-- ERD: [assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio](assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio)
-- Wireflow: [assets/images/diagrams/Wireflow%20-%20Screen%20Flow%20Diagram.drawio](assets/images/diagrams/Wireflow%20-%20Screen%20Flow%20Diagram.drawio)
+- BPMN: [assets/images/diagrams/BPMN.drawio](assets/images/diagrams/BPMN.drawio) (also viewable online via diagrams.net from the Deliverables page)
+- ERD: [assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio](assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio) (also viewable online via diagrams.net)
+- Wireflow: [assets/images/diagrams/Wireflow%20-%20Screen%20Flow%20Diagram.drawio](assets/images/diagrams/Wireflow%20-%20Screen%20Flow%20Diagram.drawio) (also viewable online via diagrams.net)
 
 **Validation (UAT)**
 
