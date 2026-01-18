@@ -1,143 +1,54 @@
-# 🍔 Foodora - Food Pickup App | Business Analyst Portfolio Project
+# Foodora — Order & Pick-up (MVP) | BA Portfolio
 
-> **A comprehensive business analysis case study** showcasing end-to-end BA skills: from problem discovery to solution design and UAT.
+Business Analyst portfolio case study covering discovery, requirements, solution design, and UAT validation for a pickup-only ordering MVP.
 
-[![View Live Demo](https://img.shields.io/badge/View-Portfolio_Website-blue)](https://yourusername.github.io/foodora-ba-portfolio/)
-[![Figma Prototype](https://img.shields.io/badge/View-Figma_Prototype-orange)](https://www.figma.com/proto/your-link)
-[![BA Skills](https://img.shields.io/badge/Business_Analysis-Requirements_%7C_Process_%7C_UAT-green)](#skills-demonstrated)
+## View the portfolio site
 
-## 📋 Project Overview
+- Open [index.html](index.html) in a browser (or use VS Code Live Server)
+- Navigate to [pages/deliverables.html](pages/deliverables.html) to download artifacts
 
-**Foodora** is a conceptual mobile application designed to help local restaurants reduce third-party delivery platform fees (30% commission) by enabling customers to order directly for pickup.
+## Deliverables (downloadable)
 
-**Business Problem:** 
-- 30% revenue loss to delivery platforms
-- No direct customer data collection
-- Manual order processing causing errors
-- Poor customer experience during peak hours
+**Discovery**
 
-**My Role:** Business Analyst (End-to-end analysis from stakeholder interviews to UAT sign-off)
+- Business Case: [assets/docs/Business%20Case.docx](assets/docs/Business%20Case.docx)
+- Stakeholder Analysis (matrix): [assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio](assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio)
+- User Personas: [assets/docs/User%20Personas.docx](assets/docs/User%20Personas.docx)
+- Customer Journey Map: [assets/docs/FOODORA%20%E2%80%93%20Customer%20Journey%20Map%20(Customer%20Ordering%20%26%20Pickup).pdf](assets/docs/FOODORA%20%E2%80%93%20Customer%20Journey%20Map%20(Customer%20Ordering%20%26%20Pickup).pdf)
 
-## 🎯 Key Objectives
+**Requirements**
 
-1. **Increase direct revenue** by 25% in 6 months
-2. **Reduce order processing errors** by 90%
-3. **Collect customer data** for marketing
-4. **Improve customer wait time** by 30%
+- PRD: [assets/docs/PRD.docx](assets/docs/PRD.docx)
+- Use Case Diagram: [assets/images/diagrams/Use%20Case%20Diagram.drawio](assets/images/diagrams/Use%20Case%20Diagram.drawio)
+- Use Case Descriptions: [assets/docs/Use%20Case%20Description.docx](assets/docs/Use%20Case%20Description.docx)
+- Backlog (documented): [assets/docs/Jira%20Backlog%20and%20Technical%20Stories.docx](assets/docs/Jira%20Backlog%20and%20Technical%20Stories.docx)
 
-## 🔧 Tools & Technologies Used
+**Design**
 
-| Category | Tools |
-|----------|-------|
-| **Requirements Management** | Jira, Confluence (simulated), Google Docs |
-| **Process Modeling** | Lucidchart, Draw.io |
-| **UI/UX Design** | Figma |
-| **Documentation** | Google Workspace, Microsoft Office |
-| **Project Management** | Agile/Scrum methodology |
+- BPMN: [assets/images/diagrams/BPMN.drawio](assets/images/diagrams/BPMN.drawio)
+- ERD: [assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio](assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio)
+- Wireflow: [assets/images/diagrams/Wireflow%20-%20Screen%20Flow%20Diagram.drawio](assets/images/diagrams/Wireflow%20-%20Screen%20Flow%20Diagram.drawio)
 
-## 📊 BA Process & Deliverables
+**Validation (UAT)**
 
-### Phase 1: Discovery & Analysis
-- **Stakeholder Analysis Matrix** - Identifying key stakeholders and their interests
-- **User Personas** (2 personas: Busy Customer & Restaurant Cashier)
-- **Customer Journey Map** - Mapping pain points from hunger to satisfaction
-- **Business Case Document** - ROI analysis and feasibility study
+- UAT Test Cases (execution template): [assets/docs/UAT_Test_Cases_Template.xlsx](assets/docs/UAT_Test_Cases_Template.xlsx)
+- UAT Plan (markdown): [assets/docs/UAT_Test_Plan_and_Cases.md](assets/docs/UAT_Test_Plan_and_Cases.md)
+- UAT Test Cases (CSV): [assets/docs/UAT_Test_Cases.csv](assets/docs/UAT_Test_Cases.csv)
+- Traceability Matrix (IEEE 829 aligned): [assets/docs/Foodora_Traceability_Matrix.xlsx](assets/docs/Foodora_Traceability_Matrix.xlsx)
+- Test Summary Report + Sign-off (IEEE 829 aligned): [assets/docs/Foodora_UAT_Signoff_Form.docx](assets/docs/Foodora_UAT_Signoff_Form.docx)
 
-### Phase 2: Requirements Definition
-- **Product Requirements Document (PRD)** - 12-page comprehensive requirements
-- **Use Case Diagram** - System interactions overview
-- **User Stories & Acceptance Criteria** (25+ stories in Jira)
-- **Prioritization Matrix** (MoSCoW method)
+## Repository structure
 
-### Phase 3: Solution Design
-- **BPMN 2.0 Process Flows** - Order fulfillment and kitchen processes
-- **Figma Interactive Prototype** - 15+ screens for mobile and web
-- **Entity Relationship Diagram (ERD)** - Database structure
-- **Wireflows & Screen Flows** - User navigation paths
+```
+assets/docs/                Documents (DOCX/XLSX/MD/CSV)
+assets/images/diagrams/     Diagrams (.drawio)
+assets/images/deliverables/ Preview images used by the website
+assets/images/screenshots/  Prototype/wireflow screenshots
+pages/                      Portfolio website pages
+css/                        Shared styles
+```
 
-### Phase 4: Validation & Handover
-- **UAT Test Plan & Cases** - 30+ test scenarios
-- **Traceability Matrix** - Requirements to test coverage
-- **UAT Sign-off Document** - Stakeholder approval
-- **Implementation Roadmap** - Phased rollout plan
+## Notes
 
-## 🖼️ Visual Deliverables Preview
-
-### Process & Analysis
-![Customer Journey Map](assets/images/diagrams/customer-journey-map.png)
-*Customer Journey Map highlighting pain points and opportunities*
-
-![BPMN Process Flow](assets/images/diagrams/bpmn-order-process.png)
-*End-to-end order processing workflow using BPMN 2.0*
-
-### Design & Prototype
-![Mobile App Screens](assets/images/screenshots/figma-mobile-screens.png)
-*Figma prototype for customer mobile app*
-
-![Admin Dashboard](assets/images/screenshots/figma-admin-dashboard.png)
-*Web dashboard for restaurant staff*
-
-### Requirements Management
-![Jira Backlog](assets/images/screenshots/jira-backlog-sprint1.png)
-*Jira backlog with user stories and sprint planning*
-
-## 📈 Key Metrics & Success Criteria
-
-| Metric | Before Solution | Target After | Status |
-|--------|----------------|--------------|--------|
-| Commission Fees | 30% of revenue | 0% | ✅ Achieved |
-| Order Errors | 15% of orders | <2% | 🎯 Targeted |
-| Customer Wait Time | 15 minutes | 10 minutes | 📊 Measurable |
-| Data Collection | None | 100% customer profiles | ✅ Achieved |
-
-## 🎓 Skills Demonstrated
-
-| Skill Category | Specific Skills |
-|---------------|----------------|
-| **Core BA Skills** | Requirements Elicitation, Process Modeling, Stakeholder Management |
-| **Technical Skills** | BPMN 2.0, UML, ERD, API Specifications, User Story Writing |
-| **Tools Proficiency** | Jira, Figma, Lucidchart, Draw.io, Google Workspace |
-| **Soft Skills** | Communication, Presentation, Critical Thinking, Problem-Solving |
-| **Methodologies** | Agile/Scrum, Waterfall-hybrid, User-Centered Design |
-
-## 🔗 Live Links & Resources
-
-### Interactive Materials
-- **[Figma Prototype](https://www.figma.com/proto/your-link-here)** - Interactive clickable prototype
-- **[Jira Board](https://yourname.atlassian.net/jira/)** - Full backlog & sprint planning (request access)
-- **[Process Diagrams](assets/docs/Foodora_Process_Diagrams.pdf)** - Complete diagram collection
-
-### Documentation
-- **[Full PRD Document](assets/docs/Foodora_PRD_v1.0.pdf)** - Complete Product Requirements Document
-- **[Business Case](assets/docs/Foodora_Business_Case.pdf)** - Problem statement & ROI analysis
-- **[UAT Package](assets/docs/Foodora_UAT_Package.pdf)** - Test plans and results
-
-## 📝 How to Navigate This Portfolio
-
-1. **Start with the Problem** → Read Business Case
-2. **Understand the Users** → View Personas & Journey Maps
-3. **See the Solution** → Explore Figma Prototype
-4. **Review the Process** → Examine BPMN Diagrams
-5. **Check Implementation** → View Jira Backlog
-6. **Validate Quality** → Review UAT Test Cases
-
-## 🧠 Key Learnings & Insights
-
-1. **Stakeholder Alignment is Critical**: Regular check-ins with both restaurant owners and staff prevented scope creep.
-2. **Visuals Communicate Better**: A well-crafted journey map conveyed more than 10 pages of text requirements.
-3. **UAT Uncovers Hidden Assumptions**: Testing revealed that "5-minute pickup" needed clearer definition.
-4. **Tool Proficiency Accelerates Delivery**: Mastering Jira and Figma shortcuts saved ~20 hours of work.
-
-## 👨‍💻 About the Analyst
-
-**Your Name**  
-Aspiring Business Analyst with passion for translating business needs into technical solutions.
-
-📫 **Connect with me:** 
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
-- Portfolio: [Full Portfolio Site](https://yourportfolio.com)
-
----
-
-*Note: This is a conceptual project created for portfolio purposes. All data, businesses, and metrics are fictional but based on real industry challenges.*
+- This is a portfolio project; the company/product is conceptual.
+- The repository is intentionally kept free of generator scripts and temp artifacts to stay GitHub-ready.

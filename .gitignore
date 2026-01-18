@@ -1,0 +1,27 @@
+# Python / virtual env
+.venv/
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Local temp / exports
+.tmp_docx/
+*.tmp
+*.bak
+*.bkp
+*.dtmp
+
+# Draw.io autosave / lock artifacts
+.$*.drawio.bkp
+.$*.drawio.dtmp
+.$*.drawio
+
+# OS / editor
+.DS_Store
+Thumbs.db
+
+# Tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

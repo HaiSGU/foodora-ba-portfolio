@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f7fa"/>
+      <stop offset="1" stop-color="#c3cfe2"/>
+    </linearGradient>
+    <style>
+      .title{font:700 34px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#111827}
+      .sub{font:400 18px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#374151}
+      .h{font:700 16px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#111827}
+      .t{font:400 15px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#111827}
+      .m{fill:#6b7280}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="600" fill="url(#g)"/>
+
+  <text x="60" y="90" class="title">Test Summary Report (IEEE 829)</text>
+  <text x="60" y="125" class="sub">FOODORA Pickup MVP — includes sign-off approvals (DOCX)</text>
+
+  <g transform="translate(60,170)">
+    <rect x="0" y="0" width="1080" height="360" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+
+    <g transform="translate(28,26)">
+      <text x="0" y="22" class="h">Report Identifier (IEEE 829)</text>
+      <rect x="0" y="36" width="1024" height="92" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+      <text x="14" y="62" class="t">Document: IEEE829-TSR-FOODORA-MVP | Version: 1.0</text>
+      <text x="14" y="84" class="t">Test Item: FOODORA — Order &amp; Pick-up (MVP) | Release: v1.0</text>
+      <text x="14" y="106" class="t m">Execution sheet: UAT_Test_Cases_Template.xlsx</text>
+
+      <text x="0" y="160" class="h">Summary &amp; Sign-off</text>
+      <rect x="0" y="174" width="1024" height="86" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+      <text x="14" y="202" class="t">Approve deployment based on IEEE 829 Test Summary Report.</text>
+      <text x="14" y="226" class="t m">(VN) Tôi phê duyệt triển khai phiên bản 1.0 dựa trên kết quả UAT.</text>
+
+      <text x="0" y="304" class="h">Approvals</text>
+      <rect x="0" y="318" width="1024" height="62" rx="10" fill="#f9fafb" stroke="#e5e7eb"/>
+      <text x="14" y="348" class="t">Business Owner | Product Owner | BA | QA Lead</text>
+    </g>
+  </g>
+</svg>

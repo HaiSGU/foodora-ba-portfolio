@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="600" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f5f7fa"/>
+      <stop offset="1" stop-color="#c3cfe2"/>
+    </linearGradient>
+    <style>
+      .title{font:700 34px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#111827}
+      .sub{font:400 18px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#374151}
+      .cellH{font:700 16px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#111827}
+      .cell{font:400 15px system-ui, -apple-system, Segoe UI, Roboto, Arial; fill:#111827}
+      .muted{fill:#6b7280}
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1200" height="600" fill="url(#g)"/>
+
+  <text x="60" y="90" class="title">UAT Test Plan &amp; Cases</text>
+  <text x="60" y="125" class="sub">FOODORA Pickup MVP — sample sheet preview (CSV)</text>
+
+  <g transform="translate(60,170)">
+    <rect x="0" y="0" width="1080" height="360" rx="14" fill="#ffffff" stroke="#e5e7eb"/>
+
+    <g transform="translate(24,26)">
+      <rect x="0" y="0" width="1032" height="44" rx="10" fill="#f3f4f6" stroke="#e5e7eb"/>
+      <text x="14" y="28" class="cellH">TC_ID</text>
+      <text x="150" y="28" class="cellH">Scenario</text>
+      <text x="420" y="28" class="cellH">Description</text>
+      <text x="760" y="28" class="cellH">Expected</text>
+
+      <g transform="translate(0,64)">
+        <rect x="0" y="0" width="1032" height="56" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="14" y="34" class="cell">TC-03</text>
+        <text x="150" y="34" class="cell">S1 Place Pickup Order</text>
+        <text x="420" y="26" class="cell">Place order (Pay at counter)</text>
+        <text x="420" y="46" class="cell muted">UC07/UC08</text>
+        <text x="760" y="34" class="cell">Order created as PLACED; confirmation shows ID</text>
+      </g>
+
+      <g transform="translate(0,134)">
+        <rect x="0" y="0" width="1032" height="56" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="14" y="34" class="cell">TC-05</text>
+        <text x="150" y="34" class="cell">S2 Cancel/Reject Rules</text>
+        <text x="420" y="26" class="cell">Customer cancels at PLACED</text>
+        <text x="420" y="46" class="cell muted">UC09</text>
+        <text x="760" y="34" class="cell">Order becomes CANCELLED; cancel button removed</text>
+      </g>
+
+      <g transform="translate(0,204)">
+        <rect x="0" y="0" width="1032" height="56" rx="10" fill="#ffffff" stroke="#e5e7eb"/>
+        <text x="14" y="34" class="cell">TC-08</text>
+        <text x="150" y="34" class="cell">S3 Status Updates + Payment</text>
+        <text x="420" y="26" class="cell">Update status to READY</text>
+        <text x="420" y="46" class="cell muted">UC15</text>
+        <text x="760" y="34" class="cell">Customer tracking reflects PREPARING → READY</text>
+      </g>
+
+      <text x="0" y="320" class="sub" fill="#6b7280">Tip: import CSV into Google Sheets, then fill Actual/Result/Tester</text>
+    </g>
+  </g>
+</svg>
