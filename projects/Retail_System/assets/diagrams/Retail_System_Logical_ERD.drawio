@@ -1,0 +1,265 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram id="erd-1" name="Logical ERD">
+    <mxGraphModel dx="4482" dy="2332" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="&lt;div style=&quot;font-size:20px;&quot;&gt;&lt;b&gt;ERD — Retail Operations Backoffice (Logical / High-level)&lt;/b&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=middle;spacing=6;fillColor=none;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="180" y="-100" width="920" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="legend" value="&lt;div style=&quot;font-size:13px;&quot;&gt;&lt;b&gt;Legend&lt;/b&gt;&lt;br/&gt;• PK = Primary Key&lt;br/&gt;• FK = Foreign Key&lt;br/&gt;• Edge label shows target multiplicity: 1..n, 0..1, 0..n&lt;br/&gt;• Scope: Backoffice operations (Sales/Inventory/Purchasing/Finance)&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=10;fillColor=#f3f4f6;strokeColor=#9ca3af;" parent="1" vertex="1">
+          <mxGeometry x="-360" y="890" width="360" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="branch" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Branch&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;address&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="60" y="70" width="140" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="user" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;User&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;user_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;username&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-330" y="235" width="200" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="role" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Role&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;role_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-250" y="400" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="user_role" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;UserRole&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;role_id → Role&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-550" y="390" width="180" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="product" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Product (SKU)&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;product_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;unit&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="400" y="-40" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="inv" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;InventoryBalance&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;product_id → Product&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;on_hand_qty&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;reserved_qty&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="770" y="50" width="200" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="sale" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Sale / Invoice&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;sale_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;created_by_user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;total_amount&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="400" y="560" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="sale_item" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;SaleItem&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;sale_id → Sale&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;product_id → Product&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;qty&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;unit_price&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="800" y="580" width="210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="supplier" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Supplier&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;supplier_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1230" y="120" width="150" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="po" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;PurchaseOrder&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;po_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;supplier_id → Supplier&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1200" y="300" width="210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="cash" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;CashbookEntry&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;entry_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;type&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;amount&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;ref_doc_id (nullable)&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1210" y="645" width="210" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="promotion" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Promotion&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;promotion_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch (optional)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;start_date / end_date&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="920" y="230" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="promotion_product" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;PromotionProduct&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;promotion_id → Promotion&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;product_id → Product&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="660" y="250" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="stocktake" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;StocktakeSession&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;stocktake_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;created_by_user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="-195" y="660" width="250" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="stocktake_line" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;StocktakeLine&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;stocktake_id → StocktakeSession&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;product_id → Product&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;counted_qty / variance_qty&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="360" y="805" width="280" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="transfer" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;TransferOrder&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;transfer_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;from_branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;to_branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK3&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;created_by_user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1260" y="465" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="transfer_item" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;TransferItem&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;transfer_id → TransferOrder&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;product_id → Product&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;qty_requested / qty_received&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1630" y="480" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="writeoff" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;WriteOff&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;writeoff_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;branch_id → Branch&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;created_by_user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;reason_code / status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1330" y="1020" width="240" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="writeoff_item" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;WriteOffItem&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;writeoff_id → WriteOff&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;product_id → Product&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;qty&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
+          <mxGeometry x="1640" y="870" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="e_branch_user" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="user" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_user_userrole" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="user" target="user_role" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_role_userrole" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="role" target="user_role" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-250" y="450" />
+              <mxPoint x="-300" y="450" />
+              <mxPoint x="-300" y="430" />
+              <mxPoint x="-360" y="430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_branch_inv" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="inv" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="180" />
+              <mxPoint x="760" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_product_inv" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="product" target="inv" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="860" y="10" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_branch_sale" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="sale" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="680" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_user_sale" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="user" target="sale" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-70" y="500" />
+              <mxPoint x="180" y="500" />
+              <mxPoint x="180" y="700" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sale_saleitem" value="1..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="sale" target="sale_item" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_product_saleitem" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="product" target="sale_item" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="550" y="420" />
+              <mxPoint x="960" y="420" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_supplier_po" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="supplier" target="po" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_branch_po" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="po" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="260" />
+              <mxPoint x="340" y="260" />
+              <mxPoint x="340" y="410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_branch_cash" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="cash" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="725" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_sale_cash" value="0..n (ref)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" parent="1" source="sale" target="cash" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="820" />
+              <mxPoint x="1200" y="820" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_branch_promo" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="promotion" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="320" y="210" />
+              <mxPoint x="760" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_promo_promoproduct" value="1..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="promotion" target="promotion_product" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_product_promoproduct" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=1.031;exitY=0.628;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="product" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="705" y="40" />
+            </Array>
+            <mxPoint x="540" y="40" as="sourcePoint" />
+            <mxPoint x="705" y="265" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_branch_stocktake" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="stocktake" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-40" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_user_stocktake" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="user" target="stocktake" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="-20" y="290" />
+              <mxPoint x="-20" y="460" />
+              <mxPoint x="220" y="460" />
+              <mxPoint x="220" y="740" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_stocktake_stocktakeline" value="1..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="stocktake" target="stocktake_line" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="760" />
+              <mxPoint x="310" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_product_stocktakeline" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="product" target="stocktake_line" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="360" y="25" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_branch_transfer" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="transfer" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="200" y="260" />
+              <mxPoint x="200" y="520" />
+              <mxPoint x="1200" y="520" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_user_transfer" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="user" target="transfer" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="240" y="280" />
+              <mxPoint x="240" y="540" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_transfer_transferitem" value="1..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="transfer" target="transfer_item" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_product_transferitem" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;entryX=0.25;entryY=0;entryDx=0;entryDy=0;" parent="1" source="product" target="transfer_item" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1695" y="-20" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_branch_writeoff" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="branch" target="writeoff" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="120" y="940" />
+              <mxPoint x="1450" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_user_writeoff" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="user" target="writeoff" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="160" y="330" />
+              <mxPoint x="160" y="980" />
+              <mxPoint x="1420" y="980" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="e_writeoff_writeoffitem" value="1..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="writeoff" target="writeoff_item" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_product_writeoffitem" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="product" target="writeoff_item" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="650" y="60" />
+              <mxPoint x="650" y="900" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

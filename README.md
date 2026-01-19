@@ -36,6 +36,7 @@ Recommended GitHub repo name: `BA-portfolio`.
 
 - Foodora — Order & Pick-up (MVP): [projects/foodora-mvp/project-overview.html](projects/foodora-mvp/project-overview.html)
 - Retail Operations Backoffice: [projects/Retail_System/project-overview.html](projects/Retail_System/project-overview.html)
+- SAP ERP — Order-to-Cash (O2C): [projects/SAP_ERP/project-overview.html](projects/SAP_ERP/project-overview.html)
 
 ## Deliverables (Foodora)
 

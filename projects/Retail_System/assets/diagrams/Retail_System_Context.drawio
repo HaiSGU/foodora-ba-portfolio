@@ -1,0 +1,154 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram id="context-1" name="System Context">
+    <mxGraphModel dx="732" dy="358" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="Retail Operations Backoffice — Context Diagram (DFD / Level 0)" style="text;html=1;strokeColor=none;fillColor=none;fontSize=16;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="30" width="980" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="sys" value="Retail\nBackoffice" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#1d4ed8;strokeColor=#1e3a8a;fontColor=#ffffff;fontSize=15;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="520" y="300" width="200" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_cashier" value="Cashier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="130" y="220" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_warehouse" value="Warehouse Staff" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="70" y="290" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_inventory" value="Inventory Staff" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="40" y="370" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_manager" value="Branch Manager" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="110" y="480" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_purchasing" value="Purchasing Staff" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="910" y="210" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_accountant" value="Cashbook Clerk" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="960" y="330" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_admin" value="System Admin" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="930" y="490" width="190" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ext_supplier" value="Supplier" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;" parent="1" vertex="1">
+          <mxGeometry x="520" y="120" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ent_hqops" value="HQ Operations" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e5e7eb;strokeColor=#374151;" parent="1" vertex="1">
+          <mxGeometry x="500" y="620" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_sales" value="Sales Ledger\n(Invoices/Receipts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="120" width="220" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_inventory" value="Inventory Records\n(Stock/Movements)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="60" y="600" width="240" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="ds_master" value="Master Data\n(Products/Suppliers/Users)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="860" y="110" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="f_cashier_in" value="Sales entry / payment input" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_cashier" target="sys" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_cashier_out" value="Invoice / receipt" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_cashier" edge="1">
+          <mxGeometry x="-0.4226" y="-1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_wh_in" value="Transfer / write-off handling" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_warehouse" target="sys" edge="1">
+          <mxGeometry x="0.2153" y="-6" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_wh_out" value="Transfer docs / stock status" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_warehouse" edge="1">
+          <mxGeometry x="0.5436" y="3" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_inv_in" value="Stocktake / adjustments" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_inventory" target="sys" edge="1">
+          <mxGeometry x="0.4194" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_inv_out" value="Stock levels / alerts" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_inventory" edge="1">
+          <mxGeometry x="0.4194" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_mgr_in" value="Approvals / queries" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_manager" target="sys" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_mgr_out" value="KPIs / reports" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_manager" edge="1">
+          <mxGeometry x="-0.329" y="-6" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_po_in" value="PO / GRN processing" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_purchasing" target="sys" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_po_out" value="PO status" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_purchasing" edge="1">
+          <mxGeometry x="0.3403" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_fin_in" value="Cashbook / reconciliation" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_accountant" target="sys" edge="1">
+          <mxGeometry x="0.171" y="8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_fin_out" value="Cashbook reports / close status" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_accountant" edge="1">
+          <mxGeometry x="0.2567" y="7" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_admin_in" value="User/role configuration" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_admin" target="sys" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_admin_out" value="Audit logs / status" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_admin" edge="1">
+          <mxGeometry x="0.2801" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_supplier_out" value="Purchase order / returns" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#2563eb;" parent="1" source="sys" target="ext_supplier" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_supplier_in" value="Delivery note / invoice" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#2563eb;" parent="1" source="ext_supplier" target="sys" edge="1">
+          <mxGeometry x="-0.3333" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_hq_in" value="Policies / oversight requests" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="ent_hqops" target="sys" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_hq_out" value="Consolidated reports" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#374151;" parent="1" source="sys" target="ent_hqops" edge="1">
+          <mxGeometry x="-0.5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_sales_store" value="Sales transactions" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#b85450;" parent="1" source="sys" target="ds_sales" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_sales_read" value="Sales history" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#b85450;" parent="1" source="ds_sales" target="sys" edge="1">
+          <mxGeometry x="0.192" y="-4" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_inv_store" value="Stock updates" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#b85450;" parent="1" source="sys" target="ds_inventory" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_inv_read" value="Stock data" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#b85450;" parent="1" source="ds_inventory" target="sys" edge="1">
+          <mxGeometry x="0.4018" y="-8" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="f_master_read" value="Reference data" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#b85450;" parent="1" source="ds_master" target="sys" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="f_master_write" value="Master data maintenance" style="curved=1;endArrow=block;endFill=1;html=1;strokeColor=#b85450;" parent="1" source="sys" target="ds_master" edge="1">
+          <mxGeometry x="-0.1815" y="-5" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
