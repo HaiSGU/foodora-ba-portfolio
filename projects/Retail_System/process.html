@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Process | Retail Operations Backoffice</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html" class="active">BA Process</a>
+                <a href="deliverables.html">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-route"></i> BA Process</h1>
+            <p class="subtitle">How I would run this as a real project (not just a diagram set)</p>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-magnifying-glass"></i> 1) Discovery</h2>
+            </div>
+            <ul>
+                <li><strong>Business goals:</strong> reduce stock variance, standardize operations, improve visibility.</li>
+                <li><strong>Users & roles:</strong> cashier, inventory staff, warehouse staff, store manager, admin.</li>
+                <li><strong>Constraints:</strong> multi-branch data, permissions, auditability, operational speed.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-people-group"></i> 2) Stakeholders & Access Control</h2>
+            </div>
+            <p>
+                A recruiter-friendly improvement is showing you understand roles, permissions, and audit.
+                This project naturally fits a role-based access control model.
+            </p>
+            <ul>
+                <li><strong>Branch manager:</strong> approvals, overrides, reporting.</li>
+                <li><strong>Cashier:</strong> sales-only actions, limited access to pricing/promotions.</li>
+                <li><strong>Inventory staff:</strong> stocktake, adjustments with reason codes.</li>
+                <li><strong>Admin:</strong> user management, system configuration.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-clipboard-list"></i> 3) Requirements Strategy</h2>
+            </div>
+            <ul>
+                <li><strong>Functional:</strong> defined via UC + sequence + activity (already present).</li>
+                <li><strong>Non-functional:</strong> performance, availability, security, usability.</li>
+                <li><strong>Edge cases:</strong> partial returns, cancelled transfers, negative stock rules, promo conflicts.</li>
+                <li><strong>Acceptance criteria:</strong> written in testable terms (Gherkin-style where helpful).</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-diagram-project"></i> 4) Modeling Approach</h2>
+            </div>
+            <ul>
+                <li><strong>Use Case:</strong> what the user can do (scope + responsibilities).</li>
+                <li><strong>Sequence:</strong> how interactions happen over time (services/data updates).</li>
+                <li><strong>Activity:</strong> rules + decision points (the process truth table).</li>
+            </ul>
+            <p style="margin-top: 10px; color: #718096;">
+                Your current assets already cover these 3 views — the upgrade is to make them consistent and traceable.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-vial"></i> 5) Validation (UAT-ready)</h2>
+            </div>
+            <ul>
+                <li>Define 1–2 high-value end-to-end scenarios (e.g., <em>Purchase → Stock → Sale → Cashbook</em>).</li>
+                <li>Create a test case set that maps back to UC IDs and activity decisions.</li>
+                <li>Provide a short sign-off summary (pass/fail counts + issues) to feel “real”.</li>
+            </ul>
+        </section>
+
+        <div class="process-navigation">
+            <a href="project-overview.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Overview
+            </a>
+            <a href="deliverables.html" class="btn btn-primary">
+                Deliverables <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>BA Portfolio | Case studies</p>
+        </div>
+    </footer>
+</body>
+</html>

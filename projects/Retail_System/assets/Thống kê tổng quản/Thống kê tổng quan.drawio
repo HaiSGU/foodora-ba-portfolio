@@ -1,0 +1,43 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/25.0.2 Chrome/128.0.6613.186 Electron/32.2.5 Safari/537.36" version="25.0.2">
+  <diagram name="Page-1" id="IdEyE8TZFvHJlwlBrLGG">
+    <mxGraphModel dx="1050" dy="669" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gq7nhwTSaAKE5YR8uJAB-1" target="gq7nhwTSaAKE5YR8uJAB-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-1" value="" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.start_2;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="405" y="20" width="40" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gq7nhwTSaAKE5YR8uJAB-2" target="gq7nhwTSaAKE5YR8uJAB-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-2" value="Đăng nhập" style="strokeWidth=2;html=1;shape=mxgraph.flowchart.terminator;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="375" y="110" width="100" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gq7nhwTSaAKE5YR8uJAB-4" target="gq7nhwTSaAKE5YR8uJAB-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-4" value="&lt;span style=&quot;font-size:11.0pt;line-height:&lt;br/&gt;115%;font-family:&amp;quot;Times New Roman&amp;quot;,serif;mso-fareast-font-family:&amp;quot;Times New Roman&amp;quot;;&lt;br/&gt;mso-ansi-language:#002A;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot; lang=&quot;vi&quot;&gt;Hệ thống hiển thị các chức năng cho Actor&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="298" y="220" width="255" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gq7nhwTSaAKE5YR8uJAB-6" target="gq7nhwTSaAKE5YR8uJAB-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-6" value="&lt;span style=&quot;font-size:11.0pt;line-height:&lt;br/&gt;115%;font-family:&amp;quot;Times New Roman&amp;quot;,serif;mso-fareast-font-family:&amp;quot;Times New Roman&amp;quot;;&lt;br/&gt;color:#15171A;background:white;mso-highlight:white;mso-ansi-language:#002A;&lt;br/&gt;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot; lang=&quot;vi&quot;&gt;Tại màn hình &lt;b&gt;Quản lý&lt;/b&gt;, kích &lt;b&gt;Tổng quan&lt;/b&gt;&lt;/span&gt;&lt;span style=&quot;font-size:11.0pt;line-height:&lt;br/&gt;115%;font-family:&amp;quot;Times New Roman&amp;quot;,serif;mso-fareast-font-family:&amp;quot;Times New Roman&amp;quot;;&lt;br/&gt;mso-ansi-language:#002A;mso-fareast-language:EN-US;mso-bidi-language:AR-SA&quot; lang=&quot;vi&quot;&gt;.&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="300.5" y="330" width="250" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="gq7nhwTSaAKE5YR8uJAB-8" target="gq7nhwTSaAKE5YR8uJAB-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-8" value="&lt;p style=&quot;margin-top:12.0pt;margin-right:7.0pt;margin-bottom:&lt;br/&gt;0in;margin-left:7.0pt;margin-bottom:.0001pt&quot; class=&quot;MsoNormal&quot;&gt;&lt;font&gt;&lt;span style=&quot;&quot; lang=&quot;vi&quot;&gt;Hệ thống hiển thị thông tin tổng quan, bao gồm:&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;; text-indent: -0.25in; background-color: initial;&quot;&gt;&amp;nbsp; d&lt;/span&gt;&lt;span style=&quot;text-indent: -0.25in; background-color: initial; font-family: &amp;quot;Times New Roman&amp;quot;, serif;&quot; lang=&quot;vi&quot;&gt;oanh thu theo thời gian,s&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;, serif; text-indent: -0.25in; background-color: initial;&quot;&gt;ố lượng đơn hàng,hàng hóa bán chạy&lt;/span&gt;&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;, serif; background-color: initial;&quot;&gt;.&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;" style="rounded=1;whiteSpace=wrap;html=1;absoluteArcSize=1;arcSize=14;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="279" y="440" width="292" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="gq7nhwTSaAKE5YR8uJAB-10" value="" style="ellipse;html=1;shape=endState;fillColor=#000000;strokeColor=#ff0000;" vertex="1" parent="1">
+          <mxGeometry x="405.5" y="610" width="40" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

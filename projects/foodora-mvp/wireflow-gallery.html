@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireflow Screenshots | Foodora BA Portfolio</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 20px;
+        }
+        .gallery-item {
+            background: #fff;
+            border: 1px solid #e2e8f0;
+            border-radius: 10px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .gallery-item:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            display: block;
+        }
+        .gallery-caption {
+            padding: 10px 12px;
+            font-size: 0.9rem;
+            color: #4a5568;
+            border-top: 1px solid #edf2f7;
+            background: #fff;
+        }
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            background: white;
+            padding: 16px;
+            border-radius: 12px;
+            max-width: 92%;
+            max-height: 92%;
+            overflow: auto;
+        }
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+        }
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">ðŸ” Foodora BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html">BA Process</a>
+                <a href="deliverables.html">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-images"></i> Wireflow Screenshots</h1>
+            <p class="subtitle">A curated gallery of key screens used in the prototype/wireflow</p>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-link"></i> Online Links</h2>
+            </div>
+            <div class="deliverable-actions" style="flex-wrap:wrap;">
+                <a class="btn" href="https://verify-curry-15074315.figma.site/" target="_blank"><i class="fas fa-external-link-alt"></i> Open Prototype Site</a>
+                <a class="btn btn-outline" href="https://www.figma.com/design/NQueQnkRGx1mzjQSiJAmkZ/FOODORA?node-id=0-1&p=f&t=baPHsMkBRzT6ttoh-0" target="_blank"><i class="fab fa-figma"></i> Open Figma Design</a>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-th"></i> Gallery</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <!-- Customer app (mobile) -->
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/M01-%20Menu.png')">
+                    <img src="assets/images/screenshots/wireflow/M01-%20Menu.png" alt="M01 - Menu">
+                    <div class="gallery-caption">M01 — Menu</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/M03%20Cart.png')">
+                    <img src="assets/images/screenshots/wireflow/M03%20Cart.png" alt="M03 - Cart">
+                    <div class="gallery-caption">M03 — Cart</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/M05%20Checkout.png')">
+                    <img src="assets/images/screenshots/wireflow/M05%20Checkout.png" alt="M05 - Checkout">
+                    <div class="gallery-caption">M05 — Checkout</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/M06%20Confirmation.png')">
+                    <img src="assets/images/screenshots/wireflow/M06%20Confirmation.png" alt="M06 - Confirmation">
+                    <div class="gallery-caption">M06 — Confirmation</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/M08%20Tracking%20%E2%80%93%20Placed.png')">
+                    <img src="assets/images/screenshots/wireflow/M08%20Tracking%20%E2%80%93%20Placed.png" alt="M08 - Tracking (Placed)">
+                    <div class="gallery-caption">M08 — Tracking (Placed)</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/M08%20Tracking%20%E2%80%93%20Ready.png')">
+                    <img src="assets/images/screenshots/wireflow/M08%20Tracking%20%E2%80%93%20Ready.png" alt="M08 - Tracking (Ready)">
+                    <div class="gallery-caption">M08 — Tracking (Ready)</div>
+                </div>
+
+                <!-- Restaurant dashboard (desktop) -->
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/D01%20Login.png')">
+                    <img src="assets/images/screenshots/wireflow/D01%20Login.png" alt="D01 - Login">
+                    <div class="gallery-caption">D01 — Login</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/D02%20Home.png')">
+                    <img src="assets/images/screenshots/wireflow/D02%20Home.png" alt="D02 - Home">
+                    <div class="gallery-caption">D02 — Home</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/D03%20Order%20Queue%20(Placed%20tab).png')">
+                    <img src="assets/images/screenshots/wireflow/D03%20Order%20Queue%20(Placed%20tab).png" alt="D03 - Order Queue (Placed)">
+                    <div class="gallery-caption">D03 — Order Queue (Placed)</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/D03%20Order%20Queue%20(Confirmed%20tab).png')">
+                    <img src="assets/images/screenshots/wireflow/D03%20Order%20Queue%20(Confirmed%20tab).png" alt="D03 - Order Queue (Confirmed)">
+                    <div class="gallery-caption">D03 — Order Queue (Confirmed)</div>
+                </div>
+                <div class="gallery-item" onclick="openModal('assets/images/screenshots/wireflow/D04%20Order%20Detail.png')">
+                    <img src="assets/images/screenshots/wireflow/D04%20Order%20Detail.png" alt="D04 - Order Detail">
+                    <div class="gallery-caption">D04 — Order Detail</div>
+                </div>
+            </div>
+
+            <p style="margin-top:12px; color:#718096;">
+                Tip: click any thumbnail to zoom.
+            </p>
+        </section>
+
+        <div class="process-navigation">
+            <a href="deliverables.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> Back to Deliverables
+            </a>
+        </div>
+    </div>
+
+    <!-- Image Preview Modal -->
+    <div id="previewModal" class="preview-modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Preview">
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('previewModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('previewModal').style.display = 'none';
+        }
+
+        document.getElementById('previewModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>

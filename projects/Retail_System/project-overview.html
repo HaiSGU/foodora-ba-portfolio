@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview | Retail Operations Backoffice</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html" class="active">Project Overview</a>
+                <a href="process.html">BA Process</a>
+                <a href="deliverables.html">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-store"></i> Retail Operations Backoffice</h1>
+            <p class="subtitle">Turning a course assignment into a recruiter-ready BA case study</p>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Problem Statement</h2>
+            </div>
+            <p>
+                Many small and mid-sized retail stores run daily operations using spreadsheets + informal processes.
+                This leads to stock variance, inconsistent pricing/promotions, weak audit trails, and slow reporting.
+                The goal of this project is to define a clear, end-to-end backoffice workflow that supports multi-branch
+                operations across sales, inventory, purchasing, transfers, and finance.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-flag-checkered"></i> Objectives</h2>
+            </div>
+            <ul>
+                <li><strong>Standardize processes</strong> across branches with clear use cases and flows.</li>
+                <li><strong>Increase traceability</strong> with consistent actors, permissions, and audit events.</li>
+                <li><strong>Reduce operational errors</strong> (stock mismatch, incorrect promotions, cashbook issues).</li>
+                <li><strong>Enable faster onboarding</strong> by documenting how the system should behave.</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-layer-group"></i> Scope (MVP Modules)</h2>
+            </div>
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <div class="deliverable-icon"><i class="fas fa-cash-register"></i></div>
+                        <h3>Sales (Bán hàng)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p>Checkout, invoices, customer payments, and sales lifecycle.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <div class="deliverable-icon"><i class="fas fa-boxes-stacked"></i></div>
+                        <h3>Inventory (Kiểm kho)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p>Stocktake, variance handling, and reconciliation.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <div class="deliverable-icon"><i class="fas fa-truck-ramp-box"></i></div>
+                        <h3>Purchasing (Nhập hàng)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p>Receiving goods, supplier invoices, and returns to supplier.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <div class="deliverable-icon"><i class="fas fa-route"></i></div>
+                        <h3>Transfers (Chuyển hàng)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p>Inter-branch transfers and transfer receiving workflows.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <div class="deliverable-icon"><i class="fas fa-tags"></i></div>
+                        <h3>Promotions (Khuyến mại)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p>Promotion setup, validation rules, and application logic.</p>
+                    </div>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <div class="deliverable-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3>Reporting (Thống kê)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p>Summary dashboards for management decisions.</p>
+                    </div>
+                </div>
+            </div>
+
+            <p style="margin-top: 10px; color: #718096;">
+                Full module diagram set is available on the Deliverables page.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-diagram-project"></i> What Exists Today (Course Output)</h2>
+            </div>
+            <ul>
+                <li><strong>Use Case diagrams</strong> per module (UC).</li>
+                <li><strong>Sequence diagrams</strong> for key flows (sequence).</li>
+                <li><strong>Activity diagrams</strong> for process logic (module workflow).</li>
+                <li><strong>UI screen design</strong> (where available / to be expanded).</li>
+            </ul>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-arrow-up-right-dots"></i> Recruiter-Grade Upgrades (Planned)</h2>
+            </div>
+            <ul>
+                <li><strong>PRD-lite</strong>: goals, scope, assumptions, constraints, NFRs, and edge cases.</li>
+                <li><strong>Requirements structure</strong>: user stories + acceptance criteria aligned to UC/sequence.</li>
+                <li><strong>Traceability</strong>: UC → requirements → test cases → defects (simple but credible).</li>
+                <li><strong>UAT pack</strong>: test cases template + summary report for 1–2 core scenarios.</li>
+            </ul>
+        </section>
+
+        <div class="process-navigation">
+            <a href="deliverables.html" class="btn btn-primary">
+                View Deliverables <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>BA Portfolio | Case studies</p>
+        </div>
+    </footer>
+</body>
+</html>

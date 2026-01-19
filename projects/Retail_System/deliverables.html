@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliverables | Retail Operations Backoffice</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .deliverable-actions { flex-wrap: wrap; }
+        .mini-note { color: #718096; margin-top: 10px; }
+        .tag { display:inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; background:#edf2f7; color:#2d3748; margin-right: 6px; margin-bottom: 6px; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html">BA Process</a>
+                <a href="deliverables.html" class="active">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-folder-open"></i> Deliverables</h1>
+            <p class="subtitle">Use case diagrams, sequence diagrams, activity diagrams (draw.io)</p>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-download"></i> Documents</h2>
+            </div>
+            <div class="deliverable-actions">
+                <a class="btn" href="assets/docs/Retail_Operations_Backoffice_UC_Descriptions.docx" target="_blank"><i class="fas fa-file-word"></i> UC Descriptions (VI source, DOCX)</a>
+                <a class="btn" href="assets/docs/PRD_Lite_EN.docx" target="_blank"><i class="fas fa-file-word"></i> PRD-lite (EN, DOCX)</a>
+                <a class="btn" href="assets/docs/Sample_User_Stories_EN.docx" target="_blank"><i class="fas fa-file-word"></i> Sample User Stories (EN, DOCX)</a>
+                <a class="btn" href="assets/docs/IIBA_Requirements_Scope_and_NFRs_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Requirements + Scope + NFRs (EN, DOCX)</a>
+                <a class="btn" href="assets/docs/IIBA_Stakeholder_Engagement_Approach_and_RACI_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Stakeholders + RACI (EN, DOCX)</a>
+                <a class="btn" href="assets/docs/IIBA_Role_and_Permissions_Matrix_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Roles + Permissions Matrix (EN, DOCX)</a>
+                <a class="btn" href="assets/docs/IIBA_Business_Rules_and_Decision_Tables_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Business Rules + Decision Tables (EN, DOCX)</a>
+                <a class="btn" href="assets/docs/IIBA_Requirements_Traceability_Matrix_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Requirements Traceability Matrix (EN, DOCX)</a>
+                <a class="btn" href="assets/docs/IIBA_UAT_Test_Cases_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA UAT Mini Pack (EN, DOCX)</a>
+                <a class="btn btn-outline" href="https://app.diagrams.net/" target="_blank"><i class="fas fa-up-right-from-square"></i> Open diagrams.net</a>
+            </div>
+            <p class="mini-note">
+                Tip: For any <code>.drawio</code> file, you can open diagrams.net → File → Open from Device.
+            </p>
+            <p class="mini-note">
+                Note: Markdown source files are kept in the repo for maintenance, but hidden from this page.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-diagram-project"></i> Diagram Library</h2>
+            </div>
+            <p class="mini-note">
+                Each module includes 3 artifacts: <strong>UC</strong>, <strong>Sequence</strong>, <strong>Activity</strong>.
+                This page is built to be recruiter-friendly: fast scanning, clear grouping, and direct downloads.
+            </p>
+
+            <div id="diagramGrid" class="deliverables-grid"></div>
+        </section>
+
+        <div class="process-navigation">
+            <a href="process.html" class="btn btn-secondary">
+                <i class="fas fa-arrow-left"></i> BA Process
+            </a>
+            <a href="learnings.html" class="btn btn-primary">
+                Learnings <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>BA Portfolio | Case studies</p>
+        </div>
+    </footer>
+
+    <script>
+        // Note: file/folder names include spaces + Vietnamese characters.
+        // We URL-encode paths when generating href to keep links working in browsers and GitHub Pages.
+        function toHref(relativePath) {
+            return encodeURI(relativePath);
+        }
+
+        const modules = [
+            {
+                name: 'Bán hàng (Sales)',
+                folder: 'assets/Bán hàng',
+                activity: 'Bán hàng.drawio',
+                sequence: 'sequence bán hàng.drawio',
+                useCase: 'UC bán hàng.drawio'
+            },
+            {
+                name: 'Chuyển hàng (Transfer)',
+                folder: 'assets/Chuyển hàng',
+                activity: 'chuyển hàng.drawio',
+                sequence: 'sequence chuyển hàng.drawio',
+                useCase: 'UC chuyển hàng.drawio'
+            },
+            {
+                name: 'Kiểm kho (Stocktake)',
+                folder: 'assets/Kiểm kho',
+                activity: 'Kiểm kho.drawio',
+                sequence: 'sequence kiểm kho.drawio',
+                useCase: 'UC Kiểm kho.drawio'
+            },
+            {
+                name: 'Nhập hàng (Receiving)',
+                folder: 'assets/Nhập hàng',
+                activity: 'Nhập hàng.drawio',
+                sequence: 'sequence nhập hàng.drawio',
+                useCase: 'UC nhập hàng.drawio'
+            },
+            {
+                name: 'Nhập hàng chi nhánh khác (Receive from other branch)',
+                folder: 'assets/Nhập hàng chi nhánh khác',
+                activity: 'Nhập hàng chi nhánh khác.drawio',
+                sequence: 'sequence nhập hàng chi nhánh khác.drawio',
+                useCase: 'UC nhập hàng chi nhánh khác.drawio'
+            },
+            {
+                name: 'Quản lý chi nhánh (Branch management)',
+                folder: 'assets/quản lý chi nhánh',
+                activity: 'quản lý chi nhánh.drawio',
+                sequence: 'sequence quản lý chi nhánh.drawio',
+                useCase: 'UC quản lý chi nhánh.drawio'
+            },
+            {
+                name: 'Quản lý hàng hóa (Product catalog)',
+                folder: 'assets/Quản lý hàng hóa',
+                activity: 'Quản lý hàng hóa.drawio',
+                sequence: 'sequence quản lý hàng hóa.drawio',
+                useCase: 'UC Quản lý hàng hóa.drawio'
+            },
+            {
+                name: 'Quản lý khuyến mại (Promotions)',
+                folder: 'assets/Quản lý khuyến mại',
+                activity: 'Khuyến mại.drawio',
+                sequence: 'sequence khuyến mại.drawio',
+                useCase: 'UC quản lý khuyến mại.drawio'
+            },
+            {
+                name: 'Quản lý nhân viên (Staff management)',
+                folder: 'assets/Quản lý nhân viên',
+                activity: 'Quản lý nhân viên.drawio',
+                sequence: 'sequence quản lý nhân viên.drawio',
+                useCase: 'UC Quản lý nhân viên.drawio'
+            },
+            {
+                name: 'Quản lý tài khoản (User accounts)',
+                folder: 'assets/Quản lý tài khoản',
+                activity: 'Quản lý tài khoản người dùng.drawio',
+                sequence: 'sequence quản lý tài khoản.drawio',
+                useCase: 'UC Quản lý tìa khoản người dùng.drawio'
+            },
+            {
+                name: 'Sổ quỹ (Cashbook)',
+                folder: 'assets/Sổ quỹ',
+                activity: 'Sổ quỹ.drawio',
+                sequence: 'sequence sổ quỹ.drawio',
+                useCase: 'UC sổ quỹ.drawio'
+            },
+            {
+                name: 'Thống kê tổng quan (Reporting)',
+                folder: 'assets/Thống kê tổng quản',
+                activity: 'Thống kê tổng quan.drawio',
+                sequence: 'sequence thống kê tổng quan.drawio',
+                useCase: 'UC thống kê tổng quan.drawio'
+            },
+            {
+                name: 'Trả hàng nhập (Return to supplier)',
+                folder: 'assets/Trả hàng nhập',
+                activity: 'Trả hàng nhập.drawio',
+                sequence: 'sequence trả hàng nhập.drawio',
+                useCase: 'UC trả hàng nhập.drawio'
+            },
+            {
+                name: 'Xuất hủy (Write-off)',
+                folder: 'assets/Xuất hủy',
+                activity: 'Xuất hủy.drawio',
+                sequence: 'sequence xuất hủy.drawio',
+                useCase: 'UC xuất hủy.drawio'
+            }
+        ];
+
+        function render() {
+            const grid = document.getElementById('diagramGrid');
+            grid.innerHTML = '';
+
+            modules.forEach(m => {
+                const activityPath = `${m.folder}/${m.activity}`;
+                const sequencePath = `${m.folder}/${m.sequence}`;
+                const useCasePath = `${m.folder}/${m.useCase}`;
+
+                const el = document.createElement('div');
+                el.className = 'deliverable-card';
+                el.innerHTML = `
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-design">Design</span>
+                        <div class="deliverable-icon"><i class="fas fa-diagram-project"></i></div>
+                        <h3>${m.name}</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <div style="margin-bottom: 10px;">
+                            <span class="tag">UC</span>
+                            <span class="tag">Sequence</span>
+                            <span class="tag">Activity</span>
+                        </div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="${toHref(useCasePath)}" target="_blank"><i class="fas fa-download"></i> UC Diagram</a>
+                            <a class="btn btn-small" href="${toHref(sequencePath)}" target="_blank"><i class="fas fa-download"></i> Sequence</a>
+                            <a class="btn btn-small" href="${toHref(activityPath)}" target="_blank"><i class="fas fa-download"></i> Activity</a>
+                        </div>
+                        <p class="mini-note">Folder: <code>${m.folder}</code></p>
+                    </div>
+                `;
+
+                grid.appendChild(el);
+            });
+        }
+
+        render();
+    </script>
+</body>
+</html>

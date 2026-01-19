@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodora BA Portfolio</title>
+    <title>BA Portfolio | Case Studies</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -11,13 +11,10 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="index.html" class="nav-logo">🍔 Foodora BA Portfolio</a>
+            <a href="index.html" class="nav-logo">BA Portfolio</a>
             <div class="nav-links">
                 <a href="index.html" class="active">Home</a>
-                <a href="pages/project-overview.html">Project Overview</a>
-                <a href="pages/process.html">BA Process</a>
-                <a href="pages/deliverables.html">Deliverables</a>
-                <a href="pages/learnings.html">Learnings</a>
+                <a href="#case-studies">Case Studies</a>
             </div>
         </div>
     </nav>
@@ -25,47 +22,58 @@
     <!-- Main Content -->
     <div class="container">
         <header class="page-header">
-            <h1><i class="fas fa-clipboard-list"></i> Foodora — Order & Pick-up (MVP)</h1>
-            <p class="subtitle">Business Analyst case study: discovery → requirements → design → UAT validation</p>
+            <h1><i class="fas fa-briefcase"></i> Business Analyst Portfolio</h1>
+            <p class="subtitle">Case studies and deliverables (discovery → requirements → design → validation)</p>
         </header>
 
-        <section class="content-section">
+        <section class="content-section" id="case-studies">
             <div class="section-header">
-                <h2><i class="fas fa-circle-info"></i> Overview</h2>
+                <h2><i class="fas fa-layer-group"></i> Case Studies</h2>
             </div>
-            <p>
-                <strong>Foodora</strong> is a portfolio case study for a pickup-only ordering MVP that helps local restaurants
-                reduce third-party delivery fees by enabling direct ordering and pickup scheduling.
-            </p>
-            <p>
-                This repository contains BA deliverables (PRD, use cases, BPMN, ERD, UAT package, traceability) presented
-                in a clean, static website format.
-            </p>
+
+            <div class="deliverables-grid">
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-validation">Featured</span>
+                        <div class="deliverable-icon"><i class="fas fa-burger"></i></div>
+                        <h3>Foodora — Order &amp; Pick-up (MVP)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Summary:</strong> Pickup-only ordering MVP for local restaurants (reduce delivery fees, improve customer experience).</p>
+                        <p><strong>Includes:</strong> PRD, BPMN, ERD, Wireflow, UAT (IEEE 829 aligned)</p>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="projects/foodora-mvp/project-overview.html"><i class="fas fa-play"></i> Open Case Study</a>
+                            <a class="btn btn-small btn-outline" href="projects/foodora-mvp/deliverables.html"><i class="fas fa-folder-open"></i> Deliverables</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-design">Design-focused</span>
+                        <div class="deliverable-icon"><i class="fas fa-store"></i></div>
+                        <h3>Retail Operations Backoffice</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Summary:</strong> Multi-branch retail backoffice covering sales, inventory, purchasing, transfers, cashbook, and reporting.</p>
+                        <p><strong>Includes:</strong> Use case diagrams, sequence diagrams, activity diagrams, and UC descriptions (course project upgraded into a case study).</p>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="projects/Retail_System/project-overview.html"><i class="fas fa-play"></i> Open Case Study</a>
+                            <a class="btn btn-small btn-outline" href="projects/Retail_System/deliverables.html"><i class="fas fa-folder-open"></i> Deliverables</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-bolt"></i> Quick Navigation</h2>
+                <h2><i class="fas fa-desktop"></i> View Locally</h2>
             </div>
-            <div class="deliverable-actions" style="justify-content:center; flex-wrap:wrap;">
-                <a class="btn" href="pages/project-overview.html"><i class="fas fa-project-diagram"></i> Project Overview</a>
-                <a class="btn btn-secondary" href="pages/process.html"><i class="fas fa-route"></i> BA Process</a>
-                <a class="btn btn-outline" href="pages/deliverables.html"><i class="fas fa-folder-open"></i> Deliverables</a>
-                <a class="btn btn-outline" href="pages/learnings.html"><i class="fas fa-lightbulb"></i> Learnings</a>
-            </div>
-        </section>
-
-        <section class="content-section">
-            <div class="section-header">
-                <h2><i class="fas fa-star"></i> Highlights</h2>
-            </div>
-            <ul>
-                <li><strong>PRD:</strong> <a href="assets/docs/PRD.docx" target="_blank">PRD.docx</a></li>
-                <li><strong>Use cases:</strong> <a href="assets/docs/Use%20Case%20Description.docx" target="_blank">Use Case Description.docx</a> and <a href="assets/images/diagrams/Use%20Case%20Diagram.drawio" target="_blank">Use Case Diagram.drawio</a></li>
-                <li><strong>Process model (BPMN):</strong> <a href="assets/images/diagrams/BPMN.drawio" target="_blank">BPMN.drawio</a></li>
-                <li><strong>Data model (ERD):</strong> <a href="assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio" target="_blank">ERD - Foodora MVP.drawio</a></li>
-                <li><strong>UAT package:</strong> <a href="assets/docs/UAT_Test_Cases_Template.xlsx" target="_blank">UAT_Test_Cases_Template.xlsx</a>, <a href="assets/docs/Foodora_Traceability_Matrix.xlsx" target="_blank">Traceability Matrix (IEEE 829)</a>, <a href="assets/docs/Foodora_UAT_Signoff_Form.docx" target="_blank">Test Summary Report (IEEE 829)</a></li>
-            </ul>
+            <ol>
+                <li>Open <strong>index.html</strong> in your browser (or use VS Code Live Server).</li>
+                <li>Select a case study from <strong>Case Studies</strong>.</li>
+            </ol>
         </section>
 
         <section class="content-section">
@@ -79,8 +87,8 @@
         </section>
 
         <div class="process-navigation">
-            <a href="pages/project-overview.html" class="btn btn-primary">
-                Start: Project Overview <i class="fas fa-arrow-right"></i>
+            <a href="projects/foodora-mvp/project-overview.html" class="btn btn-primary">
+                Open Foodora Case Study <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </div>
@@ -88,13 +96,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
-            <p>© 2024 Foodora Business Analyst Portfolio | Created for educational purposes</p>
+            <p>BA Portfolio | Created for educational purposes</p>
             <p class="footer-links">
                 <a href="index.html">Home</a> |
-                <a href="pages/project-overview.html">Project Overview</a> |
-                <a href="pages/process.html">BA Process</a> |
-                <a href="pages/deliverables.html">Deliverables</a> |
-                <a href="pages/learnings.html">Learnings</a>
+                <a href="projects/foodora-mvp/project-overview.html">Foodora</a> |
+                <a href="projects/Retail_System/project-overview.html">Retail Backoffice</a>
             </p>
         </div>
     </footer>
