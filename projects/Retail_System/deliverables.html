@@ -7,9 +7,160 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .deliverable-actions { flex-wrap: wrap; }
+        .deliverable-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid #667eea;
+            background: white;
+            color: #667eea;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .deliverable-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .deliverable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .deliverable-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .deliverable-phase {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .phase-discovery { background: #ffebee; color: #c62828; }
+        .phase-requirements { background: #e3f2fd; color: #1565c0; }
+        .phase-design { background: #e8f5e9; color: #2e7d32; }
+        .phase-validation { background: #fff3e0; color: #ef6c00; }
+
+        .deliverable-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: #667eea;
+        }
+
+        .deliverable-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .deliverable-tools {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .tool-tag {
+            background: #f0f4ff;
+            color: #667eea;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .deliverable-preview {
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .deliverable-preview img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .deliverable-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
         .mini-note { color: #718096; margin-top: 10px; }
-        .tag { display:inline-block; font-size: 12px; padding: 2px 8px; border-radius: 999px; background:#edf2f7; color:#2d3748; margin-right: 6px; margin-bottom: 6px; }
+
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
@@ -28,24 +179,157 @@
 
     <div class="container">
         <header class="page-header">
-            <h1><i class="fas fa-folder-open"></i> Deliverables</h1>
-            <p class="subtitle">Use case, sequence, and activity diagrams (PNG exports)</p>
+            <h1><i class="fas fa-folder-open"></i> BA Deliverables Portfolio</h1>
+            <p class="subtitle">Recruiter-friendly BA documentation pack (DOCX/XLSX/PNG)</p>
         </header>
+
+        <div class="deliverable-filter">
+            <button class="filter-btn active" data-filter="all">All Deliverables</button>
+            <button class="filter-btn" data-filter="discovery">Discovery Phase</button>
+            <button class="filter-btn" data-filter="requirements">Requirements Phase</button>
+            <button class="filter-btn" data-filter="design">Design Phase</button>
+            <button class="filter-btn" data-filter="validation">Validation Phase</button>
+        </div>
 
         <section class="content-section">
             <div class="section-header">
                 <h2><i class="fas fa-download"></i> Documents</h2>
             </div>
-            <div class="deliverable-actions">
-                <a class="btn" href="assets/docs/Retail_Operations_Backoffice_UC_Descriptions.docx" target="_blank"><i class="fas fa-file-word"></i> UC Descriptions (VI source, DOCX)</a>
-                <a class="btn" href="assets/docs/PRD_Lite_EN.docx" target="_blank"><i class="fas fa-file-word"></i> PRD-lite (EN, DOCX)</a>
-                <a class="btn" href="assets/docs/Sample_User_Stories_EN.docx" target="_blank"><i class="fas fa-file-word"></i> Sample User Stories (EN, DOCX)</a>
-                <a class="btn" href="assets/docs/IIBA_Requirements_Scope_and_NFRs_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Requirements + Scope + NFRs (EN, DOCX)</a>
-                <a class="btn" href="assets/docs/IIBA_Stakeholder_Engagement_Approach_and_RACI_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Stakeholders + RACI (EN, DOCX)</a>
-                <a class="btn" href="assets/docs/IIBA_Role_and_Permissions_Matrix_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Roles + Permissions Matrix (EN, DOCX)</a>
-                <a class="btn" href="assets/docs/IIBA_Business_Rules_and_Decision_Tables_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Business Rules + Decision Tables (EN, DOCX)</a>
-                <a class="btn" href="assets/docs/IIBA_Requirements_Traceability_Matrix_EN.docx" target="_blank"><i class="fas fa-file-word"></i> IIBA Requirements Traceability Matrix (EN, DOCX)</a>
-                <a class="btn" href="assets/docs/IIBA_UAT_Test_Cases.xlsx" target="_blank"><i class="fas fa-file-excel"></i> IIBA UAT Mini Pack (EN, XLSX)</a>
+            <div class="deliverables-grid">
+                <div class="deliverable-card" data-phase="requirements">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-requirements">Requirements</span>
+                        <div class="deliverable-icon"><i class="fas fa-file-word"></i></div>
+                        <h3>UC Descriptions</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Detailed use case narratives (VI source)</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">VI</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/Retail_Operations_Backoffice_UC_Descriptions.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="requirements">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-requirements">Requirements</span>
+                        <div class="deliverable-icon"><i class="fas fa-file-lines"></i></div>
+                        <h3>PRD-lite</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> High-level requirements and scope snapshot</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/PRD_Lite_EN.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="requirements">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-requirements">Requirements</span>
+                        <div class="deliverable-icon"><i class="fas fa-list"></i></div>
+                        <h3>Sample User Stories</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Story format examples with acceptance criteria</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/Sample_User_Stories_EN.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="requirements">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-requirements">Requirements</span>
+                        <div class="deliverable-icon"><i class="fas fa-list-check"></i></div>
+                        <h3>Requirements + Scope + NFRs</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Define functional scope and non-functional expectations</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/IIBA_Requirements_Scope_and_NFRs_EN.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="discovery">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-discovery">Discovery</span>
+                        <div class="deliverable-icon"><i class="fas fa-users"></i></div>
+                        <h3>Stakeholders + RACI</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Define responsibilities and engagement model</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/IIBA_Stakeholder_Engagement_Approach_and_RACI_EN.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="requirements">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-requirements">Requirements</span>
+                        <div class="deliverable-icon"><i class="fas fa-user-shield"></i></div>
+                        <h3>Roles + Permissions Matrix</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Define RBAC boundaries and permissions</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/IIBA_Role_and_Permissions_Matrix_EN.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="requirements">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-requirements">Requirements</span>
+                        <div class="deliverable-icon"><i class="fas fa-table"></i></div>
+                        <h3>Business Rules + Decision Tables</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Make rules testable and unambiguous</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/IIBA_Business_Rules_and_Decision_Tables_EN.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="validation">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-validation">Validation</span>
+                        <div class="deliverable-icon"><i class="fas fa-link"></i></div>
+                        <h3>Requirements Traceability Matrix</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Link requirements to tests for coverage</p>
+                        <div class="deliverable-tools"><span class="tool-tag">DOCX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/IIBA_Requirements_Traceability_Matrix_EN.docx" target="_blank"><i class="fas fa-download"></i> Download DOCX</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="validation">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-validation">Validation</span>
+                        <div class="deliverable-icon"><i class="fas fa-clipboard-check"></i></div>
+                        <h3>UAT Mini Pack</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Execute business acceptance tests (Excel-first template)</p>
+                        <div class="deliverable-tools"><span class="tool-tag">XLSX</span><span class="tool-tag">EN</span></div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/docs/IIBA_UAT_Test_Cases.xlsx" target="_blank"><i class="fas fa-download"></i> Download XLSX</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <p class="mini-note">
                 Tip: Diagrams are provided as PNG for quick viewing.
@@ -62,10 +346,60 @@
             <p class="mini-note">
                 These 3 diagrams provide a system-level view (context → end-to-end process → data model).
             </p>
-            <div class="deliverable-actions">
-                <a class="btn" href="assets/diagrams/Retail_System_Context.drawio.png" target="_blank"><i class="fas fa-image"></i> System Context (DFD Level 0) — PNG</a>
-                <a class="btn" href="assets/diagrams/Retail_System_BPMN_L0.drawio.png" target="_blank"><i class="fas fa-image"></i> End-to-End Process Map (BPMN L0) — PNG</a>
-                <a class="btn" href="assets/diagrams/Retail_System_Logical_ERD.drawio.png" target="_blank"><i class="fas fa-image"></i> Logical ERD — PNG</a>
+            <div class="deliverables-grid">
+                <div class="deliverable-card" data-phase="design">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-design">Design</span>
+                        <div class="deliverable-icon"><i class="fas fa-sitemap"></i></div>
+                        <h3>System Context (DFD Level 0)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> System boundaries and external entities</p>
+                        <div class="deliverable-tools"><span class="tool-tag">PNG</span></div>
+                        <div class="deliverable-preview">
+                            <img src="assets/diagrams/Retail_System_Context.drawio.png" alt="Retail Context" onclick="openModal(this.src)">
+                        </div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/diagrams/Retail_System_Context.drawio.png" target="_blank"><i class="fas fa-download"></i> Download PNG</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="design">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-design">Design</span>
+                        <div class="deliverable-icon"><i class="fas fa-stream"></i></div>
+                        <h3>Process Map (BPMN L0)</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> End-to-end business flow view</p>
+                        <div class="deliverable-tools"><span class="tool-tag">PNG</span></div>
+                        <div class="deliverable-preview">
+                            <img src="assets/diagrams/Retail_System_BPMN_L0.drawio.png" alt="Retail BPMN" onclick="openModal(this.src)">
+                        </div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/diagrams/Retail_System_BPMN_L0.drawio.png" target="_blank"><i class="fas fa-download"></i> Download PNG</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deliverable-card" data-phase="design">
+                    <div class="deliverable-header">
+                        <span class="deliverable-phase phase-design">Design</span>
+                        <div class="deliverable-icon"><i class="fas fa-database"></i></div>
+                        <h3>Logical ERD</h3>
+                    </div>
+                    <div class="deliverable-body">
+                        <p><strong>Purpose:</strong> Data entities and relationships</p>
+                        <div class="deliverable-tools"><span class="tool-tag">PNG</span></div>
+                        <div class="deliverable-preview">
+                            <img src="assets/diagrams/Retail_System_Logical_ERD.drawio.png" alt="Retail ERD" onclick="openModal(this.src)">
+                        </div>
+                        <div class="deliverable-actions">
+                            <a class="btn btn-small" href="assets/diagrams/Retail_System_Logical_ERD.drawio.png" target="_blank"><i class="fas fa-download"></i> Download PNG</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
@@ -216,24 +550,29 @@
 
                 const el = document.createElement('div');
                 el.className = 'deliverable-card';
+                el.dataset.phase = 'design';
                 el.innerHTML = `
                     <div class="deliverable-header">
                         <span class="deliverable-phase phase-design">Design</span>
-                        <div class="deliverable-icon"><i class="fas fa-diagram-project"></i></div>
+                        <div class="deliverable-icon"><i class="fas fa-layer-group"></i></div>
                         <h3>${m.name}</h3>
                     </div>
                     <div class="deliverable-body">
-                        <div style="margin-bottom: 10px;">
-                            <span class="tag">UC</span>
-                            <span class="tag">Sequence</span>
-                            <span class="tag">Activity</span>
+                        <p><strong>Purpose:</strong> Module-level behavioral + interaction views</p>
+                        <div class="deliverable-tools">
+                            <span class="tool-tag">PNG</span>
+                            <span class="tool-tag">UC</span>
+                            <span class="tool-tag">Sequence</span>
+                            <span class="tool-tag">Activity</span>
+                        </div>
+                        <div class="deliverable-preview">
+                            <img src="${toHref(useCasePath)}" alt="${m.name} preview" loading="lazy" onclick="openModal('${toHref(useCasePath)}')">
                         </div>
                         <div class="deliverable-actions">
                             <a class="btn btn-small" href="${toHref(useCasePath)}" target="_blank"><i class="fas fa-image"></i> UC Diagram</a>
                             <a class="btn btn-small" href="${toHref(sequencePath)}" target="_blank"><i class="fas fa-image"></i> Sequence</a>
                             <a class="btn btn-small" href="${toHref(activityPath)}" target="_blank"><i class="fas fa-image"></i> Activity</a>
                         </div>
-                        <p class="mini-note">Folder: <code>${m.folder}</code></p>
                     </div>
                 `;
 
@@ -242,6 +581,46 @@
         }
 
         render();
+
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+
+                const filter = this.getAttribute('data-filter');
+                const cards = document.querySelectorAll('.deliverable-card');
+
+                cards.forEach(card => {
+                    if (filter === 'all' || card.getAttribute('data-phase') === filter) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+
+        function openModal(imageSrc) {
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('previewModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('previewModal').style.display = 'none';
+        }
+
+        document.getElementById('previewModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeModal();
+            }
+        });
     </script>
+
+    <div id="previewModal" class="preview-modal">
+        <span class="close-modal" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Preview">
+        </div>
+    </div>
 </body>
 </html>
