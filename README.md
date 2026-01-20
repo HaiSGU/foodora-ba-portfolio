@@ -5,7 +5,10 @@ Business Analyst portfolio hub with case studies covering discovery, requirement
 ## View the portfolio site
 
 - Open [index.html](index.html) in a browser (or use VS Code Live Server)
-- Navigate to [projects/foodora-mvp/deliverables.html](projects/foodora-mvp/deliverables.html) to download Foodora artifacts
+- Download artifacts from each project’s Deliverables page:
+	- Foodora: [projects/foodora-mvp/deliverables.html](projects/foodora-mvp/deliverables.html)
+	- Retail System: [projects/Retail_System/deliverables.html](projects/Retail_System/deliverables.html)
+	- SAP ERP (O2C): [projects/SAP_ERP/deliverables.html](projects/SAP_ERP/deliverables.html)
 
 ## Online links (recommended for recruiters)
 
@@ -13,32 +16,42 @@ Business Analyst portfolio hub with case studies covering discovery, requirement
 - Figma design file: [https://www.figma.com/design/NQueQnkRGx1mzjQSiJAmkZ/FOODORA](https://www.figma.com/design/NQueQnkRGx1mzjQSiJAmkZ/FOODORA)
 - Jira backlog: [https://nguyennhathai031004.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog](https://nguyennhathai031004.atlassian.net/jira/software/projects/SCRUM/boards/1/backlog)
 
-## Deliverables (downloadable)
-
-**Discovery**
-
-- Business Case: [projects/foodora-mvp/assets/docs/Business%20Case.docx](projects/foodora-mvp/assets/docs/Business%20Case.docx)
-- Stakeholder Analysis (matrix): [projects/foodora-mvp/assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio](projects/foodora-mvp/assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio)
-- User Personas: [projects/foodora-mvp/assets/docs/User%20Personas.docx](projects/foodora-mvp/assets/docs/User%20Personas.docx)
-- Customer Journey Map: [projects/foodora-mvp/assets/docs/Customer_Journey_Map.png](projects/foodora-mvp/assets/docs/Customer_Journey_Map.png)
-
-**Requirements**
-
-- PRD: [projects/foodora-mvp/assets/docs/PRD.docx](projects/foodora-mvp/assets/docs/PRD.docx)
-- Use Case Diagram: [projects/foodora-mvp/assets/images/diagrams/Use%20Case%20Diagram.drawio](projects/foodora-mvp/assets/images/diagrams/Use%20Case%20Diagram.drawio)
-- Use Case Descriptions: [projects/foodora-mvp/assets/docs/Use%20Case%20Description.docx](projects/foodora-mvp/assets/docs/Use%20Case%20Description.docx)
-
-## Repository name
-
-Recommended GitHub repo name: `BA-portfolio`.
-
 ## Case studies
 
 - Foodora — Order & Pick-up (MVP): [projects/foodora-mvp/project-overview.html](projects/foodora-mvp/project-overview.html)
 - Retail Operations Backoffice: [projects/Retail_System/project-overview.html](projects/Retail_System/project-overview.html)
 - SAP ERP — Order-to-Cash (O2C): [projects/SAP_ERP/project-overview.html](projects/SAP_ERP/project-overview.html)
 
-## Deliverables (Foodora)
+## Standards-based BA checklists (BABOK v3 + ISO/IEC/IEEE 29148)
+
+Project-specific checklists:
+
+- Foodora: [assets/docs/BA_Checklist_Foodora_MVP.xlsx](assets/docs/BA_Checklist_Foodora_MVP.xlsx)
+- Retail System: [assets/docs/BA_Checklist_Retail_System.xlsx](assets/docs/BA_Checklist_Retail_System.xlsx)
+- SAP ERP (O2C): [assets/docs/BA_Checklist_SAP_ERP.xlsx](assets/docs/BA_Checklist_SAP_ERP.xlsx)
+
+Reference/template files:
+
+- Template: [assets/docs/BA_Checklist_Template_BABOK_ISO.xlsx](assets/docs/BA_Checklist_Template_BABOK_ISO.xlsx)
+- Combined (filled): [assets/docs/BA_Checklist_BABOK_ISO_Filled.xlsx](assets/docs/BA_Checklist_BABOK_ISO_Filled.xlsx)
+
+## SQL showcase (SQL Server / T-SQL)
+
+Each project includes a canonical SQL showcase script with seed data so the queries return results:
+
+- Foodora: [projects/foodora-mvp/assets/sql/foodora_sql_showcase.sql](projects/foodora-mvp/assets/sql/foodora_sql_showcase.sql)
+- Retail System: [projects/Retail_System/assets/sql/retail_sql_showcase.sql](projects/Retail_System/assets/sql/retail_sql_showcase.sql)
+- SAP ERP (O2C): [projects/SAP_ERP/assets/sql/sap_o2c_sql_showcase.sql](projects/SAP_ERP/assets/sql/sap_o2c_sql_showcase.sql)
+
+To avoid forced downloads in the browser, the portfolio uses an in-browser SQL viewer:
+
+- Viewer page: [pages/sql-viewer.html](pages/sql-viewer.html)
+
+## Repository name
+
+Recommended GitHub repo name: `BA-portfolio`.
+
+## Selected deliverables (Foodora)
 
 - Backlog (documented): [projects/foodora-mvp/assets/docs/Jira%20Backlog%20and%20Technical%20Stories.docx](projects/foodora-mvp/assets/docs/Jira%20Backlog%20and%20Technical%20Stories.docx)
 
@@ -51,7 +64,6 @@ Recommended GitHub repo name: `BA-portfolio`.
 **Validation (UAT)**
 
 - UAT Test Cases (execution template): [projects/foodora-mvp/assets/docs/UAT_Test_Cases_Template.xlsx](projects/foodora-mvp/assets/docs/UAT_Test_Cases_Template.xlsx)
-- UAT Plan (markdown): [projects/foodora-mvp/assets/docs/UAT_Test_Plan_and_Cases.md](projects/foodora-mvp/assets/docs/UAT_Test_Plan_and_Cases.md)
 - Traceability Matrix (IEEE 829 aligned): [projects/foodora-mvp/assets/docs/Foodora_Traceability_Matrix.xlsx](projects/foodora-mvp/assets/docs/Foodora_Traceability_Matrix.xlsx)
 - Test Summary Report + Sign-off (IEEE 829 aligned): [projects/foodora-mvp/assets/docs/Foodora_UAT_Signoff_Form.docx](projects/foodora-mvp/assets/docs/Foodora_UAT_Signoff_Form.docx)
 
@@ -65,9 +77,11 @@ projects/foodora-mvp/assets/images/deliverables/ Foodora preview images used by 
 projects/foodora-mvp/assets/images/screenshots/  Foodora prototype/wireflow screenshots
 pages/                      Redirect stubs (backward compatibility)
 css/                        Shared styles
+assets/docs/                Shared portfolio artifacts (e.g., standards-based BA checklists)
+tools/                      Optional scripts used to generate checklist workbooks
 ```
 
 ## Notes
 
 - This is a portfolio project; the company/product is conceptual.
-- The repository is intentionally kept free of generator scripts and temp artifacts to stay GitHub-ready.
+- The site is static (HTML/CSS/JS) and is designed to be recruiter-friendly (viewable PDFs/SQL, plus downloads).
