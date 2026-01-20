@@ -233,7 +233,7 @@
                     <p><strong>Contents:</strong> Power/Interest matrix, communication strategies per stakeholder group</p>
                     
                     <div class="deliverable-tools">
-                        <span class="tool-tag">Draw.io</span>
+                        <span class="tool-tag">PNG</span>
                         <span class="tool-tag">Google Sheets</span>
                     </div>
                     
@@ -242,11 +242,8 @@
                     </div>
                     
                     <div class="deliverable-actions">
-                        <button class="btn btn-small" onclick="openDiagramsNetViewer('assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio')">
-                            <i class="fas fa-external-link-alt"></i> View Online
-                        </button>
-                        <a href="assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio" class="btn btn-small btn-outline" target="_blank">
-                            <i class="fas fa-download"></i> Download draw.io
+                        <a href="assets/images/diagrams/Stakeholder%20Analysis%20Matrix.drawio.png" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PNG
                         </a>
                     </div>
                 </div>
@@ -351,7 +348,7 @@
                     <p><strong>Contents:</strong> 8 use cases, 3 actors, system boundaries</p>
                     
                     <div class="deliverable-tools">
-                        <span class="tool-tag">Draw.io</span>
+                        <span class="tool-tag">PNG</span>
                         <span class="tool-tag">UML</span>
                     </div>
                     
@@ -360,11 +357,8 @@
                     </div>
                     
                     <div class="deliverable-actions">
-                        <button class="btn btn-small" onclick="openDiagramsNetViewer('assets/images/diagrams/Use%20Case%20Diagram.drawio')">
-                            <i class="fas fa-external-link-alt"></i> View Online
-                        </button>
-                        <a href="assets/images/diagrams/Use%20Case%20Diagram.drawio" class="btn btn-small btn-outline" target="_blank">
-                            <i class="fas fa-download"></i> Download draw.io
+                        <a href="assets/images/diagrams/Use%20Case%20Diagram.drawio.png" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PNG
                         </a>
                     </div>
                 </div>
@@ -413,7 +407,7 @@
                     <p><strong>Contents:</strong> Level 1 data flows, external entities, processes, data stores</p>
 
                     <div class="deliverable-tools">
-                        <span class="tool-tag">Draw.io</span>
+                        <span class="tool-tag">PNG</span>
                         <span class="tool-tag">DFD</span>
                     </div>
 
@@ -422,11 +416,8 @@
                     </div>
 
                     <div class="deliverable-actions">
-                        <button class="btn btn-small" onclick="openDiagramsNetViewer('assets/images/diagrams/Data%20Flow%20Diagram%20(DFD%20Level%201).drawio')">
-                            <i class="fas fa-external-link-alt"></i> View Online
-                        </button>
-                        <a href="assets/images/diagrams/Data%20Flow%20Diagram%20(DFD%20Level%201).drawio" class="btn btn-small btn-outline" target="_blank">
-                            <i class="fas fa-download"></i> Download draw.io
+                        <a href="assets/images/diagrams/Data%20Flow%20Diagram%20(DFD%20Level%201).drawio.png" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PNG
                         </a>
                     </div>
                 </div>
@@ -455,11 +446,8 @@
                     </div>
                     
                     <div class="deliverable-actions">
-                        <button class="btn btn-small" onclick="openDiagramsNetViewer('assets/images/diagrams/BPMN.drawio')">
-                            <i class="fas fa-external-link-alt"></i> View Online
-                        </button>
-                        <a href="assets/images/diagrams/BPMN.drawio" class="btn btn-small btn-outline" target="_blank">
-                            <i class="fas fa-download"></i> Download draw.io
+                        <a href="assets/images/diagrams/BPMN.drawio.png" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PNG
                         </a>
                     </div>
                 </div>
@@ -515,7 +503,7 @@
                     <p><strong>Contents:</strong> 8 entities, relationships, attributes, primary keys</p>
                     
                     <div class="deliverable-tools">
-                        <span class="tool-tag">Draw.io</span>
+                        <span class="tool-tag">PNG</span>
                         <span class="tool-tag">ERD</span>
                     </div>
                     
@@ -524,11 +512,8 @@
                     </div>
                     
                     <div class="deliverable-actions">
-                        <button class="btn btn-small" onclick="openDiagramsNetViewer('assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio')">
-                            <i class="fas fa-external-link-alt"></i> View Online
-                        </button>
-                        <a href="assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio" class="btn btn-small btn-outline" target="_blank">
-                            <i class="fas fa-download"></i> Download draw.io
+                        <a href="assets/images/diagrams/ERD%20-%20Foodora%20MVP.drawio.png" class="btn btn-small" target="_blank">
+                            <i class="fas fa-download"></i> Download PNG
                         </a>
                     </div>
                 </div>
@@ -555,9 +540,6 @@
                     <div class="deliverable-actions">
                         <a href="assets/docs/UAT_Test_Cases_Template.xlsx" class="btn btn-small" target="_blank">
                             <i class="fas fa-download"></i> Download XLSX
-                        </a>
-                        <a href="assets/docs/UAT_Test_Plan_and_Cases.md" class="btn btn-small btn-outline" target="_blank">
-                            <i class="fas fa-file-alt"></i> Open Test Plan
                         </a>
                     </div>
                 </div>
@@ -696,13 +678,6 @@
                 });
             });
         });
-
-        // Open draw.io files in diagrams.net viewer (no local draw.io needed)
-        function openDiagramsNetViewer(relativePath) {
-            const absoluteUrl = new URL(relativePath, window.location.href).href;
-            const viewerUrl = 'https://viewer.diagrams.net/?url=' + encodeURIComponent(absoluteUrl);
-            window.open(viewerUrl, '_blank', 'noopener');
-        }
 
         // Modal functionality
         function openModal(imageSrc) {

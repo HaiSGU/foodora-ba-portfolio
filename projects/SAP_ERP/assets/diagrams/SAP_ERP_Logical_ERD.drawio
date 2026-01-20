@@ -1,6 +1,6 @@
 <mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
   <diagram id="erd-sap-erp" name="Logical ERD">
-    <mxGraphModel dx="1281" dy="626" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
+    <mxGraphModel dx="5580" dy="1789" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1920" pageHeight="1080" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -11,61 +11,69 @@
           <mxGeometry x="1510" y="40" width="380" height="150" as="geometry" />
         </mxCell>
         <mxCell id="customer" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Customer&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;customer_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;credit_limit&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="40" y="120" width="150" height="100" as="geometry" />
+          <mxGeometry x="110" y="90" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="user" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;User&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;user_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;username&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="40" y="300" width="140" height="100" as="geometry" />
+          <mxGeometry x="20" y="300" width="140" height="100" as="geometry" />
         </mxCell>
         <mxCell id="role" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Role&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;role_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="40" y="480" width="130" height="80" as="geometry" />
+          <mxGeometry x="20" y="500" width="130" height="80" as="geometry" />
         </mxCell>
         <mxCell id="user_role" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;UserRole&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;role_id → Role&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="390" y="320" width="300" height="110" as="geometry" />
+          <mxGeometry x="250" y="320" width="170" height="80" as="geometry" />
         </mxCell>
         <mxCell id="material" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Material&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;material_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;name&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;base_uom&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="390" y="120" width="320" height="140" as="geometry" />
+          <mxGeometry x="390" y="120" width="150" height="100" as="geometry" />
         </mxCell>
         <mxCell id="pricing_condition" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;PricingCondition&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;condition_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;type / valid_from / valid_to&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="760" y="120" width="360" height="120" as="geometry" />
+          <mxGeometry x="760" y="120" width="230" height="90" as="geometry" />
         </mxCell>
         <mxCell id="pricing_condition_material" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;PricingConditionMaterial&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;condition_id → PricingCondition&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;material_id → Material&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;rate / currency&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="760" y="270" width="280" height="110" as="geometry" />
         </mxCell>
         <mxCell id="credit_block" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;CreditBlock&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;credit_block_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;customer_id → Customer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;sales_order_id → SalesOrder&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status / reason / created_at&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="120" width="340" height="190" as="geometry" />
+          <mxGeometry x="1200" y="120" width="260" height="140" as="geometry" />
         </mxCell>
         <mxCell id="sales_order" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;SalesOrder&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;sales_order_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;customer_id → Customer&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;created_by_user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status / net_value&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="390" y="470" width="240" height="130" as="geometry" />
         </mxCell>
         <mxCell id="sales_order_item" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;SalesOrderItem&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;sales_order_id → SalesOrder&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;material_id → Material&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;qty / net_price&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="800" y="470" width="250" height="110" as="geometry" />
+          <mxGeometry x="850" y="540" width="250" height="110" as="geometry" />
         </mxCell>
         <mxCell id="pricing_override" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;PricingOverrideRequest&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;override_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;sales_order_id → SalesOrder&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;requested_by_user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;reason / requested_at / status&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="360" width="340" height="190" as="geometry" />
+          <mxGeometry x="1200" y="360" width="260" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="vqrEnsbQvx7-eVuSxCn3-1" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="approval" target="payment">
+          <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="approval" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;Approval&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;approval_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;override_id → PricingOverrideRequest&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;approved_by_user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;decision / decided_at&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="580" width="340" height="180" as="geometry" />
+          <mxGeometry x="1175" y="550" width="310" height="140" as="geometry" />
         </mxCell>
         <mxCell id="billing_invoice" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;BillingInvoice&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;invoice_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;sales_order_id → SalesOrder&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;status / amount / created_at&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="390" y="720" width="360" height="150" as="geometry" />
+          <mxGeometry x="490" y="740" width="260" height="110" as="geometry" />
         </mxCell>
         <mxCell id="billing_invoice_item" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;BillingInvoiceItem&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;invoice_id → BillingInvoice&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;material_id → Material&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;qty / net_price&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="800" y="720" width="320" height="150" as="geometry" />
+          <mxGeometry x="920" y="740" width="240" height="110" as="geometry" />
         </mxCell>
         <mxCell id="payment" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;PaymentPosting&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;payment_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;invoice_id → BillingInvoice&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;amount / method / posted_at&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1200" y="800" width="340" height="140" as="geometry" />
+          <mxGeometry x="1205" y="830" width="250" height="120" as="geometry" />
         </mxCell>
         <mxCell id="credit_memo" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;CreditMemo&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;credit_memo_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;invoice_id → BillingInvoice&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;reason / status / created_at&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="40" y="720" width="320" height="150" as="geometry" />
+          <mxGeometry x="40" y="720" width="240" height="110" as="geometry" />
         </mxCell>
         <mxCell id="credit_memo_item" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#fff0d6;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;CreditMemoItem&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;credit_memo_id → CreditMemo&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK/FK2&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;material_id → Material&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;qty / amount&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#fff7e6;strokeColor=none;" parent="1" vertex="1">
           <mxGeometry x="40" y="890" width="260" height="110" as="geometry" />
         </mxCell>
         <mxCell id="audit_log" value="&lt;div&gt;&lt;table style=&quot;border-collapse:collapse;width:100%;font-size:13px;&quot;&gt;&lt;tr&gt;&lt;th colspan=&quot;2&quot; style=&quot;background:#e5e7eb;border:1px solid #111;padding:6px 8px;text-align:center;font-weight:700;&quot;&gt;AuditLog&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;width:52px;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;PK&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;audit_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;font-weight:700;text-align:center;&quot;&gt;FK1&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;user_id → User&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;ref_doc_type / ref_doc_id&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;&lt;/td&gt;&lt;td style=&quot;border:1px solid #111;padding:4px 6px;&quot;&gt;action / timestamp&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=0;fillColor=#ffffff;strokeColor=none;" parent="1" vertex="1">
-          <mxGeometry x="1570" y="250" width="320" height="170" as="geometry" />
+          <mxGeometry x="-240" y="460" width="230" height="140" as="geometry" />
         </mxCell>
         <mxCell id="e_user_userrole" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="user" target="user_role" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="340" y="380" />
+              <mxPoint x="340" y="380" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="e_role_userrole" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="role" target="user_role" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -78,18 +86,17 @@
         <mxCell id="e_customer_salesorder" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="customer" target="sales_order" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="200" y="240" />
-              <mxPoint x="200" y="560" />
-              <mxPoint x="390" y="560" />
+              <mxPoint x="185" y="535" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e_user_salesorder" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="user" target="sales_order" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="200" y="440" />
-              <mxPoint x="200" y="620" />
-              <mxPoint x="390" y="620" />
+              <mxPoint x="90" y="440" />
+              <mxPoint x="220" y="440" />
+              <mxPoint x="220" y="620" />
+              <mxPoint x="420" y="620" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -135,7 +142,8 @@
         <mxCell id="e_material_invoiceitem" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="material" target="billing_invoice_item" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="550" y="660" />
+              <mxPoint x="670" y="170" />
+              <mxPoint x="670" y="660" />
               <mxPoint x="960" y="660" />
             </Array>
           </mxGeometry>
@@ -159,37 +167,41 @@
         <mxCell id="e_creditmemo_creditmemoitem" value="1..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="credit_memo" target="credit_memo_item" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="e_material_creditmemoitem" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="material" target="credit_memo_item" edge="1">
+        <mxCell id="e_material_creditmemoitem" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;exitX=0.25;exitY=0;exitDx=0;exitDy=0;" parent="1" source="material" target="credit_memo_item" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="550" y="920" />
-              <mxPoint x="360" y="920" />
+              <mxPoint x="428" y="80" />
+              <mxPoint x="-260" y="80" />
+              <mxPoint x="-260" y="960" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_salesorder_creditblock" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="sales_order" target="credit_block" edge="1">
+        <mxCell id="e_salesorder_creditblock" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="sales_order" target="credit_block" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="750" y="520" />
-              <mxPoint x="1370" y="520" />
-              <mxPoint x="1370" y="310" />
+              <mxPoint x="1560" y="520" />
+              <mxPoint x="1560" y="225" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_user_audit" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" source="user" target="audit_log" edge="1">
+        <mxCell id="e_user_audit" value="0..n" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;" parent="1" target="audit_log" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="320" y="360" />
-              <mxPoint x="1570" y="360" />
+              <mxPoint x="20" y="350" />
+              <mxPoint x="-130" y="350" />
             </Array>
+            <mxPoint x="20" y="360" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="e_salesorder_audit" value="0..n (ref)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;" parent="1" source="sales_order" target="audit_log" edge="1">
+        <mxCell id="e_salesorder_audit" value="0..n (ref)" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;html=1;rounded=0;strokeWidth=2;dashed=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" parent="1" source="sales_order" target="audit_log" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="750" y="620" />
-              <mxPoint x="1730" y="620" />
+              <mxPoint x="380" y="568" />
+              <mxPoint x="380" y="670" />
+              <mxPoint x="-125" y="670" />
             </Array>
+            <mxPoint x="630" y="515" as="sourcePoint" />
+            <mxPoint x="1730" y="370" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
