@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="theme-retail">
     <nav class="navbar">
         <div class="nav-container">
             <a href="../../index.html" class="nav-logo">BA Portfolio</a>
@@ -23,80 +23,190 @@
 
     <div class="container">
         <header class="page-header">
-            <h1><i class="fas fa-route"></i> BA Process</h1>
-            <p class="subtitle">How I would run this as a real project (not just a diagram set)</p>
+            <h1><i class="fas fa-sitemap"></i> Business Analysis Process</h1>
+            <p class="subtitle">A structured, end-to-end BA approach for the Retail Operations Backoffice case study</p>
         </header>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-magnifying-glass"></i> 1) Discovery</h2>
+                <h2><i class="fas fa-road"></i> Project Timeline & Phases</h2>
             </div>
-            <ul>
-                <li><strong>Business goals:</strong> reduce stock variance, standardize operations, improve visibility.</li>
-                <li><strong>Users & roles:</strong> cashier, inventory staff, warehouse staff, store manager, admin.</li>
-                <li><strong>Constraints:</strong> multi-branch data, permissions, auditability, operational speed.</li>
-            </ul>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">01</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-search"></i> Discovery & Analysis</h3>
+                            <p><strong>Focus:</strong> goals, stakeholders, constraints, current-state pain points</p>
+                            <ul>
+                                <li>Define business outcomes (variance reduction, faster reporting)</li>
+                                <li>Identify actors and decision rights (approvals / overrides)</li>
+                                <li>Document core entities and audit events</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">02</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-file-alt"></i> Requirements Definition</h3>
+                            <p><strong>Focus:</strong> functional flows + NFRs + business rules</p>
+                            <ul>
+                                <li>Write FRs per module and end-to-end scenarios</li>
+                                <li>Capture NFRs (auditability, performance, security)</li>
+                                <li>Define decision tables (promotions, stock rules)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">03</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-pencil-ruler"></i> Modeling & Validation Prep</h3>
+                            <p><strong>Focus:</strong> make flows consistent and testable</p>
+                            <ul>
+                                <li>Align UC → sequence → activity per module</li>
+                                <li>Confirm edge cases (returns, negative stock, cancellations)</li>
+                                <li>Prepare traceability (requirements → tests)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">04</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-clipboard-check"></i> UAT & Sign-off</h3>
+                            <p><strong>Focus:</strong> acceptance-ready evidence</p>
+                            <ul>
+                                <li>UAT test cases in a recruiter-friendly XLSX template</li>
+                                <li>RTM coverage checks</li>
+                                <li>UAT summary and sign-off readiness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-people-group"></i> 2) Stakeholders & Access Control</h2>
+                <h2><i class="fas fa-users"></i> Stakeholder Analysis</h2>
             </div>
-            <p>
-                A recruiter-friendly improvement is showing you understand roles, permissions, and audit.
-                This project naturally fits a role-based access control model.
+
+            <div class="stakeholder-grid">
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar owner"><i class="fas fa-crown"></i></div>
+                    <h3>Business Owner</h3>
+                    <p><strong>Interest:</strong> High | <strong>Power:</strong> High</p>
+                    <p><strong>Key Concerns:</strong> shrinkage control, profitability, reporting</p>
+                </div>
+
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar staff"><i class="fas fa-user-tie"></i></div>
+                    <h3>Branch Manager</h3>
+                    <p><strong>Interest:</strong> High | <strong>Power:</strong> Medium</p>
+                    <p><strong>Key Concerns:</strong> approvals, overrides, daily operations</p>
+                </div>
+
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar customer"><i class="fas fa-cash-register"></i></div>
+                    <h3>Cashier / Inventory Staff</h3>
+                    <p><strong>Interest:</strong> High | <strong>Power:</strong> Low</p>
+                    <p><strong>Key Concerns:</strong> speed, usability, clear exception handling</p>
+                </div>
+
+                <div class="stakeholder-card">
+                    <div class="stakeholder-avatar dev"><i class="fas fa-code"></i></div>
+                    <h3>IT / Delivery Team</h3>
+                    <p><strong>Interest:</strong> Medium | <strong>Power:</strong> High</p>
+                    <p><strong>Key Concerns:</strong> clear rules, feasibility, testability</p>
+                </div>
+            </div>
+
+            <p class="mini-note">
+                This project naturally fits a role-based access control model (RBAC) with approvals and audit events.
             </p>
-            <ul>
-                <li><strong>Branch manager:</strong> approvals, overrides, reporting.</li>
-                <li><strong>Cashier:</strong> sales-only actions, limited access to pricing/promotions.</li>
-                <li><strong>Inventory staff:</strong> stocktake, adjustments with reason codes.</li>
-                <li><strong>Admin:</strong> user management, system configuration.</li>
-            </ul>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-clipboard-list"></i> 3) Requirements Strategy</h2>
+                <h2><i class="fas fa-comments"></i> Requirements Elicitation Techniques</h2>
             </div>
-            <ul>
-                <li><strong>Functional:</strong> defined via UC + sequence + activity (already present).</li>
-                <li><strong>Non-functional:</strong> performance, availability, security, usability.</li>
-                <li><strong>Edge cases:</strong> partial returns, cancelled transfers, negative stock rules, promo conflicts.</li>
-                <li><strong>Acceptance criteria:</strong> written in testable terms (Gherkin-style where helpful).</li>
-            </ul>
+
+            <div class="techniques-grid">
+                <div class="technique-card">
+                    <div class="technique-icon"><i class="fas fa-user-friends"></i></div>
+                    <h3>Stakeholder Interviews</h3>
+                    <p>Understand roles, approvals, and operational constraints across branches.</p>
+                </div>
+
+                <div class="technique-card">
+                    <div class="technique-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Workshops</h3>
+                    <p>Align on scope, prioritize modules, and resolve promo/stock rule conflicts.</p>
+                </div>
+
+                <div class="technique-card">
+                    <div class="technique-icon"><i class="fas fa-eye"></i></div>
+                    <h3>Observation</h3>
+                    <p>Follow day-to-day flows: receiving, transfers, cash closure, stocktake.</p>
+                </div>
+
+                <div class="technique-card">
+                    <div class="technique-icon"><i class="fas fa-file-signature"></i></div>
+                    <h3>Document & Diagram Review</h3>
+                    <p>Consolidate existing UC/sequence/activity diagrams into a consistent model.</p>
+                </div>
+            </div>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-diagram-project"></i> 4) Modeling Approach</h2>
+                <h2><i class="fas fa-project-diagram"></i> Process Modeling & Analysis</h2>
             </div>
-            <ul>
-                <li><strong>Use Case:</strong> what the user can do (scope + responsibilities).</li>
-                <li><strong>Sequence:</strong> how interactions happen over time (services/data updates).</li>
-                <li><strong>Activity:</strong> rules + decision points (the process truth table).</li>
-            </ul>
-            <p style="margin-top: 10px; color: #718096;">
-                Your current assets already cover these 3 views — the upgrade is to make them consistent and traceable.
-            </p>
-        </section>
 
-        <section class="content-section">
-            <div class="section-header">
-                <h2><i class="fas fa-vial"></i> 5) Validation (UAT-ready)</h2>
+            <div class="process-modeling">
+                <div class="process-as-is">
+                    <h3><i class="fas fa-history"></i> AS-IS (Common Reality)</h3>
+                    <p><strong>Typical pain points:</strong></p>
+                    <ul>
+                        <li>Spreadsheet-driven tracking with inconsistent updates</li>
+                        <li>Manual approvals/overrides without clear audit evidence</li>
+                        <li>Promo conflicts and unclear exception handling</li>
+                        <li>Delayed reporting and reconciliation</li>
+                    </ul>
+                </div>
+
+                <div class="process-to-be">
+                    <h3><i class="fas fa-rocket"></i> TO-BE (Defined Target Process)</h3>
+                    <img src="assets/diagrams/Retail_System_BPMN_L0.drawio.png" alt="Retail TO-BE BPMN" class="responsive-img">
+                    <p class="img-caption">
+                        Process model: <a href="assets/diagrams/Retail_System_BPMN_L0.drawio.png" target="_blank">BPMN L0 (PNG)</a>
+                    </p>
+                    <p><strong>Improvements:</strong></p>
+                    <ul>
+                        <li>Standardized workflows per module</li>
+                        <li>Decision points and exceptions made explicit</li>
+                        <li>RBAC boundaries and approvals</li>
+                        <li>Requirements-to-UAT traceability</li>
+                    </ul>
+                </div>
             </div>
-            <ul>
-                <li>Define 1–2 high-value end-to-end scenarios (e.g., <em>Purchase → Stock → Sale → Cashbook</em>).</li>
-                <li>Create a test case set that maps back to UC IDs and activity decisions.</li>
-                <li>Provide a short sign-off summary (pass/fail counts + issues) to feel “real”.</li>
-            </ul>
         </section>
 
         <div class="process-navigation">
             <a href="project-overview.html" class="btn btn-secondary">
-                <i class="fas fa-arrow-left"></i> Back to Overview
+                <i class="fas fa-arrow-left"></i> Previous: Project Overview
             </a>
             <a href="deliverables.html" class="btn btn-primary">
-                Deliverables <i class="fas fa-arrow-right"></i>
+                Next: Deliverables <i class="fas fa-arrow-right"></i>
             </a>
         </div>
     </div>

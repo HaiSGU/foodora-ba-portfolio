@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="theme-retail">
     <nav class="navbar">
         <div class="nav-container">
             <a href="../../index.html" class="nav-logo">BA Portfolio</a>
@@ -24,133 +24,186 @@
     <div class="container">
         <header class="page-header">
             <h1><i class="fas fa-store"></i> Retail Operations Backoffice</h1>
-            <p class="subtitle">Turning a course assignment into a recruiter-ready BA case study</p>
+            <p class="subtitle">Understanding the business problem and a practical backoffice solution scope</p>
         </header>
 
+        <section class="content-section key-artifacts">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Key Artifacts</h2>
+            </div>
+            <div class="artifact-chips">
+                <a class="artifact-chip" href="assets/diagrams/Retail_System_BPMN_L0.drawio.png" target="_blank"><i class="fas fa-diagram-project"></i> BPMN L0</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-sitemap"></i> Use Cases</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-code-branch"></i> Sequence / Activity</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-table"></i> Decision Tables</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-vial"></i> UAT Evidence</a>
+            </div>
+        </section>
+
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-bullseye"></i> Problem Statement</h2>
+                <h2><i class="fas fa-exclamation-triangle"></i> The Business Problem</h2>
+                <div class="section-badge problem">High Impact</div>
             </div>
+
             <p>
-                Many small and mid-sized retail stores run daily operations using spreadsheets + informal processes.
-                This leads to stock variance, inconsistent pricing/promotions, weak audit trails, and slow reporting.
-                The goal of this project is to define a clear, end-to-end backoffice workflow that supports multi-branch
-                operations across sales, inventory, purchasing, transfers, and finance.
+                Many small and mid-sized retail stores still run daily operations with spreadsheets and informal procedures.
+                The result is inconsistent data, weak controls, and slow decision-making.
             </p>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon inefficiency"><i class="fas fa-boxes-stacked"></i></div>
+                    <h3>Stock Variance</h3>
+                    <p><strong>Frequent mismatches</strong> between system stock and physical count</p>
+                    <p>Adjustments lack consistent reason codes and approvals</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon data-loss"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Weak Audit Trail</h3>
+                    <p><strong>Hard to trace</strong> who changed price/stock/promo and why</p>
+                    <p>Limited accountability across branches</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon experience"><i class="fas fa-tags"></i></div>
+                    <h3>Promo / Pricing Inconsistency</h3>
+                    <p><strong>Conflicting promotions</strong> and manual overrides</p>
+                    <p>Inconsistent application across branches</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon revenue-loss"><i class="fas fa-chart-line"></i></div>
+                    <h3>Slow Reporting</h3>
+                    <p><strong>Late visibility</strong> into sales, inventory, and cashbook status</p>
+                    <p>Decisions made with incomplete information</p>
+                </div>
+            </div>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-flag-checkered"></i> Objectives</h2>
+                <h2><i class="fas fa-lightbulb"></i> The Proposed Solution</h2>
+                <div class="section-badge solution">Defined Scope</div>
             </div>
-            <ul>
-                <li><strong>Standardize processes</strong> across branches with clear use cases and flows.</li>
-                <li><strong>Increase traceability</strong> with consistent actors, permissions, and audit events.</li>
-                <li><strong>Reduce operational errors</strong> (stock mismatch, incorrect promotions, cashbook issues).</li>
-                <li><strong>Enable faster onboarding</strong> by documenting how the system should behave.</li>
-            </ul>
+
+            <div class="solution-overview">
+                <div class="solution-image">
+                    <img src="assets/diagrams/Retail_System_BPMN_L0.drawio.png" alt="Retail Backoffice BPMN" class="responsive-img">
+                    <p class="img-caption">
+                        Process map: <a href="assets/diagrams/Retail_System_BPMN_L0.drawio.png" target="_blank">BPMN L0 (PNG)</a>
+                    </p>
+                </div>
+
+                <div class="solution-details">
+                    <h3><i class="fas fa-sitemap"></i> Standardized Backoffice Workflows</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Clear end-to-end flows across core modules</li>
+                        <li><i class="fas fa-check-circle"></i> Defined actors/permissions and decision points</li>
+                        <li><i class="fas fa-check-circle"></i> Audit-friendly actions (reason codes, approvals)</li>
+                        <li><i class="fas fa-check-circle"></i> Consistent documentation for onboarding</li>
+                    </ul>
+
+                    <h3><i class="fas fa-shield-halved"></i> Controls That Feel “Real”</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> RBAC boundaries for cashier / inventory / manager / admin</li>
+                        <li><i class="fas fa-check-circle"></i> Traceability from requirements → UAT</li>
+                        <li><i class="fas fa-check-circle"></i> Business rules captured in decision tables</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-layer-group"></i> Scope (MVP Modules)</h2>
-            </div>
-            <div class="deliverables-grid">
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <div class="deliverable-icon"><i class="fas fa-cash-register"></i></div>
-                        <h3>Sales (Bán hàng)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Checkout, invoices, customer payments, and sales lifecycle.</p>
-                    </div>
-                </div>
-
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <div class="deliverable-icon"><i class="fas fa-boxes-stacked"></i></div>
-                        <h3>Inventory (Kiểm kho)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Stocktake, variance handling, and reconciliation.</p>
-                    </div>
-                </div>
-
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <div class="deliverable-icon"><i class="fas fa-truck-ramp-box"></i></div>
-                        <h3>Purchasing (Nhập hàng)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Receiving goods, supplier invoices, and returns to supplier.</p>
-                    </div>
-                </div>
-
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <div class="deliverable-icon"><i class="fas fa-route"></i></div>
-                        <h3>Transfers (Chuyển hàng)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Inter-branch transfers and transfer receiving workflows.</p>
-                    </div>
-                </div>
-
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <div class="deliverable-icon"><i class="fas fa-tags"></i></div>
-                        <h3>Promotions (Khuyến mại)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Promotion setup, validation rules, and application logic.</p>
-                    </div>
-                </div>
-
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <div class="deliverable-icon"><i class="fas fa-chart-line"></i></div>
-                        <h3>Reporting (Thống kê)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Summary dashboards for management decisions.</p>
-                    </div>
-                </div>
+                <h2><i class="fas fa-bullseye"></i> Project Scope & Boundaries</h2>
             </div>
 
-            <p style="margin-top: 10px; color: #718096;">
-                Full module diagram set is available on the Deliverables page.
-            </p>
+            <div class="scope-container">
+                <div class="scope-in-scope">
+                    <h3><i class="fas fa-check green"></i> IN SCOPE (MVP Modules)</h3>
+                    <ul>
+                        <li>Sales (checkout, invoices, payments)</li>
+                        <li>Inventory (stocktake, adjustments, reconciliation)</li>
+                        <li>Purchasing (receiving, supplier invoices, returns)</li>
+                        <li>Transfers (inter-branch transfers + receiving)</li>
+                        <li>Promotions (setup, validation, application logic)</li>
+                        <li>Cashbook (cash-in/out, end-of-day closure)</li>
+                        <li>Reporting (summary dashboards)</li>
+                    </ul>
+                </div>
+
+                <div class="scope-out-scope">
+                    <h3><i class="fas fa-times red"></i> OUT OF SCOPE</h3>
+                    <ul>
+                        <li>POS hardware integration</li>
+                        <li>E-commerce / omnichannel fulfillment</li>
+                        <li>Advanced forecasting and ML analytics</li>
+                        <li>Third-party accounting system integrations</li>
+                        <li>Multi-country tax localization</li>
+                    </ul>
+                </div>
+            </div>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-diagram-project"></i> What Exists Today (Course Output)</h2>
+                <h2><i class="fas fa-chart-line"></i> Success Metrics & KPIs</h2>
             </div>
-            <ul>
-                <li><strong>Use Case diagrams</strong> per module (UC).</li>
-                <li><strong>Sequence diagrams</strong> for key flows (sequence).</li>
-                <li><strong>Activity diagrams</strong> for process logic (module workflow).</li>
-                <li><strong>UI screen design</strong> (where available / to be expanded).</li>
-            </ul>
-        </section>
-
-        <section class="content-section">
-            <div class="section-header">
-                <h2><i class="fas fa-arrow-up-right-dots"></i> Recruiter-Grade Upgrades (Planned)</h2>
+            <div class="metrics-table-container">
+                <table class="metrics-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Baseline (Common Pain)</th>
+                            <th>Target (MVP Goal)</th>
+                            <th>Measurement Method</th>
+                            <th>Business Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Stocktake Variance Handling</strong></td>
+                            <td><span class="badge current">Manual + inconsistent</span></td>
+                            <td><span class="badge target">Reason codes + approval</span></td>
+                            <td>Adjustment log review</td>
+                            <td><span class="impact high">HIGH</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Promo Rule Consistency</strong></td>
+                            <td><span class="badge current">Conflicts / overrides</span></td>
+                            <td><span class="badge target">Rules validated</span></td>
+                            <td>Promo validation reports</td>
+                            <td><span class="impact medium">MEDIUM</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Auditability</strong></td>
+                            <td><span class="badge current">Hard to trace</span></td>
+                            <td><span class="badge target">Who/when/why tracked</span></td>
+                            <td>Audit events coverage</td>
+                            <td><span class="impact high">HIGH</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>UAT Coverage</strong></td>
+                            <td><span class="badge current">Ad-hoc</span></td>
+                            <td><span class="badge target">Mapped to requirements</span></td>
+                            <td>RTM + UAT pack</td>
+                            <td><span class="impact medium">MEDIUM</span></td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
-            <ul>
-                <li><strong>PRD-lite</strong>: goals, scope, assumptions, constraints, NFRs, and edge cases.</li>
-                <li><strong>Requirements structure</strong>: user stories + acceptance criteria aligned to UC/sequence.</li>
-                <li><strong>Traceability</strong>: UC → requirements → test cases → defects (simple but credible).</li>
-                <li><strong>UAT pack</strong>: test cases template + summary report for 1–2 core scenarios.</li>
-            </ul>
-        </section>
 
-        <div class="process-navigation">
-            <a href="deliverables.html" class="btn btn-primary">
-                View Deliverables <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
+            <div class="cta-buttons">
+                <a href="process.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i> Next: BA Process
+                </a>
+                <a href="deliverables.html" class="btn btn-secondary">
+                    <i class="fas fa-folder-open"></i> View Deliverables
+                </a>
+            </div>
+        </section>
     </div>
 
     <footer class="footer">

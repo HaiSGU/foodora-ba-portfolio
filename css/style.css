@@ -1,5 +1,37 @@
 /* ===== CSS STYLES FOR FOODORA BA PORTFOLIO ===== */
 
+:root {
+    --accent: #667eea;
+    --accent-strong: #5a67d8;
+    --accent2: #764ba2;
+    --accent-soft: #f0f4ff;
+    --accent-shadow: rgba(102, 126, 234, 0.3);
+}
+
+body.theme-foodora {
+    --accent: #ff5a5f;
+    --accent-strong: #e84c51;
+    --accent2: #ff9068;
+    --accent-soft: #fff1f2;
+    --accent-shadow: rgba(255, 90, 95, 0.25);
+}
+
+body.theme-retail {
+    --accent: #16a34a;
+    --accent-strong: #15803d;
+    --accent2: #0ea5e9;
+    --accent-soft: #ecfdf5;
+    --accent-shadow: rgba(22, 163, 74, 0.22);
+}
+
+body.theme-sap {
+    --accent: #2563eb;
+    --accent-strong: #1d4ed8;
+    --accent2: #06b6d4;
+    --accent-soft: #eff6ff;
+    --accent-shadow: rgba(37, 99, 235, 0.22);
+}
+
 /* Reset & Base Styles */
 * {
     margin: 0;
@@ -34,7 +66,7 @@ h1 {
 
 h2 {
     font-size: 2rem;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid var(--accent);
     padding-bottom: 10px;
     margin-bottom: 25px;
 }
@@ -71,7 +103,7 @@ h3 {
 .nav-logo {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #667eea;
+    color: var(--accent);
     text-decoration: none;
 }
 
@@ -90,12 +122,12 @@ h3 {
 }
 
 .nav-links a:hover {
-    background: #f0f4ff;
-    color: #667eea;
+    background: var(--accent-soft);
+    color: var(--accent);
 }
 
 .nav-links a.active {
-    background: #667eea;
+    background: var(--accent);
     color: white;
 }
 
@@ -103,7 +135,7 @@ h3 {
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background: #667eea;
+    background: var(--accent);
     color: white;
     text-decoration: none;
     border-radius: 6px;
@@ -115,13 +147,13 @@ h3 {
 }
 
 .btn:hover {
-    background: #5a67d8;
+    background: var(--accent-strong);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 5px 15px var(--accent-shadow);
 }
 
 .btn-primary {
-    background: #667eea;
+    background: var(--accent);
 }
 
 .btn-secondary {
@@ -130,8 +162,8 @@ h3 {
 
 .btn-outline {
     background: white;
-    color: #667eea;
-    border: 2px solid #667eea;
+    color: var(--accent);
+    border: 2px solid var(--accent);
 }
 
 .btn-small {
@@ -148,9 +180,45 @@ h3 {
     text-align: center;
     margin: 40px 0 50px;
     padding: 30px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
     color: white;
     border-radius: 12px;
+}
+
+/* Key Artifacts */
+.key-artifacts {
+    border-left: 6px solid var(--accent);
+}
+
+.artifact-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.artifact-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 999px;
+    border: 1px solid #e2e8f0;
+    background: white;
+    color: #4a5568;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.2s;
+}
+
+.artifact-chip i {
+    color: var(--accent);
+}
+
+.artifact-chip:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px var(--accent-shadow);
 }
 
 .page-header h1 {
@@ -357,7 +425,7 @@ h3 {
 }
 
 .metrics-table th {
-    background: #667eea;
+    background: var(--accent);
     color: white;
     padding: 15px;
     text-align: left;
@@ -421,7 +489,7 @@ h3 {
     top: 0;
     bottom: 0;
     width: 4px;
-    background: #667eea;
+    background: var(--accent);
     transform: translateX(-50%);
 }
 
@@ -439,7 +507,7 @@ h3 {
 .phase-number {
     width: 60px;
     height: 60px;
-    background: #667eea;
+    background: var(--accent);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -504,7 +572,7 @@ h3 {
 }
 
 .stakeholder-avatar.owner {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, var(--accent) 0%, var(--accent2) 100%);
     color: white;
 }
 
@@ -541,7 +609,7 @@ h3 {
 
 .technique-icon {
     font-size: 40px;
-    color: #667eea;
+    color: var(--accent);
     margin-bottom: 20px;
 }
 
@@ -606,7 +674,7 @@ h3 {
 .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #667eea;
+    color: var(--accent);
     margin-bottom: 10px;
 }
 

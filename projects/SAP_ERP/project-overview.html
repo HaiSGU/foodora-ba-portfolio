@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
+<body class="theme-sap">
     <nav class="navbar">
         <div class="nav-container">
             <a href="../../index.html" class="nav-logo">BA Portfolio</a>
@@ -27,6 +27,19 @@
             <p class="subtitle">Simulated BA engagement: Order-to-Cash (O2C) with approvals, pricing, and auditability (example reference: SAP S/4HANA)</p>
         </header>
 
+        <section class="content-section key-artifacts">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Key Artifacts</h2>
+            </div>
+            <div class="artifact-chips">
+                <a class="artifact-chip" href="assets/diagrams/SAP_ERP_BPMN_L0.drawio.png" target="_blank"><i class="fas fa-diagram-project"></i> BPMN L0</a>
+                <a class="artifact-chip" href="assets/diagrams/SAP_ERP_Stakeholder_Matrix.drawio.png" target="_blank"><i class="fas fa-users"></i> Stakeholder Matrix</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-table"></i> Rules / Decision Tables</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-sitemap"></i> RTM</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-vial"></i> UAT Pack</a>
+            </div>
+        </section>
+
         <section class="content-section">
             <div class="section-header">
                 <h2><i class="fas fa-bullseye"></i> Objective</h2>
@@ -40,56 +53,170 @@
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-diagram-project"></i> Scope (Scenario)</h2>
+                <h2><i class="fas fa-exclamation-triangle"></i> The Business Problem</h2>
+                <div class="section-badge problem">High Impact</div>
             </div>
-            <div class="deliverables-grid">
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <span class="deliverable-phase phase-discovery">Business</span>
-                        <div class="deliverable-icon"><i class="fas fa-cart-shopping"></i></div>
-                        <h3>Order-to-Cash (O2C)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Sales order → delivery → billing → payment + credit/approval controls.</p>
-                        <p class="mini-note">Focus: pricing, credit limit, cancellations/returns, audit trail.</p>
-                    </div>
+
+            <p>
+                In an Order-to-Cash process, the biggest operational risks are usually not “happy-path automation”, but
+                <strong>controls</strong> (credit, pricing approvals) and <strong>auditability</strong> (who changed what, when, and why).
+                ERP implementations often fail when rules are undocumented, approvals are unclear, and testing coverage is weak.
+            </p>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon revenue-loss"><i class="fas fa-scale-balanced"></i></div>
+                    <h3>Pricing & Discount Risk</h3>
+                    <p><strong>Uncontrolled overrides</strong> create margin leakage</p>
+                    <p>Discounts and manual price changes need rules + approvals</p>
                 </div>
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <span class="deliverable-phase phase-design">Controls</span>
-                        <div class="deliverable-icon"><i class="fas fa-shield-halved"></i></div>
-                        <h3>Governance & RBAC</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p>Roles, permissions, approvals, and traceability.</p>
-                        <p class="mini-note">Designed to look like a real BA deliverables pack.</p>
-                    </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon data-loss"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Credit & Compliance</h3>
+                    <p><strong>Credit limit breaches</strong> increase bad debt exposure</p>
+                    <p>Credit checks, blocks, and release workflows must be explicit</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon inefficiency"><i class="fas fa-file-circle-xmark"></i></div>
+                    <h3>Exception Handling</h3>
+                    <p><strong>Cancellations/returns</strong> are where processes break</p>
+                    <p>Need consistent rules for delivery, billing, and reversal paths</p>
+                </div>
+
+                <div class="problem-card">
+                    <div class="problem-icon experience"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Auditability & Traceability</h3>
+                    <p><strong>Hard to prove</strong> decisions and approvals</p>
+                    <p>Requirements must map cleanly to tests and sign-off evidence</p>
                 </div>
             </div>
         </section>
 
         <section class="content-section">
             <div class="section-header">
-                <h2><i class="fas fa-folder-open"></i> Key Deliverables</h2>
+                <h2><i class="fas fa-lightbulb"></i> The Proposed Solution</h2>
+                <div class="section-badge solution">Defined Scope</div>
             </div>
-            <ul>
-                <li>PRD / BRD / SRS (core documents)</li>
-                <li>Stakeholder Engagement + RACI</li>
-                <li>Requirements (FR/NFR) + Scope</li>
-                <li>Business Rules + Decision Tables</li>
-                <li>Roles & Permissions Matrix</li>
-                <li>Requirements Traceability Matrix (RTM)</li>
-                <li>UAT Test Cases + UAT Test Summary Report & Sign-off (IEEE 829 aligned)</li>
-            </ul>
-            <div class="deliverable-actions" style="margin-top: 14px; flex-wrap: wrap;">
-                <a class="btn" href="deliverables.html"><i class="fas fa-folder-open"></i> Open Deliverables</a>
-                <a class="btn btn-outline" href="process.html"><i class="fas fa-route"></i> BA Process</a>
+
+            <div class="solution-overview">
+                <div class="solution-image">
+                    <img src="assets/diagrams/SAP_ERP_BPMN_L0.drawio.png" alt="SAP ERP O2C BPMN" class="responsive-img">
+                    <p class="img-caption">
+                        Process map: <a href="assets/diagrams/SAP_ERP_BPMN_L0.drawio.png" target="_blank">BPMN L0 (PNG)</a>
+                    </p>
+                </div>
+
+                <div class="solution-details">
+                    <h3><i class="fas fa-cart-shopping"></i> Order-to-Cash (O2C) Scenario</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Sales order → delivery → billing → payment</li>
+                        <li><i class="fas fa-check-circle"></i> Credit checks, blocks, and approval releases</li>
+                        <li><i class="fas fa-check-circle"></i> Pricing overrides and discount governance</li>
+                        <li><i class="fas fa-check-circle"></i> Exception paths: cancellations, returns, reversals</li>
+                    </ul>
+
+                    <h3><i class="fas fa-user-shield"></i> Governance & Traceability</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> RBAC + approvals with decision tables</li>
+                        <li><i class="fas fa-check-circle"></i> RTM linking requirements ↔ tests</li>
+                        <li><i class="fas fa-check-circle"></i> UAT evidence: test cases + summary + sign-off</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Project Scope & Boundaries</h2>
+            </div>
+            <div class="scope-container">
+                <div class="scope-in-scope">
+                    <h3><i class="fas fa-check green"></i> IN SCOPE</h3>
+                    <ul>
+                        <li>O2C steps: sales order, delivery, billing, payment posting</li>
+                        <li>Credit management controls (checks, blocks, releases)</li>
+                        <li>Pricing/discount governance (rules + approvals)</li>
+                        <li>Audit events and traceability expectations</li>
+                        <li>UAT-ready deliverables pack (XLSX + sign-off summary)</li>
+                    </ul>
+                </div>
+
+                <div class="scope-out-scope">
+                    <h3><i class="fas fa-times red"></i> OUT OF SCOPE</h3>
+                    <ul>
+                        <li>Real SAP configuration / screenshots / proprietary artifacts</li>
+                        <li>Full finance closing, tax localization, and treasury scope</li>
+                        <li>Real integration interfaces (EDI/IDoc) implementation details</li>
+                        <li>Performance testing at enterprise scale</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Success Metrics & KPIs</h2>
+            </div>
+
+            <div class="metrics-table-container">
+                <table class="metrics-table">
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Baseline Risk</th>
+                            <th>Target</th>
+                            <th>Measurement Method</th>
+                            <th>Business Impact</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Pricing Override Control</strong></td>
+                            <td><span class="badge current">Manual / inconsistent</span></td>
+                            <td><span class="badge target">Rule + approval</span></td>
+                            <td>Audit events + decision table tests</td>
+                            <td><span class="impact high">HIGH</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Credit Block Handling</strong></td>
+                            <td><span class="badge current">Unclear ownership</span></td>
+                            <td><span class="badge target">Defined release workflow</span></td>
+                            <td>UAT scenarios coverage</td>
+                            <td><span class="impact high">HIGH</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Exception Coverage</strong></td>
+                            <td><span class="badge current">Edge cases missed</span></td>
+                            <td><span class="badge target">Cancellation/return rules</span></td>
+                            <td>Rules ↔ RTM ↔ UAT</td>
+                            <td><span class="impact medium">MEDIUM</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Sign-off Readiness</strong></td>
+                            <td><span class="badge current">Hard to evidence</span></td>
+                            <td><span class="badge target">Summary + approval</span></td>
+                            <td>UAT summary report</td>
+                            <td><span class="impact medium">MEDIUM</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="process.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i> Next: BA Process
+                </a>
+                <a href="deliverables.html" class="btn btn-secondary">
+                    <i class="fas fa-folder-open"></i> View Deliverables
+                </a>
             </div>
         </section>
 
         <div class="process-navigation">
             <a href="../../index.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Home</a>
-            <a href="deliverables.html" class="btn btn-primary">Deliverables <i class="fas fa-arrow-right"></i></a>
+            <a href="process.html" class="btn btn-primary">BA Process <i class="fas fa-arrow-right"></i></a>
         </div>
     </div>
 
