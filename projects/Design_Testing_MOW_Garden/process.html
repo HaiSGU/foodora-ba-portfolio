@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BA Process | Design & Testing — MOW Garden</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="theme-mow">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html" class="active">BA Process</a>
+                <a href="deliverables.html">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-sitemap"></i> Business Analysis / QA Process</h1>
+            <p class="subtitle">How the MOW Garden project was structured from design to testing deliverables</p>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-road"></i> Timeline & Phases</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">01</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-search"></i> Scope & Use Cases</h3>
+                            <p><strong>Focus:</strong> define core modules and user goals</p>
+                            <ul>
+                                <li>Identify main flows (catalog, cart, checkout, inventory, access)</li>
+                                <li>Capture use cases in a structured template</li>
+                                <li>Agree on assumptions and boundaries (course project constraints)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">02</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-diagram-project"></i> Design Views</h3>
+                            <p><strong>Focus:</strong> make flows consistent and testable</p>
+                            <ul>
+                                <li>Decomposition diagram to clarify responsibilities</li>
+                                <li>Sequence diagrams per module (cart, payment, catalog, inventory)</li>
+                                <li>Access control and communication views</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">03</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-clipboard-list"></i> Test Planning & Test Design</h3>
+                            <p><strong>Focus:</strong> define strategy + concrete test assets</p>
+                            <ul>
+                                <li>Test plan: approach, environments, entry/exit criteria</li>
+                                <li>Functional test cases + review checklist</li>
+                                <li>NFR coverage: usability, compatibility, security, database testing</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">04</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-gauge-high"></i> Performance Testing (JMeter)</h3>
+                            <p><strong>Focus:</strong> run repeatable load tests with clear parameters</p>
+                            <ul>
+                                <li>Homepage load test plan (50 users, 300s, ramp 30s)</li>
+                                <li>API performance plan (auth + browse + checkout endpoints)</li>
+                                <li>Collect results via Summary/Aggregate reports</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-phase">
+                        <span class="phase-number">05</span>
+                        <div class="phase-content">
+                            <h3><i class="fas fa-file-circle-check"></i> Reporting & Improvements</h3>
+                            <p><strong>Focus:</strong> turn findings into actionable improvements</p>
+                            <ul>
+                                <li>Defect logging template for consistent reporting</li>
+                                <li>Use results to refine test coverage and critical flows</li>
+                                <li>Document learnings for iteration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="process-navigation">
+            <a href="project-overview.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Project Overview</a>
+            <a href="deliverables.html" class="btn btn-primary">Deliverables <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>BA Portfolio | Case studies</p>
+        </div>
+    </footer>
+</body>
+</html>

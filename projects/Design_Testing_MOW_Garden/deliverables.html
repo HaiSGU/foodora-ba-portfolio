@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deliverables | Design & Testing — MOW Garden</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .deliverable-filter {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 8px 20px;
+            border: 2px solid var(--accent);
+            background: white;
+            color: var(--accent);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-weight: 500;
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background: var(--accent);
+            color: white;
+        }
+
+        .deliverables-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .deliverable-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            background: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .deliverable-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .deliverable-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .deliverable-phase {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .phase-discovery { background: #ffebee; color: #c62828; }
+        .phase-requirements { background: #e3f2fd; color: #1565c0; }
+        .phase-design { background: #e8f5e9; color: #2e7d32; }
+        .phase-validation { background: #fff3e0; color: #ef6c00; }
+
+        .deliverable-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+            color: var(--accent);
+        }
+
+        .deliverable-body {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .deliverable-tools {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin: 15px 0;
+        }
+
+        .tool-tag {
+            background: var(--accent-soft);
+            color: var(--accent-strong);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+        }
+
+        .deliverable-preview {
+            margin: 15px 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid #eee;
+        }
+
+        .deliverable-preview img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            cursor: pointer;
+        }
+
+        .deliverable-actions {
+            margin-top: auto;
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .mini-note { color: #718096; margin-top: 10px; }
+
+        .preview-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .modal-content {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            max-width: 90%;
+            max-height: 90%;
+            overflow: auto;
+        }
+
+        .modal-content img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 40px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body class="theme-mow">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html">BA Process</a>
+                <a href="deliverables.html" class="active">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-folder-open"></i> Deliverables</h1>
+            <p class="subtitle">Design + testing documentation pack for MOW Garden (course project)</p>
+            <p class="mini-note">Tip: Most artifacts are Excel-heavy (test design). Key previews below use PNG exports for quick recruiter viewing. Current project folder: <strong>38 files</strong> (excluding <strong>Detai01</strong>).</p>
+        </header>
+
+        <div class="deliverable-filter">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="requirements">Requirements</button>
+            <button class="filter-btn" data-filter="design">Design</button>
+            <button class="filter-btn" data-filter="validation">Testing</button>
+        </div>
+
+        <div class="deliverables-grid">
+            <div class="deliverable-card" data-phase="requirements">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-requirements">Requirements</span>
+                    <div class="deliverable-icon"><i class="fas fa-file-lines"></i></div>
+                    <h3>Use Cases</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Structured use case definitions for core customer and admin flows</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLSX</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Use%20Case.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View XLSX</a>
+                        <a class="btn btn-small" href="Use%20Case.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download XLSX</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-clipboard-check"></i></div>
+                    <h3>Test Plan (English)</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Define scope, approach, risks, entry/exit criteria and responsibilities</p>
+                    <div class="deliverable-tools"><span class="tool-tag">PDF</span><span class="tool-tag">DOCX</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="Test%20Plan%20-%20English.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> View PDF</a>
+                        <a class="btn btn-small" href="Test%20Plan%20-%20English.docx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download DOCX</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-diagram-project"></i></div>
+                    <h3>System Decomposition</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Break down the system into modules and responsibilities</p>
+                    <div class="deliverable-tools"><span class="tool-tag">PNG</span></div>
+                    <div class="deliverable-preview">
+                        <img src="Sequence/Decomposition.png" alt="Decomposition" onclick="openModal(this.src)">
+                    </div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Sequence/Decomposition.png" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download PNG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-cart-shopping"></i></div>
+                    <h3>Sequence — Shopping Cart</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Clarify cart interactions for consistent implementation & test design</p>
+                    <div class="deliverable-tools"><span class="tool-tag">PNG</span><span class="tool-tag">UML</span></div>
+                    <div class="deliverable-preview">
+                        <img src="Sequence/ShoppingCart.png" alt="Shopping Cart" onclick="openModal(this.src)">
+                    </div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Sequence/ShoppingCart.png" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download PNG</a>
+                        <a class="btn btn-small btn-outline" href="Sequence/ShoppingCart.drawio" target="_blank" rel="noopener"><i class="fas fa-file"></i> Download drawio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-credit-card"></i></div>
+                    <h3>Sequence — Payment Process</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Map the payment/checkout interactions and edge cases</p>
+                    <div class="deliverable-tools"><span class="tool-tag">PNG</span><span class="tool-tag">UML</span></div>
+                    <div class="deliverable-preview">
+                        <img src="Sequence/PaymentProcess.png" alt="Payment Process" onclick="openModal(this.src)">
+                    </div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Sequence/PaymentProcess.png" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download PNG</a>
+                        <a class="btn btn-small btn-outline" href="Sequence/PaymentProcess.drawio" target="_blank" rel="noopener"><i class="fas fa-file"></i> Download drawio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Sequence — Product Catalog</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Describe product browsing and catalog retrieval interactions</p>
+                    <div class="deliverable-tools"><span class="tool-tag">PNG</span><span class="tool-tag">UML</span></div>
+                    <div class="deliverable-preview">
+                        <img src="Sequence/ProductCatalog.png" alt="Product Catalog" onclick="openModal(this.src)">
+                    </div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Sequence/ProductCatalog.png" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download PNG</a>
+                        <a class="btn btn-small btn-outline" href="Sequence/ProductCatalog.drawio" target="_blank" rel="noopener"><i class="fas fa-file"></i> Download drawio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-boxes-stacked"></i></div>
+                    <h3>Sequence — Inventory</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Clarify inventory-related interactions and data updates</p>
+                    <div class="deliverable-tools"><span class="tool-tag">PNG</span><span class="tool-tag">UML</span></div>
+                    <div class="deliverable-preview">
+                        <img src="Sequence/Inventory.png" alt="Inventory" onclick="openModal(this.src)">
+                    </div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Sequence/Inventory.png" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download PNG</a>
+                        <a class="btn btn-small btn-outline" href="Sequence/Inventory.drawio" target="_blank" rel="noopener"><i class="fas fa-file"></i> Download drawio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-user-shield"></i></div>
+                    <h3>Sequence — Access Control</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Model authentication/authorization touchpoints for protected actions</p>
+                    <div class="deliverable-tools"><span class="tool-tag">PNG</span><span class="tool-tag">UML</span></div>
+                    <div class="deliverable-preview">
+                        <img src="Sequence/AccessControl.png" alt="Access Control" onclick="openModal(this.src)">
+                    </div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Sequence/AccessControl.png" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download PNG</a>
+                        <a class="btn btn-small btn-outline" href="Sequence/AccessControl.drawio" target="_blank" rel="noopener"><i class="fas fa-file"></i> Download drawio</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-object-group"></i></div>
+                    <h3>UI / Screen Design (Spreadsheet)</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Screen inventory to support scenario coverage and UI test design</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLSX</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/DesignScreen.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View XLSX</a>
+                        <a class="btn btn-small" href="DesignScreen.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download XLSX</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-database"></i></div>
+                    <h3>Data Model</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Document key entities/fields to support DB testing and data validation</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLSX</span><span class="tool-tag">Data</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Data%20model.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View XLSX</a>
+                        <a class="btn btn-small" href="Testing/Data%20model.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download XLSX</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation" id="test-design">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-table"></i></div>
+                    <h3>Test Design Pack</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Concrete test assets across functional + non-functional testing</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLSX</span><span class="tool-tag">Templates</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Test_Design_Workflow_Checkout_FULL.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Workflow</a>
+                        <a class="btn btn-small" href="Testing/Test_Design_Workflow_Checkout_FULL.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Workflow</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Function_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Functional</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/UI_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View UI</a>
+                        <a class="btn btn-small btn-outline" href="Testing/Function_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Functional</a>
+                        <a class="btn btn-small btn-outline" href="Testing/UI_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download UI</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-shield-halved"></i></div>
+                    <h3>Non-functional Testing Pack</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Concrete NFR test assets (usability, compatibility, security, database)</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLSX</span><span class="tool-tag">NFR</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Usability_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Usability</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Compatibility_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Compatibility</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/SECURITY_TESTING_ch%C3%ADnh.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Security</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/DB_Testing_MongoDB_FINAL.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View DB Testing</a>
+                        <a class="btn btn-small" href="Testing/Usability_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Usability</a>
+                        <a class="btn btn-small btn-outline" href="Testing/Compatibility_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Compatibility</a>
+                        <a class="btn btn-small btn-outline" href="Testing/SECURITY_TESTING_ch%C3%ADnh.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Security</a>
+                        <a class="btn btn-small btn-outline" href="Testing/DB_Testing_MongoDB_FINAL.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download DB Testing</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-users"></i></div>
+                    <h3>Acceptance &amp; Crowd Testing</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Acceptance-level validation and crowd testing coverage</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLSX</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Acceptance_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Acceptance</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Crowd_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Crowd</a>
+                        <a class="btn btn-small" href="Testing/Acceptance_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Acceptance</a>
+                        <a class="btn btn-small btn-outline" href="Testing/Crowd_Test.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Crowd</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-bug"></i></div>
+                    <h3>Defects &amp; Review Templates</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Standard templates for defect logging and test case review</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLS/XLSX</span><span class="tool-tag">Templates</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Testing/Defect_List_Template.xls" target="_blank" rel="noopener"><i class="fas fa-download"></i> Defect List</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Test_Case_Review_Checklist_FINAL.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Review Checklist</a>
+                        <a class="btn btn-small btn-outline" href="Testing/Test_Case_Review_Checklist_FINAL.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Checklist</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-flask"></i></div>
+                    <h3>Test Data (Sample)</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Sample dataset used to support testing scenarios (product IDs)</p>
+                    <div class="deliverable-tools"><span class="tool-tag">CSV</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="product.csv" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download CSV</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="design" id="more-design-files">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-design">Design</span>
+                    <div class="deliverable-icon"><i class="fas fa-folder-tree"></i></div>
+                    <h3>Additional Design Files (Course Pack)</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Extra design documents and diagrams included in the course folder</p>
+                    <div class="deliverable-tools"><span class="tool-tag">draw.io</span><span class="tool-tag">PDF</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="SoftwareTesting.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Software Testing (PDF)</a>
+                        <a class="btn btn-small btn-outline" href="Sequence/CommunicationView.drawio" target="_blank" rel="noopener"><i class="fas fa-download"></i> Communication View (drawio)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation" id="more-testing-files">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-layer-group"></i></div>
+                    <h3>Additional Testing Files (Course Pack)</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Extra testing sheets and JMeter plans included in the folder</p>
+                    <div class="deliverable-tools"><span class="tool-tag">XLSX</span><span class="tool-tag">JMeter</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small btn-outline" href="Testing/PERTest.jmx" target="_blank" rel="noopener"><i class="fas fa-download"></i> PERTest (.jmx)</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="deliverable-card" data-phase="validation">
+                <div class="deliverable-header">
+                    <span class="deliverable-phase phase-validation">Testing</span>
+                    <div class="deliverable-icon"><i class="fas fa-gauge-high"></i></div>
+                    <h3>Performance Tests (JMeter)</h3>
+                </div>
+                <div class="deliverable-body">
+                    <p><strong>Purpose:</strong> Repeatable performance test plans (load homepage, auth, browse, checkout)</p>
+                    <div class="deliverable-tools"><span class="tool-tag">JMeter</span><span class="tool-tag">.jmx</span></div>
+                    <div class="deliverable-actions">
+                        <a class="btn btn-small" href="Testing/PERF-01_Load_Homepage%20.jmx" target="_blank" rel="noopener"><i class="fas fa-download"></i> PERF-01 Load Homepage</a>
+                        <a class="btn btn-small btn-outline" href="Testing/performance%20test.jmx" target="_blank" rel="noopener"><i class="fas fa-download"></i> API Performance Plan</a>
+                        <a class="btn btn-small btn-outline" href="../../pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Performance_Test_JMeter.xlsx" target="_blank" rel="noopener"><i class="fas fa-eye"></i> View Perf Sheet</a>
+                        <a class="btn btn-small btn-outline" href="Testing/Performance_Test_JMeter.xlsx" target="_blank" rel="noopener"><i class="fas fa-download"></i> Download Perf Sheet</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="preview-modal" id="imageModal" onclick="closeModal()">
+        <span class="close-modal">&times;</span>
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <img id="modalImage" src="" alt="Preview">
+        </div>
+    </div>
+
+    <script>
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const deliverableCards = document.querySelectorAll('.deliverable-card');
+
+        filterButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterButtons.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.getAttribute('data-filter');
+
+                deliverableCards.forEach(card => {
+                    const phase = card.getAttribute('data-phase');
+                    card.style.display = (filter === 'all' || phase === filter) ? 'flex' : 'none';
+                });
+            });
+        });
+
+        function openModal(imgSrc) {
+            document.getElementById('modalImage').src = imgSrc;
+            document.getElementById('imageModal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('imageModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

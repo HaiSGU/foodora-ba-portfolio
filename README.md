@@ -8,7 +8,8 @@ Business Analyst portfolio hub with case studies covering discovery, requirement
 - Download artifacts from each project’s Deliverables page:
 	- Foodora: [projects/foodora-mvp/deliverables.html](projects/foodora-mvp/deliverables.html)
 	- Retail System: [projects/Retail_System/deliverables.html](projects/Retail_System/deliverables.html)
-	- SAP ERP (O2C): [projects/SAP_ERP/deliverables.html](projects/SAP_ERP/deliverables.html)
+	- SAP ERP (O2C, learning-focused): [projects/SAP_ERP/deliverables.html](projects/SAP_ERP/deliverables.html)
+	- Design & Testing — MOW Garden: [projects/Design_Testing_MOW_Garden/deliverables.html](projects/Design_Testing_MOW_Garden/deliverables.html)
 
 ## Online links (recommended for recruiters)
 
@@ -20,7 +21,8 @@ Business Analyst portfolio hub with case studies covering discovery, requirement
 
 - Foodora — Order & Pick-up (MVP): [projects/foodora-mvp/project-overview.html](projects/foodora-mvp/project-overview.html)
 - Retail Operations Backoffice: [projects/Retail_System/project-overview.html](projects/Retail_System/project-overview.html)
-- SAP ERP — Order-to-Cash (O2C): [projects/SAP_ERP/project-overview.html](projects/SAP_ERP/project-overview.html)
+- SAP ERP — Order-to-Cash (O2C) (learning-focused): [projects/SAP_ERP/project-overview.html](projects/SAP_ERP/project-overview.html)
+- Design & Testing — MOW Garden (course project): [projects/Design_Testing_MOW_Garden/project-overview.html](projects/Design_Testing_MOW_Garden/project-overview.html)
 
 ## Standards-based BA checklists (BABOK v3 + ISO/IEC/IEEE 29148)
 
@@ -46,6 +48,10 @@ Each project includes a canonical SQL showcase script with seed data so the quer
 To avoid forced downloads in the browser, the portfolio uses an in-browser SQL viewer:
 
 - Viewer page: [pages/sql-viewer.html](pages/sql-viewer.html)
+
+To reduce friction when reviewing Excel-heavy artifacts, the portfolio also includes a lightweight XLSX preview viewer (note: complex formatting may look different vs. Excel):
+
+- Viewer page: [pages/xlsx-viewer.html](pages/xlsx-viewer.html)
 
 ## Repository name
 

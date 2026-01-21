@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learnings | Design & Testing — MOW Garden</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="theme-mow">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html">Project Overview</a>
+                <a href="process.html">BA Process</a>
+                <a href="deliverables.html">Deliverables</a>
+                <a href="learnings.html" class="active">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-graduation-cap"></i> Learnings</h1>
+            <p class="subtitle">What this course project strengthened (design + testing mindset)</p>
+        </header>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-lightbulb"></i> Key Takeaways</h2>
+            </div>
+
+            <div class="insight-grid">
+                <div class="insight-card">
+                    <h3><i class="fas fa-diagram-project"></i> Design artifacts improve testability</h3>
+                    <p>Decomposition + sequence diagrams reduce ambiguity and make it easier to derive test cases from flows.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3><i class="fas fa-clipboard-check"></i> Test planning needs clear entry/exit</h3>
+                    <p>A test plan becomes actionable when it defines scope, environments, responsibilities, and exit criteria.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3><i class="fas fa-gauge-high"></i> Performance tests should be repeatable</h3>
+                    <p>JMeter plans with explicit users/ramp/duration make results comparable and useful for iteration.</p>
+                </div>
+
+                <div class="insight-card">
+                    <h3><i class="fas fa-shield-halved"></i> NFR coverage is a checklist, not an afterthought</h3>
+                    <p>Security, usability, compatibility, and database testing each need concrete test assets and evidence.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-forward"></i> Next Improvements (If Iterating)</h2>
+            </div>
+            <ul>
+                <li>Add explicit pass/fail criteria per test case and link to defects (traceability)</li>
+                <li>Standardize naming for test packs and group them by priority/risk</li>
+                <li>Export JMeter results (JTL/HTML dashboard) and attach as evidence</li>
+                <li>Add a minimal requirements traceability table (Use Case → Tests)</li>
+            </ul>
+        </section>
+
+        <div class="process-navigation">
+            <a href="deliverables.html" class="btn btn-secondary"><i class="fas fa-arrow-left"></i> Deliverables</a>
+            <a href="../../index.html" class="btn btn-primary">Home <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>BA Portfolio | Case studies</p>
+        </div>
+    </footer>
+</body>
+</html>

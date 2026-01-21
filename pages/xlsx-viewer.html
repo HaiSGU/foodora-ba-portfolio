@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>View XLSX</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    .xlsx-viewer-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+
+    .xlsx-viewer-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: 240px;
+    }
+
+    .xlsx-viewer-title h1 {
+      font-size: 22px;
+      margin: 0;
+    }
+
+    .xlsx-viewer-sub {
+      color: #666;
+      margin: 6px 0 0 0;
+      font-size: 13px;
+    }
+
+    .xlsx-toolbar {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .pill {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: rgba(0,0,0,0.06);
+      border: 1px solid rgba(0,0,0,0.10);
+      padding: 4px 8px;
+      border-radius: 999px;
+      font-size: 12px;
+      max-width: 48vw;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .status {
+      font-size: 12px;
+      color: #666;
+      margin-left: 8px;
+    }
+
+    .status.error {
+      color: #b71c1c;
+    }
+
+    .sheet-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin: 10px 0 14px 0;
+    }
+
+    select {
+      padding: 8px 10px;
+      border-radius: 10px;
+      border: 1px solid rgba(0,0,0,0.15);
+      background: white;
+      max-width: 520px;
+    }
+
+    .table-shell {
+      border: 1px solid rgba(0,0,0,0.12);
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .table-topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 12px;
+      background: rgba(0,0,0,0.04);
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+      color: rgba(0,0,0,0.78);
+      font-size: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .table-wrap {
+      overflow: auto;
+      max-height: 72vh;
+    }
+
+    /* XLSX.utils.sheet_to_html outputs a simple <table> */
+    .table-wrap table {
+      border-collapse: collapse;
+      width: max-content;
+      min-width: 100%;
+      font-size: 13px;
+    }
+
+    .table-wrap td, .table-wrap th {
+      border: 1px solid rgba(0,0,0,0.10);
+      padding: 6px 8px;
+      vertical-align: top;
+      background: #fff;
+    }
+
+    .table-wrap tr:nth-child(even) td {
+      background: rgba(0,0,0,0.02);
+    }
+
+    .hint {
+      margin-top: 14px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    code.inline {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      background: rgba(0,0,0,0.06);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="max-width: 1200px; padding-top: 40px;">
+    <div class="xlsx-viewer-header">
+      <div class="xlsx-viewer-title">
+        <i class="fas fa-file-excel" style="color: var(--accent, #667eea);"></i>
+        <div>
+          <h1>XLSX Viewer</h1>
+          <p class="xlsx-viewer-sub">Preview Excel in-browser so it doesn’t auto-download.</p>
+          <p class="xlsx-viewer-sub"><strong>Note:</strong> This is a lightweight preview; complex formatting (merged cells/charts/macros) may look different — use <strong>Download</strong> to view the original in Excel.</p>
+        </div>
+      </div>
+
+      <div class="xlsx-toolbar">
+        <button id="backBtn" class="btn btn-secondary" type="button"><i class="fas fa-arrow-left"></i> Back</button>
+        <a id="downloadBtn" class="btn btn-primary" href="#" download><i class="fas fa-download"></i> Download</a>
+        <span id="status" class="status">Loading…</span>
+      </div>
+    </div>
+
+    <div class="sheet-bar">
+      <span class="pill" id="filePill">(none)</span>
+      <label for="sheetSelect" style="font-size: 13px; color: #444;">Sheet:</label>
+      <select id="sheetSelect" disabled></select>
+    </div>
+
+    <div class="table-shell">
+      <div class="table-topbar">
+        <div><span style="opacity: 0.85;">Render:</span> <span id="renderMeta">—</span></div>
+        <div style="opacity: 0.85;">Tip: Scroll to view full width/height</div>
+      </div>
+      <div class="table-wrap" id="tableWrap">
+        <div style="padding: 14px 16px; color: #666;">Loading…</div>
+      </div>
+    </div>
+
+    <div class="hint">
+      Notes:
+      <ul style="margin: 8px 0 0 18px;">
+        <li>This viewer works best when served via a local server (VS Code Live Server). Opening via <code class="inline">file://</code> may block <code class="inline">fetch()</code>.</li>
+        <li>Complex Excel formatting (merged cells, charts, macros) may not render perfectly, but tabular content will preview well.</li>
+      </ul>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+  <script>
+    function isSafeRelativePath(p) {
+      if (!p) return false;
+      if (p.includes('..')) return false;
+      if (p.includes('\\')) return false;
+      if (p.startsWith('/')) return false;
+      if (p.includes(':')) return false;
+      if (p.startsWith('http://') || p.startsWith('https://')) return false;
+      return true;
+    }
+
+    const params = new URLSearchParams(window.location.search);
+    const file = params.get('file');
+
+    const statusEl = document.getElementById('status');
+    const filePillEl = document.getElementById('filePill');
+    const sheetSelect = document.getElementById('sheetSelect');
+    const tableWrap = document.getElementById('tableWrap');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const backBtn = document.getElementById('backBtn');
+    const renderMeta = document.getElementById('renderMeta');
+
+    let workbook = null;
+
+    backBtn.addEventListener('click', () => {
+      if (window.history.length > 1) window.history.back();
+      else window.location.href = '../index.html';
+    });
+
+    function setStatus(text, isError) {
+      statusEl.textContent = text;
+      statusEl.className = 'status' + (isError ? ' error' : '');
+    }
+
+    function renderSheet(sheetName) {
+      if (!workbook) return;
+      const sheet = workbook.Sheets[sheetName];
+      if (!sheet) return;
+
+      const range = XLSX.utils.decode_range(sheet['!ref'] || 'A1:A1');
+      const rows = range.e.r - range.s.r + 1;
+      const cols = range.e.c - range.s.c + 1;
+      renderMeta.textContent = sheetName + ' • ' + rows + ' rows × ' + cols + ' cols';
+
+      const html = XLSX.utils.sheet_to_html(sheet, {
+        id: 'sheetTable',
+        editable: false
+      });
+
+      tableWrap.innerHTML = html;
+    }
+
+    async function loadXlsx() {
+      if (!isSafeRelativePath(file)) {
+        setStatus('Invalid file path.', true);
+        filePillEl.textContent = '(invalid)';
+        tableWrap.innerHTML = '<div style="padding: 14px 16px; color: #b71c1c;">Missing/invalid file path. Example:<br><code class="inline">pages/xlsx-viewer.html?file=projects/Design_Testing_MOW_Garden/Testing/Function_Test.xlsx</code></div>';
+        return;
+      }
+
+      filePillEl.textContent = file;
+      const url = '../' + file;
+      downloadBtn.href = url;
+
+      try {
+        setStatus('Fetching…', false);
+        const res = await fetch(url, { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+
+        const buf = await res.arrayBuffer();
+        setStatus('Parsing…', false);
+
+        workbook = XLSX.read(new Uint8Array(buf), { type: 'array' });
+        const names = workbook.SheetNames || [];
+
+        sheetSelect.innerHTML = '';
+        for (const name of names) {
+          const opt = document.createElement('option');
+          opt.value = name;
+          opt.textContent = name;
+          sheetSelect.appendChild(opt);
+        }
+
+        sheetSelect.disabled = names.length === 0;
+        sheetSelect.addEventListener('change', () => renderSheet(sheetSelect.value));
+
+        if (names.length > 0) {
+          renderSheet(names[0]);
+          setStatus('Loaded', false);
+        } else {
+          tableWrap.innerHTML = '<div style="padding: 14px 16px; color: #666;">Workbook has no sheets.</div>';
+          setStatus('Loaded (no sheets)', false);
+        }
+      } catch (err) {
+        setStatus('Failed to load', true);
+        tableWrap.innerHTML = '<div style="padding: 14px 16px; color: #b71c1c;">Could not load the XLSX. You can still download it.<br><br>Error: ' + (err && err.message ? err.message : String(err)) + '</div>';
+      }
+    }
+
+    loadXlsx();
+  </script>
+</body>
+</html>

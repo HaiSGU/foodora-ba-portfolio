@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Overview | Design & Testing — MOW Garden</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="theme-mow">
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="../../index.html" class="nav-logo">BA Portfolio</a>
+            <div class="nav-links">
+                <a href="../../index.html">Home</a>
+                <a href="project-overview.html" class="active">Project Overview</a>
+                <a href="process.html">BA Process</a>
+                <a href="deliverables.html">Deliverables</a>
+                <a href="learnings.html">Learnings</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-seedling"></i> Design &amp; Testing — MOW Garden (Course Project)</h1>
+            <p class="subtitle">System design + test planning + test design + JMeter performance testing for a garden e-commerce web app</p>
+            <p class="mini-note">Note: This is a university/course project deliverables pack. The focus is on design and testing artifacts (not a production deployment).</p>
+        </header>
+
+        <section class="content-section key-artifacts">
+            <div class="section-header">
+                <h2><i class="fas fa-star"></i> Key Artifacts</h2>
+            </div>
+            <div class="artifact-chips">
+                <a class="artifact-chip" href="Sequence/Decomposition.png" target="_blank" rel="noopener"><i class="fas fa-diagram-project"></i> Decomposition (PNG)</a>
+                <a class="artifact-chip" href="Sequence/ShoppingCart.png" target="_blank" rel="noopener"><i class="fas fa-cart-shopping"></i> Shopping Cart (PNG)</a>
+                <a class="artifact-chip" href="Test%20Plan%20-%20English.pdf" target="_blank" rel="noopener"><i class="fas fa-file-pdf"></i> Test Plan (PDF)</a>
+                <a class="artifact-chip" href="Testing/PERF-01_Load_Homepage%20.jmx" target="_blank" rel="noopener"><i class="fas fa-gauge-high"></i> JMeter PERF-01</a>
+                <a class="artifact-chip" href="deliverables.html"><i class="fas fa-folder-open"></i> Full Deliverables</a>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Objective</h2>
+            </div>
+            <p>
+                Build an end-to-end <strong>design &amp; testing</strong> pack for a small e-commerce product scope (MOW Garden), including
+                core module design views (decomposition + sequence diagrams) and a structured testing approach (test plan, test design, and JMeter performance test plans).
+            </p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-exclamation-triangle"></i> The Problem Framing</h2>
+                <div class="section-badge problem">Quality Risk</div>
+            </div>
+            <p>
+                E-commerce apps often fail not only on missing features, but on <strong>quality gaps</strong>: inconsistent flows, weak access control,
+                fragile cart/checkout logic, and performance issues under load.
+                This project focuses on making core flows <strong>clear, testable, and measurable</strong>.
+            </p>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-lightbulb"></i> What I Delivered</h2>
+                <div class="section-badge solution">Testable</div>
+            </div>
+
+            <div class="solution-overview">
+                <div class="solution-image">
+                    <img src="Sequence/Decomposition.png" alt="System decomposition" class="responsive-img">
+                    <p class="img-caption">
+                        Quick view: <a href="Sequence/Decomposition.png" target="_blank" rel="noopener">Decomposition (PNG)</a>
+                    </p>
+                </div>
+
+                <div class="solution-details">
+                    <h3><i class="fas fa-layer-group"></i> Design Views</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Decomposition view (modules and responsibilities)</li>
+                        <li><i class="fas fa-check-circle"></i> Sequence diagrams for key flows (catalog, cart, payment, inventory)</li>
+                        <li><i class="fas fa-check-circle"></i> Access control and communication views</li>
+                    </ul>
+
+                    <h3><i class="fas fa-vial"></i> Testing Pack</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Test plan (scope, approach, entry/exit, risks)</li>
+                        <li><i class="fas fa-check-circle"></i> Test cases &amp; checklists (functional + non-functional)</li>
+                        <li><i class="fas fa-check-circle"></i> Performance test plans (JMeter .jmx)</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-bullseye"></i> Project Scope &amp; Boundaries</h2>
+            </div>
+
+            <div class="scope-container">
+                <div class="scope-in-scope">
+                    <h3><i class="fas fa-check green"></i> IN SCOPE</h3>
+                    <ul>
+                        <li>Product catalog browsing</li>
+                        <li>Shopping cart management</li>
+                        <li>Checkout/payment flow (modeled)</li>
+                        <li>Inventory-related interactions (modeled)</li>
+                        <li>Access control (role-based view)</li>
+                        <li>Testing strategy + test design + performance tests</li>
+                    </ul>
+                </div>
+
+                <div class="scope-out-scope">
+                    <h3><i class="fas fa-times red"></i> OUT OF SCOPE</h3>
+                    <ul>
+                        <li>Production deployment and monitoring</li>
+                        <li>Real payment gateway integration</li>
+                        <li>Enterprise-scale performance tuning</li>
+                        <li>Full security audit / penetration testing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="section-header">
+                <h2><i class="fas fa-chart-line"></i> Proof Points (Concrete Testing)</h2>
+            </div>
+
+            <div class="metrics-table-container">
+                <table class="metrics-table">
+                    <thead>
+                        <tr>
+                            <th>Area</th>
+                            <th>Artifact</th>
+                            <th>What it Demonstrates</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Test Planning</strong></td>
+                            <td><a href="Test%20Plan%20-%20English.pdf" target="_blank" rel="noopener">Test Plan (PDF)</a></td>
+                            <td>Scope, approach, entry/exit criteria, risk-based thinking</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Test Design</strong></td>
+                            <td><a href="deliverables.html#test-design" rel="noopener">Test Design Pack</a></td>
+                            <td>Structured cases/checklists across functional + non-functional areas</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Performance</strong></td>
+                            <td><a href="Testing/PERF-01_Load_Homepage%20.jmx" target="_blank" rel="noopener">PERF-01_Load_Homepage (.jmx)</a></td>
+                            <td>50 users ramp 30s, duration 300s against localhost:5173 “/”</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cta-buttons">
+                <a href="process.html" class="btn btn-primary">
+                    <i class="fas fa-arrow-right"></i> Next: BA Process
+                </a>
+                <a href="deliverables.html" class="btn btn-secondary">
+                    <i class="fas fa-folder-open"></i> View Deliverables
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p>BA Portfolio | Case studies</p>
+        </div>
+    </footer>
+</body>
+</html>
