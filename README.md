@@ -52,7 +52,6 @@ To avoid forced downloads in the browser, the portfolio uses an in-browser SQL v
 To reduce friction when reviewing Excel-heavy artifacts, the portfolio also includes a lightweight XLSX preview viewer (note: complex formatting may look different vs. Excel):
 
 - Viewer page: [pages/xlsx-viewer.html](pages/xlsx-viewer.html)
-
 ## Repository name
 
 Recommended GitHub repo name: `BA-portfolio`.
