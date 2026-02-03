@@ -184,6 +184,16 @@
             <p class="mini-note">Tip: Most artifacts are Excel-heavy (test design). Key previews below use PNG exports for quick recruiter viewing. Current project folder: <strong>38 files</strong> (excluding <strong>Detai01</strong>).</p>
         </header>
 
+        <div class="callout key-artifacts">
+            <strong><i class="fas fa-bolt"></i> Quick links:</strong> Start here (2–3 minutes)
+            <div class="artifact-chips">
+                <a class="artifact-chip" href="#use-cases"><i class="fas fa-file-lines"></i> Use cases</a>
+                <a class="artifact-chip" href="#test-plan"><i class="fas fa-file-pdf"></i> Test plan</a>
+                <a class="artifact-chip" href="#test-design"><i class="fas fa-list-check"></i> Test design</a>
+                <a class="artifact-chip" href="#performance"><i class="fas fa-gauge-high"></i> JMeter tests</a>
+            </div>
+        </div>
+
         <div class="deliverable-filter">
             <button class="filter-btn active" data-filter="all">All</button>
             <button class="filter-btn" data-filter="requirements">Requirements</button>
@@ -192,7 +202,7 @@
         </div>
 
         <div class="deliverables-grid">
-            <div class="deliverable-card" data-phase="requirements">
+            <div class="deliverable-card" id="use-cases" data-phase="requirements">
                 <div class="deliverable-header">
                     <span class="deliverable-phase phase-requirements">Requirements</span>
                     <div class="deliverable-icon"><i class="fas fa-file-lines"></i></div>
@@ -208,7 +218,7 @@
                 </div>
             </div>
 
-            <div class="deliverable-card" data-phase="validation">
+            <div class="deliverable-card" id="test-plan" data-phase="validation">
                 <div class="deliverable-header">
                     <span class="deliverable-phase phase-validation">Testing</span>
                     <div class="deliverable-icon"><i class="fas fa-clipboard-check"></i></div>
@@ -492,7 +502,7 @@
                 </div>
             </div>
 
-            <div class="deliverable-card" data-phase="validation">
+            <div class="deliverable-card" id="performance" data-phase="validation">
                 <div class="deliverable-header">
                     <span class="deliverable-phase phase-validation">Testing</span>
                     <div class="deliverable-icon"><i class="fas fa-gauge-high"></i></div>

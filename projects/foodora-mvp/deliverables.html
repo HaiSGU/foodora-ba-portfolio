@@ -182,6 +182,17 @@
             <p class="mini-note">Note: <strong>View XLSX</strong> is a lightweight preview; complex formatting (merged cells/charts/macros) may look different — use <strong>Download</strong> to view the original in Excel.</p>
         </header>
 
+        <div class="callout key-artifacts">
+            <strong><i class="fas fa-bolt"></i> Quick links:</strong> Start here (2–3 minutes)
+            <div class="artifact-chips">
+                <a class="artifact-chip" href="#prototype"><i class="fab fa-figma"></i> Prototype / Screens</a>
+                <a class="artifact-chip" href="#prd"><i class="fas fa-file-lines"></i> PRD (stories + AC)</a>
+                <a class="artifact-chip" href="#traceability"><i class="fas fa-table"></i> Traceability (RTM)</a>
+                <a class="artifact-chip" href="#uat-pack"><i class="fas fa-clipboard-check"></i> UAT pack</a>
+                <a class="artifact-chip" href="#sql-pack"><i class="fas fa-code"></i> SQL proof</a>
+            </div>
+        </div>
+
         <!-- Filter -->
         <div class="deliverable-filter">
             <button class="filter-btn active" data-filter="all">All Deliverables</button>
@@ -313,7 +324,7 @@
             </div>
 
             <!-- PRD -->
-            <div class="deliverable-card" data-phase="requirements">
+            <div class="deliverable-card" id="prd" data-phase="requirements">
                 <div class="deliverable-header">
                     <span class="deliverable-phase phase-requirements">Requirements</span>
                     <div class="deliverable-icon">
@@ -461,7 +472,7 @@
             </div>
 
             <!-- Figma Prototype -->
-            <div class="deliverable-card" data-phase="design">
+            <div class="deliverable-card" id="prototype" data-phase="design">
                 <div class="deliverable-header">
                     <span class="deliverable-phase phase-design">Design</span>
                     <div class="deliverable-icon">
@@ -586,7 +597,7 @@
             </div>
 
             <!-- UAT Test Plan -->
-            <div class="deliverable-card" data-phase="validation">
+            <div class="deliverable-card" id="uat-pack" data-phase="validation">
                 <div class="deliverable-header">
                     <span class="deliverable-phase phase-validation">Validation</span>
                     <div class="deliverable-icon">
@@ -615,7 +626,7 @@
             </div>
 
             <!-- Traceability Matrix -->
-            <div class="deliverable-card" data-phase="validation">
+            <div class="deliverable-card" id="traceability" data-phase="validation">
                 <div class="deliverable-header">
                     <span class="deliverable-phase phase-validation">Validation</span>
                     <div class="deliverable-icon">
