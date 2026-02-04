@@ -8,148 +8,404 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="nav-logo">BA Portfolio</a>
-            <div class="nav-links">
-                <a href="index.html" class="active">Home</a>
-                <a href="#case-studies">Case Studies</a>
+    <!-- Hero (profile-style header) -->
+    <section class="home-hero" aria-label="Profile header">
+        <div class="home-hero-inner">
+            <div class="home-hero-avatar" aria-hidden="true">
+                <div class="profile-avatar">BA</div>
+            </div>
+            <div class="home-hero-content">
+                <h1 class="home-title">Nguyễn Nhật Hải</h1>
+                <p class="home-tagline">Business Analyst — requirements, process modelling, and traceability</p>
+
+                <div class="hero-meta">
+                    <span class="hero-pill"><i class="fas fa-language"></i> English / Vietnamese</span>
+                    <span class="hero-pill"><i class="fas fa-briefcase"></i> Target: BA / QA / QC</span>
+                    <span class="hero-pill"><i class="fas fa-bullseye"></i> Focus: Requirements • Process • UAT</span>
+                </div>
+
+                <div class="hero-block">
+                    <div class="hero-section-title"><i class="fas fa-user"></i> Summary</div>
+                    <p class="home-summary">
+                        I’m a Business Analyst who enjoys turning messy problems into clear, actionable plans.
+                        I’m strongest when defining scope, writing precise requirements, modelling processes/data,
+                        and keeping delivery aligned with traceability and test evidence.
+                    </p>
+                </div>
+
+                <div class="hero-block">
+                    <div class="hero-section-title"><i class="fas fa-bullseye"></i> Objective</div>
+                    <ul class="hero-bullets">
+                        <li>Land a BA role where I can contribute to discovery, requirements, and delivery alignment.</li>
+                        <li>Build credibility through clear documentation, stakeholder communication, and testable acceptance criteria.</li>
+                        <li>Keep work practical: decision-ready outputs, not “documents for documents’ sake”.</li>
+                    </ul>
+                </div>
+
+                <div class="hero-block">
+                    <div class="hero-section-title"><i class="fas fa-toolbox"></i> Tools &amp; artifacts (examples)</div>
+                    <div class="artifact-chips" aria-label="Tools and artifacts">
+                        <span class="artifact-chip"><i class="fas fa-diagram-project"></i> BPMN / UML</span>
+                        <span class="artifact-chip"><i class="fas fa-sitemap"></i> RTM</span>
+                        <span class="artifact-chip"><i class="fas fa-list-check"></i> UAT pack</span>
+                        <span class="artifact-chip"><i class="fas fa-table"></i> Decision tables</span>
+                        <span class="artifact-chip"><i class="fas fa-database"></i> SQL</span>
+                        <span class="artifact-chip"><i class="fab fa-jira"></i> Jira</span>
+                        <span class="artifact-chip"><i class="fab fa-figma"></i> Figma</span>
+                    </div>
+                    <p class="hero-note">Artifacts are structured for review and anonymized where needed.</p>
+                </div>
             </div>
         </div>
-    </nav>
+    </section>
 
     <!-- Main Content -->
     <div class="container">
-        <header class="page-header">
-            <h1><i class="fas fa-briefcase"></i> Business Analyst Portfolio</h1>
-            <p class="subtitle">Case studies and deliverables (discovery → requirements → design → validation)</p>
-        </header>
+        <div class="home-toolbar" aria-label="Home navigation">
+            <div class="home-tabs" role="navigation" aria-label="Sections">
+                <a class="home-tab is-active" href="#case-studies">Projects</a>
+                <a class="home-tab" href="#resources">Learn</a>
+                <a class="home-tab" href="#certificates">Certificates</a>
+                <a class="home-tab" href="#contact">Contact</a>
+            </div>
+
+            <div class="home-search" role="search" aria-label="Search projects">
+                <i class="fas fa-magnifying-glass" aria-hidden="true"></i>
+                <input id="caseSearch" type="search" placeholder="Search projects…" aria-label="Search projects">
+                <span id="caseSearchCount" class="home-search-count" aria-live="polite"></span>
+            </div>
+        </div>
+
+        <section class="content-section" id="resources" hidden>
+            <div class="section-header">
+                <h2><i class="fas fa-book"></i> Learn (BA)</h2>
+            </div>
+            <p class="mini-note">
+                Starter reading list for anyone learning BA. I’ll plug in the exact links you choose.
+            </p>
+
+            <h3 style="margin-top: 16px;">BA Concepts</h3>
+            <div class="project-grid" style="margin-top: 10px;">
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>What a BA actually does</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">Role clarity: discovery, requirements, alignment, and validation.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Intro</span>
+                            <span class="project-tag">Scope</span>
+                            <span class="project-tag">Stakeholders</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>User stories vs requirements</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">How to express needs: stories, acceptance criteria, and exceptions.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Writing</span>
+                            <span class="project-tag">AC</span>
+                            <span class="project-tag">Edge cases</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Traceability (RTM) explained</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">Why linking requirements → tests prevents gaps and churn.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">RTM</span>
+                            <span class="project-tag">Coverage</span>
+                            <span class="project-tag">UAT</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Process modelling basics (BPMN)</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">A quick guide to modelling flows and exceptions clearly.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">BPMN</span>
+                            <span class="project-tag">Flow</span>
+                            <span class="project-tag">Exceptions</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <h3 style="margin-top: 22px;">Standard Templates</h3>
+            <div class="project-grid" style="margin-top: 10px;">
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>PRD / Requirements template</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">A practical structure: scope, rules, AC, and non-functional requirements.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">PRD</span>
+                            <span class="project-tag">29148-style</span>
+                            <span class="project-tag">Testable</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>RTM template</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">Requirements → design → test cases (coverage you can prove).</p>
+                        <div class="project-meta">
+                            <span class="project-tag">RTM</span>
+                            <span class="project-tag">Coverage</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>UAT checklist / sign-off pack</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">Simple pack: scenarios, results, defects, and approval notes.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">UAT</span>
+                            <span class="project-tag">Sign-off</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Stakeholder map / RACI template</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">Who to align with, who approves, and how decisions flow.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Stakeholders</span>
+                            <span class="project-tag">RACI</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="callout" style="margin-top: 18px;">
+                <strong><i class="fas fa-wrench"></i> Next step:</strong>
+                Send me the links you want, and I’ll replace the placeholder <span class="mini-note">(link icon)</span> buttons.
+            </div>
+
+            <h3 style="margin-top: 22px;">Skills &amp; Tools I use</h3>
+            <p class="mini-note">A quick snapshot so reviewers can map my artifacts to real workflows.</p>
+            <div class="artifact-chips" style="margin-top: 10px;" aria-label="Skills and tools">
+                <span class="artifact-chip"><i class="fas fa-users"></i> Stakeholder mapping</span>
+                <span class="artifact-chip"><i class="fas fa-pen-to-square"></i> User stories + AC</span>
+                <span class="artifact-chip"><i class="fas fa-chart-simple"></i> Process modelling</span>
+                <span class="artifact-chip"><i class="fas fa-shield-halved"></i> NFR checklisting</span>
+                <span class="artifact-chip"><i class="fas fa-bug"></i> Test design</span>
+                <span class="artifact-chip"><i class="fas fa-database"></i> SQL (T-SQL)</span>
+                <span class="artifact-chip"><i class="fab fa-jira"></i> Jira / Confluence</span>
+                <span class="artifact-chip"><i class="fas fa-chart-pie"></i> Power BI (basic)</span>
+            </div>
+        </section>
+
+        <section class="content-section" id="certificates" hidden>
+            <div class="section-header">
+                <h2><i class="fas fa-certificate"></i> Certificates</h2>
+            </div>
+            <p class="mini-note">I’ll add your certificate files and verification links here.</p>
+
+            <div class="project-grid" style="margin-top: 10px;" aria-label="Certificates list">
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Certificate title (placeholder)</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add verification link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">Provider • completion date • short note (optional)</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Credential</span>
+                            <span class="project-tag">Verification</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Certificate title (placeholder)</h3>
+                            <a class="project-icon-link" href="#" aria-label="Add verification link">
+                                <i class="fas fa-link" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">Provider • completion date • short note (optional)</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Credential</span>
+                            <span class="project-tag">Verification</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="callout" style="margin-top: 18px;">
+                <strong><i class="fas fa-upload"></i> Next step:</strong>
+                Send me the certificate files (PDF/image) + verification URLs, and I’ll replace these placeholders.
+            </div>
+        </section>
+
+        <section class="content-section" id="contact" hidden>
+            <div class="section-header">
+                <h2><i class="fas fa-envelope"></i> Contact</h2>
+            </div>
+            <p class="mini-note">Best way to reach me: LinkedIn message.</p>
+            <div class="artifact-chips" style="margin-top: 12px;">
+                <a class="artifact-chip" href="https://www.linkedin.com/in/hai31004/" target="_blank" rel="noopener"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                <a class="artifact-chip" href="https://github.com/HaiSGU" target="_blank" rel="noopener"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+            <div class="callout" style="margin-top: 18px;">
+                <strong><i class="fas fa-circle-info"></i> What to include:</strong>
+                Role you’re hiring for, location/timezone, and a link to the specific project you want to discuss.
+            </div>
+        </section>
 
         <section class="content-section" id="case-studies">
             <div class="section-header">
                 <h2><i class="fas fa-layer-group"></i> Case Studies</h2>
             </div>
 
-            <div class="deliverables-grid">
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <span class="deliverable-phase phase-validation">Featured</span>
-                        <div class="deliverable-icon"><i class="fas fa-burger"></i></div>
-                        <h3>Foodora — Order &amp; Pick-up (MVP)</h3>
-                    </div>
-                    <div class="deliverable-body">
-                        <p><strong>Problem:</strong> Restaurants need a simpler way to take pickup orders (no delivery cost), while customers still expect a clear, low-friction flow from menu to confirmation.</p>
-                        <p><strong>Scope:</strong> End-to-end pickup journey (browse menu → cart → checkout → confirmation) with the supporting business rules/constraints needed to make the MVP buildable and testable.</p>
-                        <p><strong>Concrete outputs:</strong> A PRD written as epics + user stories with acceptance criteria; 3 user personas; BPMN process flows; ERD; wireflow/screens to communicate the UX; traceability matrix (RTM) to connect requirements → tests; and a validation pack (UAT cases + sign-off) plus SQL scripts for data/logic sanity checks.</p>
-                        <p><strong>Evidence (in deliverables):</strong> 14 total deliverables, 5 diagrams, 16 UAT test cases, and 3 UAT documents (summary section on the Deliverables page).</p>
-                        <div class="artifact-chips" style="margin-top: 12px;">
-                            <a class="artifact-chip" href="projects/foodora-mvp/deliverables.html#prototype"><i class="fab fa-figma"></i> Prototype</a>
-                            <a class="artifact-chip" href="projects/foodora-mvp/deliverables.html#prd"><i class="fas fa-file-lines"></i> PRD</a>
-                            <a class="artifact-chip" href="projects/foodora-mvp/deliverables.html#traceability"><i class="fas fa-table"></i> RTM</a>
-                            <a class="artifact-chip" href="projects/foodora-mvp/deliverables.html#uat-pack"><i class="fas fa-clipboard-check"></i> UAT</a>
-                        </div>
-                        <p class="mini-note" style="margin-top: 10px;"><strong>Shortcuts:</strong> Chips jump to a few key items; use <strong>Deliverables</strong> to browse the full pack by phase.</p>
-                        <div class="deliverable-actions">
-                            <a class="btn btn-small" href="projects/foodora-mvp/project-overview.html"><i class="fas fa-play"></i> Open Case Study</a>
-                            <a class="btn btn-small btn-outline" href="projects/foodora-mvp/deliverables.html"><i class="fas fa-folder-open"></i> Deliverables</a>
-                        </div>
-                    </div>
-                </div>
+            <p class="mini-note">4 case studies (product MVP, retail controls, QA pack, ERP governance mock). Each project is written as: context → problem → role → approach → artifacts → outcomes → reflection.</p>
+            <div class="callout" style="margin-top: 12px;">
+                <strong><i class="fas fa-clipboard-check"></i> Fast scan (recommended):</strong>
+                <ul class="callout-list">
+                    <li>Open the <strong>Project overview</strong> first to understand the context and my role.</li>
+                    <li>Jump to <strong>Deliverables</strong> for evidence (RTM, UAT, diagrams, templates).</li>
+                    <li>Look for <strong>testability</strong>: clear AC, rules, edge cases, and traceability to tests.</li>
+                </ul>
+            </div>
 
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <span class="deliverable-phase phase-design">Design-focused</span>
-                        <div class="deliverable-icon"><i class="fas fa-store"></i></div>
-                        <h3>Retail Operations Backoffice</h3>
+            <div class="project-grid" aria-label="Project list">
+                <article class="project-card" data-tags="featured,mvp,requirements,validation">
+                    <a class="project-card-link" href="projects/foodora-mvp/project-overview.html" aria-label="Open Foodora case study"></a>
+                    <div class="project-media">
+                        <img src="projects/thumnail_img/project1.jpg" alt="Foodora project thumbnail" loading="lazy">
                     </div>
-                    <div class="deliverable-body">
-                        <p><strong>Problem:</strong> A retail backoffice has many moving parts (sales, inventory, purchasing, transfers, cashbook). Without clear scope and models, it’s easy to build inconsistent flows and weak reporting.</p>
-                        <p><strong>Scope:</strong> Multi-branch operations with the key modules and their end-to-end interactions (what happens, who does it, and what data moves).</p>
-                        <p><strong>Concrete outputs:</strong> PRD-lite + user stories to define scope; 3 core system diagrams (context → BPMN → ERD) to align business + data; a module diagram library (use case / sequence / activity) to explain behavior per module; RTM + UAT mini pack for validation; and an SQL showcase pack translating operational questions into example queries/reports.</p>
-                        <div class="artifact-chips" style="margin-top: 12px;">
-                            <a class="artifact-chip" href="projects/Retail_System/deliverables.html#prd-lite"><i class="fas fa-file-lines"></i> PRD-lite</a>
-                            <a class="artifact-chip" href="projects/Retail_System/deliverables.html#rtm"><i class="fas fa-table"></i> RTM</a>
-                            <a class="artifact-chip" href="projects/Retail_System/deliverables.html#uat-pack"><i class="fas fa-clipboard-check"></i> UAT</a>
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Foodora — Order &amp; Pick-up (MVP)</h3>
+                            <a class="project-icon-link" href="projects/foodora-mvp/deliverables.html" aria-label="Open Foodora deliverables">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <p class="mini-note" style="margin-top: 10px;"><strong>Shortcuts:</strong> Chips are highlights; use <strong>Deliverables</strong> to browse everything by phase.</p>
-                        <div class="deliverable-actions">
-                            <a class="btn btn-small" href="projects/Retail_System/project-overview.html"><i class="fas fa-play"></i> Open Case Study</a>
-                            <a class="btn btn-small btn-outline" href="projects/Retail_System/deliverables.html"><i class="fas fa-folder-open"></i> Deliverables</a>
+                        <p class="project-excerpt">A pickup-ordering MVP packaged to be immediately buildable: PRD with acceptance criteria, wireflows to align the UX flow, an RTM linking requirements → UAT, and a UAT pack structured for review/sign-off.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Featured</span>
+                            <span class="project-tag">Evidence: 14 deliverables</span>
+                            <span class="project-tag">Evidence: 16 UAT test cases</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <span class="deliverable-phase phase-validation">Design &amp; Testing</span>
-                        <div class="deliverable-icon"><i class="fas fa-seedling"></i></div>
-                        <h3>Design &amp; Testing — MOW Garden</h3>
+                <article class="project-card" data-tags="design,domain,retail,analysis">
+                    <a class="project-card-link" href="projects/Retail_System/project-overview.html" aria-label="Open Retail Backoffice case study"></a>
+                    <div class="project-media">
+                        <img src="projects/thumnail_img/project2.jpg" alt="Retail backoffice project thumbnail" loading="lazy">
                     </div>
-                    <div class="deliverable-body">
-                        <p><strong>Problem:</strong> Testing is hard to evaluate when it’s only “a plan” — reviewers want to see concrete test assets (scenarios, cases, NFR coverage) and how they tie back to the system behavior.</p>
-                        <p><strong>Scope:</strong> Design views to explain behavior + a testing pack that demonstrates coverage across functional and non-functional areas.</p>
-                        <p><strong>Concrete outputs:</strong> Use cases (XLSX), decomposition + sequence diagrams, screen inventory (XLSX), a test plan (PDF), a multi-sheet test design pack (workflow/functional/UI), a non-functional testing pack (usability/compatibility/security/DB), acceptance & crowd testing sheets, defect/review templates, sample test data, and JMeter performance plans (.jmx) with a performance sheet.</p>
-                        <p><strong>Evidence (in deliverables):</strong> The project folder contains 38 files (excluding Detai01), and key Excel packs can be previewed via the in-browser XLSX viewer.</p>
-                        <div class="artifact-chips" style="margin-top: 12px;">
-                            <a class="artifact-chip" href="projects/Design_Testing_MOW_Garden/deliverables.html#use-cases"><i class="fas fa-file-lines"></i> Use cases</a>
-                            <a class="artifact-chip" href="projects/Design_Testing_MOW_Garden/deliverables.html#test-plan"><i class="fas fa-file-pdf"></i> Test plan</a>
-                            <a class="artifact-chip" href="projects/Design_Testing_MOW_Garden/deliverables.html#test-design"><i class="fas fa-list-check"></i> Test design</a>
-                            <a class="artifact-chip" href="projects/Design_Testing_MOW_Garden/deliverables.html#performance"><i class="fas fa-gauge-high"></i> JMeter</a>
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Retail Operations Backoffice</h3>
+                            <a class="project-icon-link" href="projects/Retail_System/deliverables.html" aria-label="Open Retail deliverables">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <p class="mini-note" style="margin-top: 10px;"><strong>Shortcuts:</strong> These are the quickest proof points; use <strong>Deliverables</strong> to view the full folder pack.</p>
-                        <div class="deliverable-actions">
-                            <a class="btn btn-small" href="projects/Design_Testing_MOW_Garden/project-overview.html"><i class="fas fa-play"></i> Open Case Study</a>
-                            <a class="btn btn-small btn-outline" href="projects/Design_Testing_MOW_Garden/deliverables.html"><i class="fas fa-folder-open"></i> Deliverables</a>
+                        <p class="project-excerpt">This case study focuses on retail backoffice controls and auditability: BPMN for end-to-end flow, use cases + sequence/activity diagrams to make behaviour unambiguous, decision tables for promo/pricing rules, and RTM → UAT for evidence-based validation. Includes SQL samples for common operational questions.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Design-focused</span>
+                            <span class="project-tag">Reason codes + approvals</span>
+                            <span class="project-tag">Who/when/why audit trail</span>
+                            <span class="project-tag">SQL report samples</span>
                         </div>
                     </div>
-                </div>
+                </article>
 
-                <div class="deliverable-card">
-                    <div class="deliverable-header">
-                        <span class="deliverable-phase phase-requirements">Domain</span>
-                        <div class="deliverable-icon"><i class="fas fa-industry"></i></div>
-                        <h3>SAP ERP — Order-to-Cash (O2C)</h3>
+                <article class="project-card" data-tags="testing,design,nfr,performance">
+                    <a class="project-card-link" href="projects/Design_Testing_MOW_Garden/project-overview.html" aria-label="Open MOW Garden case study"></a>
+                    <div class="project-media">
+                        <img src="projects/thumnail_img/project3.png" alt="MOW Garden project thumbnail" loading="lazy">
                     </div>
-                    <div class="deliverable-body">
-                        <p><strong>Summary:</strong> Simulated BA engagement for an ERP O2C flow with pricing and credit controls <em>(learning-focused: I’m actively studying SAP concepts)</em>.</p>
-                        <div class="callout">
-                            <i class="fas fa-circle-info"></i>
-                            <strong>Note:</strong> This is a learning project to practice BA artifacts and process thinking — I’m not claiming hands-on SAP configuration experience.
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>Design &amp; Testing — MOW Garden</h3>
+                            <a class="project-icon-link" href="projects/Design_Testing_MOW_Garden/deliverables.html" aria-label="Open MOW deliverables">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
                         </div>
-                        <p><strong>Problem:</strong> O2C processes often fail in real life due to unclear scope/rules, unclear role boundaries, and weak validation (requirements don’t map cleanly to tests).</p>
-                        <p><strong>Scope:</strong> A simulated O2C scenario focusing on the BA side: scope + NFRs, pricing/credit-related rules, role-based access boundaries, and a validation approach that is traceable and reviewable.</p>
-                        <p><strong>Concrete outputs:</strong> Stakeholders + RACI, requirements + scope + NFRs, business rules + decision tables, roles/permissions (RBAC), RTM, UAT test cases (XLSX) plus a UAT summary/sign-off style report (IEEE 829), supporting diagrams (context/process/ERD), and an SQL proof pack.</p>
-                        <div class="artifact-chips" style="margin-top: 12px;">
-                            <a class="artifact-chip" href="projects/SAP_ERP/deliverables.html#rtm"><i class="fas fa-table"></i> RTM</a>
-                            <a class="artifact-chip" href="projects/SAP_ERP/deliverables.html#uat"><i class="fas fa-clipboard-check"></i> UAT</a>
-                            <a class="artifact-chip" href="projects/SAP_ERP/deliverables.html#sql-pack"><i class="fas fa-code"></i> SQL</a>
-                        </div>
-                        <p class="mini-note" style="margin-top: 10px;"><strong>Shortcuts:</strong> Chips are highlights; use <strong>Deliverables</strong> to browse the full set of docs and diagrams.</p>
-                        <div class="deliverable-actions">
-                            <a class="btn btn-small" href="projects/SAP_ERP/project-overview.html"><i class="fas fa-play"></i> Open Case Study</a>
-                            <a class="btn btn-small btn-outline" href="projects/SAP_ERP/deliverables.html"><i class="fas fa-folder-open"></i> Deliverables</a>
+                        <p class="project-excerpt">Not just a “test plan document”: this is a usable QA pack — a risk-based test plan, multi-sheet test design packs (workflow/functional/UI), NFR checklists, and runnable JMeter plans to demonstrate performance testing setup.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Design &amp; Testing</span>
+                            <span class="project-tag">JMeter: 50 users / 300s</span>
+                            <span class="project-tag">Evidence: 38 files</span>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="project-card" data-tags="erp,domain,governance,learning">
+                    <a class="project-card-link" href="projects/SAP_ERP/project-overview.html" aria-label="Open SAP ERP mock case study"></a>
+                    <div class="project-media">
+                        <img src="projects/thumnail_img/project4.jpg" alt="SAP ERP mock project thumbnail" loading="lazy">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title-row">
+                            <h3>SAP ERP (Mock) — Order-to-Cash (O2C)</h3>
+                            <a class="project-icon-link" href="projects/SAP_ERP/deliverables.html" aria-label="Open SAP deliverables">
+                                <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <p class="project-excerpt">A learning-focused SAP mock to practise “governance you can still test”: pricing/credit/exception rules captured as decision tables, clear RBAC boundaries, and an RTM linking rules/requirements → UAT scenarios, plus a UAT summary/sign-off style report.</p>
+                        <div class="project-meta">
+                            <span class="project-tag">Domain</span>
+                            <span class="project-tag">Approvals + auditability</span>
+                            <span class="project-tag">Rules → tests traceability</span>
+                            <span class="project-tag">Learning mock</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
-
-        <section class="content-section">
-            <div class="section-header">
-                <h2><i class="fas fa-desktop"></i> View Locally</h2>
-            </div>
-            <ol>
-                <li>Open <strong>index.html</strong> in your browser (or use VS Code Live Server).</li>
-                <li>Navigate to <strong>Deliverables</strong> to download/view artifacts.</li>
-            </ol>
-        </section>
-
-        <div class="process-navigation">
-            <a href="projects/foodora-mvp/project-overview.html" class="btn btn-primary">
-                Open Foodora Case Study <i class="fas fa-arrow-right"></i>
-            </a>
-        </div>
     </div>
 
     <!-- Footer -->
@@ -165,5 +421,88 @@
             </p>
         </div>
     </footer>
+
+    <script>
+        (function () {
+            const input = document.getElementById('caseSearch');
+            const count = document.getElementById('caseSearchCount');
+            const cards = Array.from(document.querySelectorAll('#case-studies .project-card'));
+            const searchWrap = document.querySelector('.home-search');
+            const toolbar = document.querySelector('.home-toolbar');
+            const tabs = Array.from(document.querySelectorAll('.home-tab'));
+            const sections = ['case-studies', 'resources', 'certificates', 'contact']
+                .map(id => document.getElementById(id))
+                .filter(Boolean);
+
+            const validTabIds = new Set(sections.map(s => s.id));
+
+            function normalize(text) {
+                return (text || '').toLowerCase().replace(/\s+/g, ' ').trim();
+            }
+
+            function updateSearch() {
+                const q = normalize(input.value);
+                let visible = 0;
+                for (const card of cards) {
+                    const haystack = normalize(card.innerText);
+                    const match = !q || haystack.includes(q);
+                    card.style.display = match ? '' : 'none';
+                    if (match) visible++;
+                }
+                count.textContent = q ? `${visible}/${cards.length}` : `${cards.length}`;
+            }
+
+            function setActiveTab(tabId, options) {
+                const opts = options || {};
+                const activeId = validTabIds.has(tabId) ? tabId : 'case-studies';
+
+                for (const section of sections) {
+                    section.hidden = section.id !== activeId;
+                }
+
+                for (const a of tabs) {
+                    const href = (a.getAttribute('href') || '').toLowerCase();
+                    const isActive = href === `#${activeId}`;
+                    a.classList.toggle('is-active', isActive);
+                }
+
+                if (searchWrap) {
+                    searchWrap.style.display = activeId === 'case-studies' ? '' : 'none';
+                }
+
+                if (opts.updateHash) {
+                    history.replaceState(null, '', `#${activeId}`);
+                }
+
+                if (opts.scrollToToolbar && toolbar) {
+                    toolbar.scrollIntoView({ block: 'start', behavior: 'smooth' });
+                }
+            }
+
+            if (input) {
+                input.addEventListener('input', updateSearch);
+                updateSearch();
+            }
+
+            for (const a of tabs) {
+                const href = (a.getAttribute('href') || '').toLowerCase();
+                if (!href.startsWith('#')) continue;
+                a.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const id = href.slice(1);
+                    setActiveTab(id, { updateHash: true, scrollToToolbar: true });
+                });
+            }
+
+            function initFromHash() {
+                const raw = (location.hash || '#case-studies').toLowerCase();
+                const id = raw.startsWith('#') ? raw.slice(1) : raw;
+                setActiveTab(id, { updateHash: !raw, scrollToToolbar: false });
+            }
+
+            window.addEventListener('hashchange', initFromHash);
+            initFromHash();
+        })();
+    </script>
 </body>
 </html>
